@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 
 class WelcomeController extends Controller
@@ -66,7 +67,7 @@ class WelcomeController extends Controller
         $request->validate([
             "first_name"  =>  "required",
             "last_name"  =>  "required",
-            "email"  =>  "required|email",
+            "email"  =>  "required|email:filter",
             "message"  =>  "required|string",
         ]);
 
@@ -74,14 +75,41 @@ class WelcomeController extends Controller
         {
             $inputs = $request->except("_token");
 
-            Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($inputs));
+            if($this->isValidEmail($request->email))
+            {
+                Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($inputs));
 
-            return back()->with('success', "Your contact with me is greatly appreciated. I will respond to your email as soon as possible");
+                return back()->with('success', "Your contact with me is greatly appreciated. I will respond to your email as soon as possible");
+            }
+
+            return back()->withInput()->withErrors([
+                "email" => "Please enter valid email address."
+            ]);
+
+            return back()->withInput()->with("exception", "Please enter valid email address.");
         }
         catch(\Exception $e)
         {
-            return back()->with("exception", $e->getMessage());
+            return back()->withInput()->with("exception", $e->getMessage());
         }
+    }
+
+
+    protected function isValidEmail($email)
+    {
+        $API_TOKEN = "d8c52869ae05581b4cf5edbc2efe2fdab3c0b178ff4639b6efe44575ca12";
+
+        $api = Http::withoutVerifying()
+        ->get("https://api.quickemailverification.com/v1/verify?email={$email}&apikey={$API_TOKEN}");
+
+        $resp = $api->object();
+
+        if($resp->result == "valid")
+        {
+            return true;
+        }
+        
+        return false;
     }
 
 }

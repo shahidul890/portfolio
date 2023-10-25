@@ -227,8 +227,8 @@
 
                 <div class="col-md">
 
-                    <div class="row mb-4 me-3 justify-content-end">
-                        <div class="col-md-3 mb-4">
+                    <div class="row mb-4 me-lg-3 justify-content-end">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="https://precisiondriving.uk/" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -243,7 +243,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="https://alloneautos.com/" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -258,7 +258,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="javascript::" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -273,7 +273,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="https://gokiiw.com/" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -290,9 +290,9 @@
 
                     </div>
 
-                    <div class="row ms-3 mb-4 justify-content-end">
+                    <div class="row ms-lg-3 mb-4 justify-content-end">
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="javasscript::" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -307,7 +307,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="https://mybankmyloan.com/" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -322,7 +322,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="javascript::" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -337,7 +337,7 @@
                             </a>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="https://sonagazicollege.gov.bd/" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img

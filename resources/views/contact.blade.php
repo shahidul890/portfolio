@@ -23,6 +23,7 @@
                                 class="form-control @error('first_name') is-invalid @enderror"
                                 placeholder="First Name"
                                 name="first_name"
+                                value="{{old("first_name")}}"
                                 required
                             />
                             @error('first_name') <strong class="text-danger"> {{$message}} </strong> @enderror
@@ -34,6 +35,7 @@
                                 class="form-control @error('last_name') is-invalid @enderror"
                                 placeholder="Last Name"
                                 name="last_name"
+                                value="{{old("last_name")}}"
                                 required
                             />
                             @error('last_name') <strong class="text-danger"> {{$message}} </strong> @enderror
@@ -45,6 +47,7 @@
                                 class="form-control @error('email') is-invalid @enderror"
                                 placeholder="Email"
                                 name="email"
+                                value="{{old("email")}}"
                                 required
                             />
                             @error('email') <strong class="text-danger"> {{$message}} </strong> @enderror
@@ -58,14 +61,14 @@
                                 rows="5"
                                 name="message"
                                 required
-                            ></textarea>
+                            >{{old("message")}}</textarea>
                             @error('message') <strong class="text-danger"> {{$message}} </strong> @enderror
                         </div>
 
                         @if(Session::has('success'))
                         <div class="alert alert-success my-4">{{Session::get('success')}} </div>
                         @elseif(Session::has('exception'))
-                        <div class="alert alert-success my-4"> {{Session::get('exception')}} </div>
+                        <div class="alert alert-danger my-4"> {{Session::get('exception')}} </div>
                         @endif
 
                         <button class="btn btn-orange px-5">Send Message</button>
