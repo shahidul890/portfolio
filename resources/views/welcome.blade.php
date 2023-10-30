@@ -1,5 +1,38 @@
 @extends('layouts.welcome')
 
+@push('styles')
+    <style>
+        .project-img{
+            transition: 0.5s all ease-in-out;
+            height: 140px;
+        }
+        .project-img:hover{
+            transform: scale(1.1);
+        }
+
+        @media only screen and (max-width: 991px){
+            /*Big smartphones [426px -> 600px]*/
+            .project-img{
+                height: 210px;
+            }
+        }
+
+        @media only screen and (max-width: 600px){
+            /*Big smartphones [426px -> 600px]*/
+            .project-img{
+                height: 230px;
+            }
+        }
+
+        @media only screen and (max-width: 426px){
+            /*Small smartphones [426px]*/
+            .project-img{
+                height: 185px;
+            }
+        }
+    </style>
+@endpush
+
 @section('content')
 
     <!-- I am Shahidul -->
@@ -22,7 +55,7 @@
                     <h6> Say Hello To </h6>
                     <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start" style="font-size: 30px;">
 
-                        <a href="mailto:hire@shahidull.com" target="_blank" class="text-orange text-decoration-none" title="Email">
+                        <a href="mailto:contact.shahidul@gmail.com" target="_blank" class="text-orange text-decoration-none" title="Email">
                             <i class="bi bi-envelope"></i>
                         </a>
                         <!-- <a href="https://facebook.com/its.antorislam/" target="_blank" class="text-orange text-decoration-none" title="Facebook">
@@ -31,13 +64,13 @@
                         <a href="javascript::" class="text-orange text-decoration-none" title="Instagram">
                             <i class="bi bi-instagram"></i>
                         </a> -->
-                        <a href="https://linkedin.com/in/antorislam/" class="text-orange text-decoration-none" title="Linkedin">
+                        <a href="https://linkedin.com/in/mdshahidul/" target="_blank" class="text-orange text-decoration-none" title="Linkedin">
                             <i class="bi bi-linkedin"></i>
                         </a>
-                        <!-- <a href="javascript::" class="text-orange text-decoration-none" title="Twitter">
-                            <i class="bi bi-twitter"></i>
-                        </a> -->
-                        <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
+                        <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        {{-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
                             <img
                                 src="/assets/icons/fiverr.png"
                                 alt="fiverr"
@@ -45,7 +78,7 @@
                                 class="img-fluid rounded-circle bg-orange"
                                 style="margin-top: -12px;"
                             />
-                        </a>
+                        </a> --}}
                     </div>
 
                     <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-5 mt-3">DOWNLOAD CV</a>
@@ -64,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="assets/img/antor.jpeg" alt="" class="img-fluid shadow" width="400" style="border-radius: 15px;">
+                    <img src="assets/img/me4.png" alt="" class="img-fluid shadow" width="400" style="border-radius: 15px;">
                 </div>
             </div>
         </div>
@@ -126,10 +159,10 @@
                     <div class="mb-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="m-0">VueJs</h6>
-                            <p class="m-0 text-muted">30%</p>
+                            <p class="m-0 text-muted">45%</p>
                         </div>
                         <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 30%"></div>
+                            <div class="progress-bar bg-dark-blue" style="width: 45%"></div>
                         </div>
                     </div>
 
@@ -210,7 +243,7 @@
     <!-- // about Me end -->
 
     <!-- Projects -->
-    <section class="py-5" style="background-image: url('/assets/img/service_bg.png');">
+    <section id="projects" class="py-5" style="background-image: url('/assets/img/service_bg.png');">
         <div class="container">
 
             <div class="row">
@@ -227,23 +260,55 @@
 
                 <div class="col-md">
 
-                    <div class="row mb-4 me-lg-3 justify-content-end">
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://precisiondriving.uk/" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/precision.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        Course Booking
+                    <div class="row mb-4 me-lg-3 justify-content-start">
+
+                        @foreach ($projects as $count => $project)
+
+                            <div class="col-12 col-md-6 col-lg-3 mb-4">
+                                <div class="card border-0 shadow-lg" style="border-radius: 15px; overflow:hidden; cursor: pointer" data-bs-target="#modal-{{$count}}" data-bs-toggle="modal">
+                                    
+                                    @if(count($project['images']) > 1)
+                                    <x-carousel>
+                                       @foreach ($project['images'] as $index => $img)
+                                        <div class="carousel-item {{ ($index == 0) ? 'active' : '' }}">
+                                            <img src="{{$img}}" class="d-block w-100 project-img" alt="{{$project['name'].$index}}">
+                                        </div>
+                                       @endforeach
+                                    </x-carousel>
+                                    @else
+                                    <div style="overflow:hidden">
+                                        <img src="{{$project['images'][0]}}" class="card-img-top w-100 project-img" alt="{{$project['name']}}">
+                                    </div>
+                                    @endif
+
+                                    <div class="card-header bg-orange text-white text-center border-0">
+                                        <p class="m-0">{{$project['category']}}</p>
+                                        {{-- <p class="m-0"><small>Technologies: @foreach ($project['technology'] as $tech) <span class="badge bg-dark-blue">{{$tech}}</span> @endforeach </small></p> --}}
                                     </div>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
 
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
+                            <div class="modal fade" id="modal-{{$count}}">
+                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-body p-0">
+                                            <div class="owl-carousel owl-theme">
+                                                @foreach ($project['images'] as $img)
+                                                    <div class="item">
+                                                        <img src="{{$img}}" alt="">
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        @endforeach
+                        
+                       
+
+                        {{-- <div class="col-12 col-md-6 col-lg-3 mb-4">
                             <a href="https://alloneautos.com/" target="_blank" class="text-decoration-none">
                                 <div class="card border-0 shadow" style="border-radius: 15px;">
                                     <img
@@ -256,101 +321,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="javascript::" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/mrdeal.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        E-commerce App
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://gokiiw.com/" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/gokiiw.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        Queue Management
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="row ms-lg-3 mb-4 justify-content-end">
-
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="javasscript::" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/svkraft.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        E-commerce App
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://mybankmyloan.com/" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/mybank-myloan.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        Blog
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="javascript::" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/csports.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        Live Broadcast
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://sonagazicollege.gov.bd/" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/sgc.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        Institute Portfolio
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        </div> --}}
 
                     </div>
 

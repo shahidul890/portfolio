@@ -19,7 +19,8 @@ class WelcomeController extends Controller
      */
     public function welcome()
     {
-        return view('welcome');
+        $data['projects'] =  \App\Models\Project::all();
+        return view('welcome')->with($data);
     }
 
 
