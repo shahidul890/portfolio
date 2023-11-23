@@ -6,9 +6,11 @@ class Project
 {
     static function all()
     {
-        return self::data();
+       return self::data();
     }
 
+
+    
 
     /**
      * -----------------------------------------------

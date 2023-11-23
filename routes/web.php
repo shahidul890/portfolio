@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", [App\Http\Controllers\WelcomeController::class, 'welcome'])->name('welcome');
 Route::get("/about", [App\Http\Controllers\WelcomeController::class, 'about'])->name('about');
-Route::get("/contact", [App\Http\Controllers\WelcomeController::class, 'contact'])->name('contact');
-Route::post("/contact", [App\Http\Controllers\WelcomeController::class, 'storeContact'])->name('contact.store');
+
+// contact form
+Route::get("/contact", [App\Http\Controllers\ContactFormController::class, 'contact'])->name('contact');
+Route::post("/contact", [App\Http\Controllers\ContactFormController::class, 'storeContact'])->name('contact.store');
+Route::get("/check/validity", [App\Http\Controllers\ContactFormController::class, 'emailValidity']);
 
 
-// Authentication
-Auth::routes();
+// // Authentication
+// Auth::routes();
 
-// After Login
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// // After Login
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

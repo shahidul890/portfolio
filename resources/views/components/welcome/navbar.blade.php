@@ -11,6 +11,8 @@
                         <a class="nav-link @if(Route::is('welcome')) active @endif" aria-current="page" href="/">Home</a>
                     </li>
 
+                    @if (Route::is("welcome"))
+                        
                     <li class="nav-item">
                         <a class="nav-link" href="#experties">Experties</a>
                     </li>
@@ -26,14 +28,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
+                    @endif
 
-                    {{-- <li class="nav-item">
+                    @if (Route::is("contact"))
+                    <li class="nav-item">
                         <a class="nav-link @if(Route::is('contact')) active @endif" href="{{route("contact")}}">Contact</a>
-                    </li> --}}
+                    </li>
+                    @endif
+                    
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li>
-                        <a href="{{route("contact")}}" class="btn-orange btn px-5 text-decoration-none">HIRE ME</a>
+                        @if (Route::is("contact"))
+                            <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn-orange btn px-4 text-decoration-none">DOWNLOAD CV</a>
+                        @else
+                            <a href="{{route("contact")}}" class="btn-orange btn px-4 text-decoration-none">HIRE ME</a>
+                        @endif
                     </li>
                 </ul>
             </div>

@@ -40,7 +40,7 @@
         class="mb-5 py-5"
         style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/gifs/1.gif');"
     >
-        <div class="d-md-none" style="padding-top: 150px;"></div>
+        <div class="d-md-none" style="padding-top: 100px;"></div>
 
         <!-- container -->
         <div class="container text-white text-md-start text-center">
@@ -81,7 +81,8 @@
                         </a> --}}
                     </div>
 
-                    <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-5 mt-3">DOWNLOAD CV</a>
+                    <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a>
+                    <a href="/contact" class="btn btn-orange px-3 mt-3">CONTACT ME</a>
                 </div>
 
                 <div
@@ -108,111 +109,116 @@
     <section class="py-5" id="experties">
         <div class="container">
             <div class="row gap-4">
-                <div class="col-md mb-5">
+                <div class="col-md-12">
                     <p><strong>SKILLS</strong></p>
-                    <h1 style="font-size: 52px;" class="mb-5">I am great in what I do and <span class="text-orange">I am loving it</span></h1>
-                    <img src="/assets/gifs/php.gif" alt="giphy" class="img-fluid d-none d-md-block" />
+                    <h1 style="font-size: 52px;" class="mb-5">I am great in what I do <br> and <span class="text-orange">I am loving it</span></h1>
+                    {{-- <img src="/assets/gifs/php.gif" alt="giphy" class="img-fluid d-none d-md-block" /> --}}
                 </div>
 
-                <div class="col-md">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md px-4">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">PHP</h6>
+                                    <p class="m-0 text-muted">80%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 80%"></div>
+                                </div>
+                            </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">PHP</h6>
-                            <p class="m-0 text-muted">80%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 80%"></div>
-                        </div>
-                    </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">Laravel</h6>
+                                    <p class="m-0 text-muted">90%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 90%"></div>
+                                </div>
+                            </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">Laravel</h6>
-                            <p class="m-0 text-muted">90%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 90%"></div>
-                        </div>
-                    </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">MySQL</h6>
+                                    <p class="m-0 text-muted">85%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 85%"></div>
+                                </div>
+                            </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">MySQL</h6>
-                            <p class="m-0 text-muted">85%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 85%"></div>
-                        </div>
-                    </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">AJAX</h6>
+                                    <p class="m-0 text-muted">90%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 90%"></div>
+                                </div>
+                            </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">AJAX</h6>
-                            <p class="m-0 text-muted">90%</p>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">Javascript</h6>
+                                    <p class="m-0 text-muted">60%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 90%"></div>
-                        </div>
-                    </div>
+                        <div class="col-md  px-4">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">VueJs</h6>
+                                    <p class="m-0 text-muted">45%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 45%"></div>
+                                </div>
+                            </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">VueJs</h6>
-                            <p class="m-0 text-muted">45%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 45%"></div>
-                        </div>
-                    </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">jQuery</h6>
+                                    <p class="m-0 text-muted">78%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 78%"></div>
+                                </div>
+                            </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">jQuery</h6>
-                            <p class="m-0 text-muted">78%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 78%"></div>
-                        </div>
-                    </div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">Bootstrap</h6>
+                                    <p class="m-0 text-muted">99%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 99%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">HTML</h6>
+                                    <p class="m-0 text-muted">99%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 99%"></div>
+                                </div>
+                            </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">Javascript</h6>
-                            <p class="m-0 text-muted">60%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 60%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">Bootstrap</h6>
-                            <p class="m-0 text-muted">99%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 99%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">HTML</h6>
-                            <p class="m-0 text-muted">99%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 99%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="m-0">CSS</h6>
-                            <p class="m-0 text-muted">96%</p>
-                        </div>
-                        <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                            <div class="progress-bar bg-dark-blue" style="width: 96%"></div>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">CSS</h6>
+                                    <p class="m-0 text-muted">96%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 96%"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

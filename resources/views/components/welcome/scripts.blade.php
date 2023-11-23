@@ -9,16 +9,17 @@
         autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true,
-    })
-
-    window.addEventListener('load', function() {
-        const preloader = document.getElementById('preloader');
-        // const content = document.getElementById('content');
-
-        // Hide preloader and show content
-        preloader.style.display = 'none';
-        // content.style.display = 'block';
     });
+
+    // preloader
+    // window.addEventListener('load', function() {
+    //     const preloader = document.getElementById('preloader');
+    //     // const content = document.getElementById('content');
+
+    //     // Hide preloader and show content
+    //     preloader.style.display = 'none';
+    //     // content.style.display = 'block';
+    // });
 </script>
 
 @stack('script')
