@@ -55,14 +55,18 @@ class ContactFormController extends Controller
         {
             $inputs = $request->except("_token");
 
-            if($this->isValidEmail($request->email))
-            {
-                Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($inputs));
+            Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($inputs));
 
-                return $this->sendSuccess("Your contact with me is greatly appreciated. I will respond to your email as soon as possible");
-            }
+            return $this->sendSuccess("Your contact with me is greatly appreciated. I will respond to your email as soon as possible");
 
-            return $this->sendError("Please enter valid email address.");
+            // if($this->isValidEmail($request->email))
+            // {
+            //     Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($inputs));
+
+            //     return $this->sendSuccess("Your contact with me is greatly appreciated. I will respond to your email as soon as possible");
+            // }
+
+            // return $this->sendError("Please enter valid email address.");
         }
         catch(\Exception $e)
         {
