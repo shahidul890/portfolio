@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ContactForm;
 use App\Traits\HttpResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -54,19 +55,11 @@ class ContactFormController extends Controller
         try
         {
             $inputs = $request->except("_token");
+            $inputs["ip"] = $request->ip();
 
-            Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($inputs));
+            event(new ContactForm($inputs));
 
             return $this->sendSuccess("Your contact with me is greatly appreciated. I will respond to your email as soon as possible");
-
-            // if($this->isValidEmail($request->email))
-            // {
-            //     Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($inputs));
-
-            //     return $this->sendSuccess("Your contact with me is greatly appreciated. I will respond to your email as soon as possible");
-            // }
-
-            // return $this->sendError("Please enter valid email address.");
         }
         catch(\Exception $e)
         {

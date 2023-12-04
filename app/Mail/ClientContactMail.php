@@ -16,7 +16,7 @@ class ClientContactMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public array $inputs)
+    public function __construct(public $inputs, public $ip)
     {
         //
     }
