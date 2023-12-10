@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Arr;
+
 class WelcomeController extends Controller
 {
 
@@ -16,8 +18,15 @@ class WelcomeController extends Controller
      */
     public function welcome()
     {
-        $data['projects'] =  \App\Models\Project::all();
-        return view('welcome')->with($data);
+        $projects =  \App\Models\Project::all();
+
+        $mapped = Arr::where($projects, function(array $value, string $key){
+            return $value['active'] == true;
+        });
+        
+        return view('welcome')->with([
+            "projects"  => $mapped
+        ]);
     }
 
 

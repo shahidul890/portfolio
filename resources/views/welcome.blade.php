@@ -37,8 +37,7 @@
 
     <!-- I am Shahidul -->
     <section
-        class="mb-5 py-5"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/gifs/1.gif');"
+        class="mb-5 py-5 hero-bg"
     >
         <div class="d-md-none" style="padding-top: 100px;"></div>
 
@@ -167,6 +166,17 @@
                                     <div class="progress-bar bg-dark-blue" style="width: 60%"></div>
                                 </div>
                             </div>
+
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">Github</h6>
+                                    <p class="m-0 text-muted">70%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 70%"></div>
+                                </div>
+                            </div>
                             
                         </div>
                         <div class="col-md  px-4">
@@ -212,6 +222,16 @@
 
                             <div class="mb-4">
                                 <div class="d-flex justify-content-between">
+                                    <h6 class="m-0">Tailwind CSS</h6>
+                                    <p class="m-0 text-muted">66%</p>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                                    <div class="progress-bar bg-dark-blue" style="width: 66%"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between">
                                     <h6 class="m-0">CSS</h6>
                                     <p class="m-0 text-muted">96%</p>
                                 </div>
@@ -250,21 +270,37 @@
 
     <!-- Projects -->
     <section id="projects" class="py-5" style="background-image: url('/assets/img/service_bg.png');">
-        <div class="container">
+        <div class="container py-5">
 
-            <div class="row">
-                <div class="col">
+            <div class="row align-items-center">
+                <div class="col-md-4">
                     <p>PROJECTS</p>
 
                     <h1 style="font-size: 52px;">
                         I have worked over <span class="text-orange">20+ projects</span>
                     </h1>
                 </div>
-            </div>
+            {{-- </div> --}}
 
-            <div class="row py-5 align-items-center">
+            {{-- <div class="row py-5 align-items-center"> --}}
+                <div class="col-md-8">
+                    <x-swipper.projects>
+                        @foreach ($projects as $count => $project)
+                        <div class="swiper-slide">
+                            <div class="card" style="border-radius: 15px; overflow:hidden; cursor: pointer">
+                                <img src="{{$project['images'][0]}}" class="d-block w-100" alt="{{$project['name']}}">
+                                <div class="card-header bg-orange text-white text-center border-0">
+                                    <p class="m-0">{{$project['category']}}</p>
+                                    <p class="m-0"><small>Technologies: @foreach ($project['technology'] as $tech) <span class="badge bg-dark-blue">{{$tech}}</span> @endforeach </small></p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </x-swipper.projects>
+                </div>
 
-                <div class="col-md">
+
+                <div class="col-md d-none">
 
                     <div class="row mb-4 me-lg-3 justify-content-start">
 
@@ -311,23 +347,6 @@
                             </div>
 
                         @endforeach
-                        
-                       
-
-                        {{-- <div class="col-12 col-md-6 col-lg-3 mb-4">
-                            <a href="https://alloneautos.com/" target="_blank" class="text-decoration-none">
-                                <div class="card border-0 shadow" style="border-radius: 15px;">
-                                    <img
-                                        src="/assets/projects/alloneautos.png"
-                                        alt="precision"
-                                        class="card-img-top"
-                                    />
-                                    <div class="card-header text-center border-0">
-                                        Car Management
-                                    </div>
-                                </div>
-                            </a>
-                        </div> --}}
 
                     </div>
 
@@ -343,7 +362,7 @@
             <div class="row gap-3 align-items-center">
                 <div class="col-12 mb-5">
                     <p>SERVICES</p>
-                    <h1>How can <span class="text-orange">I help you?</span> </h1>
+                    <h1 style="font-size: 52px;">How can <span class="text-orange">I help you?</span> </h1>
                 </div>
 
                 <div class="my-3 col-md">

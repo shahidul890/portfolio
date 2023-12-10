@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer
-    style="background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('/assets/img/footer_bg.svg');"
+    class="footer-bg"
 >
     <div class="container text-white">
         <div class="row">

@@ -4,7 +4,7 @@ namespace App\Models;
 
 class Project
 {
-    static function all()
+    static function all(): array
     {
        return self::data();
     }
@@ -23,6 +23,17 @@ class Project
     {
         return [
             [
+                "name" => "Big R Drivig",
+                "category" => "Learning Management System (LMS)",
+                "images" => [
+                    asset("assets/projects/bigrdriving.png"),
+                ],
+                "technology" => ["Laravel 10", "Vue 3", "MySQL", "Tailwind CSS", "HTML"],
+                "link" => "https://bigrdriving.co.uk",
+                "completed_date"  => "Running",
+                "active"=> true,
+            ],
+            [
                 "name" => "Lead Tracker",
                 "category" => "Lead Management",
                 "images" => [
@@ -33,7 +44,8 @@ class Project
                 ],
                 "technology" => ["Laravel 10", "Vue 3", "MySQL", "JavaScript", "jQuery", "Bootstrap 5"],
                 "link" => "https://leads.highlycoded.com",
-                "completed_date"  => "25 June, 2023"
+                "completed_date"  => "25 June, 2023",
+                "active"=> true,
             ],
             [
                 "name" => "Precision Driving Uk",
@@ -46,7 +58,8 @@ class Project
                 ],
                 "technology" => ["Laravel 9", "MySQL", "JavaScript", "jQuery", "Bootstrap 5"],
                 "link" => "https://precisiondriving.uk",
-                "completed_date"  => "25 June, 2023"
+                "completed_date"  => "25 June, 2023",
+                "active"=> true,
             ],
             [
                 "name" => "All One Autos",
@@ -56,7 +69,8 @@ class Project
                 ],
                 "technology" => ["Laravel 8", "MySQL", "JavaScript", "jQuery", "Bootstrap 5"],
                 "link" => null,
-                "completed_date"  => "25 June, 2023"
+                "completed_date"  => "25 June, 2023",
+                "active"=> true,
             ],
             [
                 "name" => "Mr Deal",
@@ -66,7 +80,8 @@ class Project
                 ],
                 "technology" => ["Laravel 9", "MySQL", "JavaScript", "jQuery", "Bootstrap 4"],
                 "link" => null,
-                "completed_date"  => "25 June, 2023"
+                "completed_date"  => "25 June, 2023",
+                "active"=> true,
             ],
             [
                 "name" => "Gokiiw",
@@ -76,7 +91,8 @@ class Project
                 ],
                 "technology" => ["Laravel 7", "MySQL", "JavaScript", "jQuery", "Bootstrap 4"],
                 "link" => "https://gokiiw.com",
-                "completed_date"  => "25 June, 2023"
+                "completed_date"  => "25 June, 2023",
+                "active"=> true,
             ],
             [
                 "name" => "SV Kraft",
@@ -86,7 +102,8 @@ class Project
                 ],
                 "technology" => ["Laravel 8", "MySQL", "JavaScript", "jQuery", "Bootstrap 5"],
                 "link" => null,
-                "completed_date"  => "25 June, 2023"
+                "completed_date"  => "25 June, 2023",
+                "active"=> true,
             ],
             [
                 "name" => "My Bank My Loan",
@@ -96,18 +113,31 @@ class Project
                 ],
                 "technology" => ["Laravel 8", "MySQL", "JavaScript", "jQuery", "Bootstrap 5"],
                 "link" => null,
-                "completed_date"  => "01 March, 2023"
+                "completed_date"  => "01 March, 2023",
+                "active"=> false,
             ],
-            // [
-            //     "name" => "C Sports",
-            //     "category" => "Live Broadcasting",
-            //     "images" => [
-            //         asset("assets/projects/csports.png")
-            //     ],
-            //     "technology" => ["PHP", "Laravel 8", "MySQL", "JavaScript", "jQuery", "Bootstrap 5"],
-            //     "link" => null,
-            //     "completed_date"  => "02 Feb, 2023"
-            // ],
+            [
+                "name" => "Promartket",
+                "category" => "Cryto Market",
+                "images" => [
+                    asset("assets/projects/promarket.png")
+                ],
+                "technology" => ["Laravel 10", "MySQL", "JavaScript", "jQuery", "AJAX", "Rest APIs", "Bootstrap 5"],
+                "link" => null,
+                "completed_date"  => "01 October, 2023",
+                "active"=> true,
+            ],
+            [
+                "name" => "C Sports",
+                "category" => "Live Broadcasting",
+                "images" => [
+                    asset("assets/projects/csports.png")
+                ],
+                "technology" => ["PHP", "Laravel 8", "MySQL", "JavaScript", "jQuery", "Bootstrap 5"],
+                "link" => null,
+                "completed_date"  => "02 Feb, 2023",
+                "active"=> false,
+            ],
             [
                 "name" => "Sonagazi Govt College",
                 "category" => "Institute Portfolio",
@@ -116,7 +146,8 @@ class Project
                 ],
                 "technology" => ["PHP", "MySQL", "JavaScript", "jQuery", "Bootstrap 4"],
                 "link" => "http://sonagazicollege.gov.bd",
-                "completed_date"  => "25 Nov, 2020"
+                "completed_date"  => "25 Nov, 2020",
+                "active"=> true,
             ]
         ];
     }
