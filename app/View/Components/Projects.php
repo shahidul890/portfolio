@@ -6,13 +6,13 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Skills extends Component
+class Projects extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public array $skills
+        public array $projects
     )
     {
         //
@@ -23,6 +23,6 @@ class Skills extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.skills');
+        return view('components.projects');
     }
 }
