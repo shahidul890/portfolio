@@ -1,41 +1,8 @@
 @extends('layouts.welcome')
 
-@push('styles')
-    <style>
-        .project-img{
-            transition: 0.5s all ease-in-out;
-            height: 140px;
-        }
-        .project-img:hover{
-            transform: scale(1.1);
-        }
-
-        @media only screen and (max-width: 991px){
-            /*Big smartphones [426px -> 600px]*/
-            .project-img{
-                height: 210px;
-            }
-        }
-
-        @media only screen and (max-width: 600px){
-            /*Big smartphones [426px -> 600px]*/
-            .project-img{
-                height: 230px;
-            }
-        }
-
-        @media only screen and (max-width: 426px){
-            /*Small smartphones [426px]*/
-            .project-img{
-                height: 185px;
-            }
-        }
-    </style>
-@endpush
-
 @section('content')
 
-    <!-- I am Shahidul -->
+    <!-- Hero Section -->
     <section
         class="mb-5 py-5 hero-bg"
     >
@@ -103,144 +70,26 @@
         </div>
         <!-- // container end -->
     </section>
+    <!-- //. Hero Section -->
 
     <!-- Skills -->
     <section class="py-5" id="experties">
+        <div id="icons">
+            <img src="{{asset("assets/icons/php-icon.png")}}" alt="php" id="php-icon" />
+            <img src="{{asset("assets/icons/tailwind-icons.jfif")}}" alt="tailwind" id="tailwind-icon" />
+            <img src="{{asset("assets/icons/laravel-icon.png")}}" alt="laravel" id="laravel-icon" />
+            <img src="{{asset("assets/icons/vue-icon.jfif")}}" alt="vue" id="vue-icon" />
+        </div>
+
         <div class="container">
-            <div class="row gap-4">
+            <div class="row align-items-center">
                 <div class="col-md-12">
                     <p><strong>SKILLS</strong></p>
                     <h1 style="font-size: 52px;" class="mb-5">I am great in what I do <br> and <span class="text-orange">I am loving it</span></h1>
-                    {{-- <img src="/assets/gifs/php.gif" alt="giphy" class="img-fluid d-none d-md-block" /> --}}
                 </div>
 
                 <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md px-4">
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">PHP</h6>
-                                    <p class="m-0 text-muted">80%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">Laravel</h6>
-                                    <p class="m-0 text-muted">90%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">MySQL</h6>
-                                    <p class="m-0 text-muted">85%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 85%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">AJAX</h6>
-                                    <p class="m-0 text-muted">90%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">Javascript</h6>
-                                    <p class="m-0 text-muted">60%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 60%"></div>
-                                </div>
-                            </div>
-
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">Github</h6>
-                                    <p class="m-0 text-muted">70%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 70%"></div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-md  px-4">
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">VueJs</h6>
-                                    <p class="m-0 text-muted">45%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 45%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">jQuery</h6>
-                                    <p class="m-0 text-muted">78%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 78%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">Bootstrap</h6>
-                                    <p class="m-0 text-muted">99%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 99%"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">HTML</h6>
-                                    <p class="m-0 text-muted">99%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 99%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">Tailwind CSS</h6>
-                                    <p class="m-0 text-muted">66%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 66%"></div>
-                                </div>
-                            </div>
-
-                            <div class="mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0">CSS</h6>
-                                    <p class="m-0 text-muted">96%</p>
-                                </div>
-                                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                                    <div class="progress-bar bg-dark-blue" style="width: 96%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-skills :skills="$skills" />
                 </div>
             </div>
         </div>
@@ -297,59 +146,6 @@
                         </div>
                         @endforeach
                     </x-swipper.projects>
-                </div>
-
-
-                <div class="col-md d-none">
-
-                    <div class="row mb-4 me-lg-3 justify-content-start">
-
-                        @foreach ($projects as $count => $project)
-
-                            <div class="col-12 col-md-6 col-lg-3 mb-4">
-                                <div class="card border-0 shadow-lg" style="border-radius: 15px; overflow:hidden; cursor: pointer" data-bs-target="#modal-{{$count}}" data-bs-toggle="modal">
-                                    
-                                    @if(count($project['images']) > 1)
-                                    <x-carousel>
-                                       @foreach ($project['images'] as $index => $img)
-                                        <div class="carousel-item {{ ($index == 0) ? 'active' : '' }}">
-                                            <img src="{{$img}}" class="d-block w-100 project-img" alt="{{$project['name'].$index}}">
-                                        </div>
-                                       @endforeach
-                                    </x-carousel>
-                                    @else
-                                    <div style="overflow:hidden">
-                                        <img src="{{$project['images'][0]}}" class="card-img-top w-100 project-img" alt="{{$project['name']}}">
-                                    </div>
-                                    @endif
-
-                                    <div class="card-header bg-orange text-white text-center border-0">
-                                        <p class="m-0">{{$project['category']}}</p>
-                                        {{-- <p class="m-0"><small>Technologies: @foreach ($project['technology'] as $tech) <span class="badge bg-dark-blue">{{$tech}}</span> @endforeach </small></p> --}}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="modal fade" id="modal-{{$count}}">
-                                <div class="modal-dialog modal-dialog-centered modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-body p-0">
-                                            <div class="owl-carousel owl-theme">
-                                                @foreach ($project['images'] as $img)
-                                                    <div class="item">
-                                                        <img src="{{$img}}" alt="">
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        @endforeach
-
-                    </div>
-
                 </div>
             </div>
         </div>

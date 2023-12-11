@@ -1,7 +1,3 @@
-{{-- Owl Carousel --}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 <style>
     body {
         font-family: 'Josefin Sans', sans-serif;
@@ -133,6 +129,69 @@
     .nav-link.active{
         color: #ff580b !important;
         font-weight: 800
+    }
+
+    .project-img{
+        transition: 0.5s all ease-in-out;
+        height: 140px;
+    }
+    .project-img:hover{
+        transform: scale(1.1);
+    }
+
+    #experties{
+        position: relative;
+    }
+
+    #experties #icons img{
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        animation: iconAnimate 8s infinite;
+    }
+    img#php-icon{
+        top: 15%;
+        right: 15%
+    }
+
+    img#tailwind-icon{
+        top: 25%;
+        right: 20%
+    }
+
+    img#laravel-icon{
+        top: 15%;
+        right: 26%
+    }
+
+    img#vue-icon{
+        top: 23%;
+        right: 32%
+    }
+
+    @keyframes iconAnimate{
+        0% {transform: rotate(360deg);}
+    }
+
+    @media only screen and (max-width: 991px){
+        /*Big smartphones [426px -> 600px]*/
+        .project-img{
+            height: 210px;
+        }
+    }
+
+    @media only screen and (max-width: 600px){
+        /*Big smartphones [426px -> 600px]*/
+        .project-img{
+            height: 230px;
+        }
+    }
+
+    @media only screen and (max-width: 426px){
+        /*Small smartphones [426px]*/
+        .project-img{
+            height: 185px;
+        }
     }
 
     @media only screen and (max-width: 600px){

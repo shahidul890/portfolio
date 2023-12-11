@@ -19,14 +19,17 @@ class WelcomeController extends Controller
     public function welcome()
     {
         $projects =  \App\Models\Project::all();
+        $skills =  \App\Models\Skill::all();
 
-        $mapped = Arr::where($projects, function(array $value, string $key){
+        $data['projects'] = Arr::where($projects, function(array $value, string $key){
+            return $value['active'] == true;
+        });
+
+        $data['skills'] = Arr::where($skills, function(array $value, string $key){
             return $value['active'] == true;
         });
         
-        return view('welcome')->with([
-            "projects"  => $mapped
-        ]);
+        return view('welcome')->with($data);
     }
 
 
@@ -41,7 +44,7 @@ class WelcomeController extends Controller
      */
     public function about()
     {
-        return view('about');
+        // return view('about');
     }
 
 }
