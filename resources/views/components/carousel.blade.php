@@ -1,4 +1,5 @@
-<div id="leadCarousel" class="carousel slide" data-bs-ride="carousel">
+{{-- Bootstrap Carousel --}}
+<div class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         {{$slot}}
     </div>
