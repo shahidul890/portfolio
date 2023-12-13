@@ -47,7 +47,8 @@
                         </a> --}}
                     </div>
 
-                    <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a>
+                    {{-- <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a> --}}
+                    <a href="/contact" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a>
                     <a href="/contact" class="btn btn-orange px-3 mt-3">CONTACT ME</a>
                 </div>
 
