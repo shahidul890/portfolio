@@ -39,7 +39,8 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li>
                     @if (Route::is("contact"))
-                        <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn-orange btn px-4 text-decoration-none">DOWNLOAD CV</a>
+                        {{-- <a href="/contact" class="btn-orange btn px-4 text-decoration-none">DOWNLOAD CV</a> --}}
+                        {{-- <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn-orange btn px-4 text-decoration-none">DOWNLOAD CV</a> --}}
                     @else
                         <a href="{{route("contact")}}" class="btn-orange btn px-4 text-decoration-none">HIRE ME</a>
                     @endif
