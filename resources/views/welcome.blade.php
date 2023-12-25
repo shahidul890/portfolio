@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="assets/img/me4.png" alt="" class="img-fluid shadow" width="400" style="border-radius: 15px;">
+                    <img src="assets/img/ai-me4.png" alt="" class="img-fluid shadow" width="400" style="border-radius: 15px;">
                 </div>
             </div>
         </div>
