@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@hasSection('page_title') @yield('page_title') | @endif Shaihdul Islam | Full-stack Software Developer (PHP/Laravel)</title>
+    <meta name="description" content="I offer Web design, development, Rest API, and Bug-fixing services" />
+    <meta name="keywords" content="web developer, software developer, programming, software engineer, developer">
+    <meta name="author" content="Md Shahidul Islam">
 
-    <link rel="shortcut icon" href="{{asset("assets/img/fav.jpg")}}" type="image/x-icon">
+    <meta name="twitter:title" content="Md Shahidul Islam - Full-stack Software Developer" />
+    <meta name="twitter:description" content="I offer Web design, development, Rest API, and Bug-fixing services" />
+    <meta name="twitter:image" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
+    <meta name="twitter:card" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
+
+    <meta name="og:title" content="Md Shahidul Islam - Full-stack Software Developer" />
+    <meta name="og:description" content="I offer Web design, development, Rest API, and Bug-fixing services" />
+    <meta name="og:image" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
+    <meta name="og:url" content="{{url('/')}}" />
+
+    <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam | Full-stack Software Developer</title>
+
+    <link rel="shortcut icon" href="{{asset("assets/img/sha.png")}}" type="image/x-icon">
+
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
