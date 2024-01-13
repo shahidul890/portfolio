@@ -15,6 +15,12 @@
                                 <img class="card-img-top rounded-top-4" src="{{asset("assets/blogs/web-hosting.jpg")}}" alt="web hosting feature image" />
                                 <div class="p-4">
                                     <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam reiciendis neque voluptas unde dolorum official!</h5>
+                                    
+                                    <div class="text-muted my-3">
+                                        <p class="m-0"> <i class="fa fa-calendar-days"></i> Published: {{now()->subdays(10)->format("M d, Y")}}</p>
+                                        <p class="m-0"> <i class="fa fa-recycle"></i> Last Updated: {{now()->subdays(2)->format("M d, Y")}}</p>
+                                    </div>
+
                                     <a href="{{url("/blog/lorem-ipsum")}}" class="mt-3 btn btn-orange px-4">Read More <i class="fa fa-angles-right"></i> </a>
                                 </div>
                             </div>
