@@ -29,6 +29,10 @@
                 </li>
                 @endif
 
+                <li class="nav-item">
+                    <a class="nav-link @if(request()->is("blogs") || request()->is("blog/*")) active @endif" href="/blogs">Blogs</a>
+                </li>
+
                 @if (Route::is("contact"))
                 <li class="nav-item">
                     <a class="nav-link @if(Route::is('contact')) active @endif" href="{{route("contact")}}">Contact</a>

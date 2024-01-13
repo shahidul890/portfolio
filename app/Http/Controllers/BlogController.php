@@ -12,7 +12,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        return view("blogs");
     }
 
     /**
@@ -34,9 +34,9 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Blog $blog)
+    public function show(string $slug)
     {
-        //
+        return view("blogDetails")->with(compact('slug'));
     }
 
     /**
