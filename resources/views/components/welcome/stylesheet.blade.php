@@ -9,10 +9,18 @@
     }
     
     .hero-bg{
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/gifs/Blue-Connected-Particles.webp');
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/videos/hero-bg.webm');
         /* background-repeat: no-repeat;
         background-size: cover; */
         /* background-position: center; */
+    }
+
+    #hero-bg-video{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
     }
 
     .footer-bg{

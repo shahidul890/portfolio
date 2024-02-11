@@ -8,6 +8,11 @@
     >
         <div class="d-md-none" style="padding-top: 100px;"></div>
 
+        <!-- The video -->
+        <video autoplay muted loop id="hero-bg-video">
+            <source src="{{asset("assets/videos/hero-bg.webm")}}" type="video/mp4" />
+        </video>
+
         <!-- container -->
         <div class="container text-white text-md-start text-center">
 
