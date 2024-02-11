@@ -4,19 +4,18 @@
 
     <!-- Hero Section -->
     <section
-        class="mb-5 py-5 hero-bg"
+        class="hero-bg"
     >
         <div class="d-md-none" style="padding-top: 100px;"></div>
 
         <!-- The video -->
-        <video autoplay muted loop id="hero-bg-video">
-            <source src="{{asset("assets/videos/hero-bg.webm")}}" type="video/mp4" />
+        <video autoplay muted loop id="hero-bg-video" class="d-none d-lg-block">
+            <source src="{{asset("assets/videos/working-on-laptop.mov")}}" type="video/mp4" />
         </video>
 
         <!-- container -->
-        <div class="container text-white text-md-start text-center">
-
-            <div class="row align-items-center" style="min-height: 80vh;">
+        <div class="container text-white text-md-start text-center ">
+            <div class="row align-items-center overlay">
 
                 <div class="col-md">
                     <h3>Hi! I'm</h3>
