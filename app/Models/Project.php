@@ -23,6 +23,17 @@ class Project
     {
         return [
             [
+                "name" => "Esperazero Pay",
+                "category" => "A solution for received payment",
+                "images" => [
+                    asset("assets/projects/esperazero.jpeg"),
+                ],
+                "technology" => ["Laravel 10", "Vue 3", "MySQL", "Tailwind CSS", "Preline"],
+                "link" => "https://esperazero.live",
+                "completed_date"  => "10 February, 2024",
+                "active"=> true,
+            ],
+            [
                 "name" => "Big R Drivig",
                 "category" => "Learning Management System (LMS)",
                 "images" => [
@@ -30,7 +41,7 @@ class Project
                 ],
                 "technology" => ["Laravel 10", "Vue 3", "MySQL", "Tailwind CSS", "HTML"],
                 "link" => "https://bigrdriving.co.uk",
-                "completed_date"  => "Running",
+                "completed_date"  => "30 January, 2024",
                 "active"=> true,
             ],
             [
