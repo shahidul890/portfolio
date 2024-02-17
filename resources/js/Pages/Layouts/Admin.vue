@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <Link class="navbar-brand" href="/">
+                <Link class="navbar-brand" href="/home">
                     shahidull.com
                 </Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -11,17 +11,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <Link href="/admin/blogs" class="">Blogs</Link>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ user.name }}
-                            </a>
+                            <Link id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ $page.props.auth.user.name }}
+                            </Link>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <Link class="dropdown-item" href="/logout" method="post" as="button">Logout</Link>
@@ -39,10 +41,5 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { usePage, Link } from '@inertiajs/vue3'
-
-const page = usePage()
-
-const user = computed(() => page.props.auth.user)
+import { Link } from '@inertiajs/vue3';
 </script>
