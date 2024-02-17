@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,4 +22,6 @@ Route::get("/check/validity", [App\Http\Controllers\ContactFormController::class
 Route::middleware('auth')
 ->group(function(){
     Route::get('home', [HomeController::class, 'index']);
+
+    Route::resource('admin/blogs', AdminBlogController::class);
 });
