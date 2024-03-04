@@ -14,4 +14,11 @@ class Contact extends Model
     protected $casts = [
         'ip' => 'object'
     ];
+
+    protected $appends = ['full_name'];
+
+    public function getFullNameAttribute()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
 }

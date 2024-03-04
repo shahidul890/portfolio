@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,4 +25,5 @@ Route::middleware('auth')
     Route::get('home', [HomeController::class, 'index']);
 
     Route::resource('admin/blogs', AdminBlogController::class);
+    Route::resource('admin/contact-requests', ContactController::class);
 });
