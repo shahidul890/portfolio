@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\ContactForm;
+use App\Models\Contact;
 use App\Traits\HttpResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -55,8 +56,11 @@ class ContactFormController extends Controller
         try
         {
             $inputs = $request->except("_token");
-            $inputs["ip"] = $request->ip();
+            $ip = $request->ip();
+            $http = Http::withoutVerifying()->get("https://ipinfo.io/$ip?token=6cc45549a56a40");
+            $inputs["ip"] = $http->object();
 
+            Contact::create($inputs);
             event(new ContactForm($inputs));
 
             return $this->sendSuccess("Your contact with me is greatly appreciated. I will respond to your email as soon as possible");

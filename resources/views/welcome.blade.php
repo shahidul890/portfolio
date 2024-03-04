@@ -60,7 +60,7 @@
                     class="col-md text-md-end slow-motion"
                     style="position: relative;"
                 >
-                    <div class="bg-light text-dark p-3 experience-card">
+                    <div class="bg-light text-dark p-3 experience-card" style="z-index: 100">
                         <div class="d-flex gap-3 align-items-center">
                             <h1 class="m-0 text-blue">3+</h1>
                             <div class="text-start">
