@@ -127,14 +127,14 @@
         <div class="container py-3">
 
             <div class="row align-items-center">
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <p>PROJECTS</p>
 
                     <h1 style="font-size: 52px;">
                         I have worked over <span class="text-orange">20+ projects</span>
                     </h1>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <x-projects :projects="$projects" />
                 </div>
             </div>

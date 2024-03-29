@@ -23,6 +23,17 @@ class Project
     {
         return [
             [
+                "name" => "RhodesCoffeeCo",
+                "category" => "A Business Profile",
+                "images" => [
+                    asset("assets/projects/sc_rhodescoffeeco.png"),
+                ],
+                "technology" => ["Laravel 10", "Inertia JS", "Vue 3", "MySQL", "Tailwind CSS", "Flowbite"],
+                "link" => "https://rhodescoffeeco.com",
+                "completed_date"  => "15 March, 2024",
+                "active"=> true,
+            ],
+            [
                 "name" => "Esperazero Pay",
                 "category" => "A solution for received payment",
                 "images" => [
@@ -48,6 +59,7 @@ class Project
                 "name" => "Lead Tracker",
                 "category" => "Lead Management",
                 "images" => [
+                    asset("assets/projects/sc_leads.png"),
                     asset("assets/projects/lead/logo.png"),
                     asset("assets/projects/lead/login.png"),
                     asset("assets/projects/lead/dashboard.png"),
