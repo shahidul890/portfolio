@@ -4,14 +4,18 @@
 
     <!-- Hero Section -->
     <section
-        class="mb-5 py-5 hero-bg"
+        class="hero-bg"
     >
         <div class="d-md-none" style="padding-top: 100px;"></div>
 
-        <!-- container -->
-        <div class="container text-white text-md-start text-center">
+        <!-- The video -->
+        <video autoplay muted loop id="hero-bg-video" class="d-none d-lg-block">
+            <source src="{{asset("assets/videos/working-on-laptop.mov")}}" type="video/mp4" />
+        </video>
 
-            <div class="row align-items-center" style="min-height: 80vh;">
+        <!-- container -->
+        <div class="container text-white text-md-start text-center ">
+            <div class="row align-items-center overlay">
 
                 <div class="col-md">
                     <h3>Hi! I'm</h3>
@@ -56,7 +60,7 @@
                     class="col-md text-md-end slow-motion"
                     style="position: relative;"
                 >
-                    <div class="bg-light text-dark p-3 experience-card">
+                    <div class="bg-light text-dark p-3 experience-card" style="z-index: 100">
                         <div class="d-flex gap-3 align-items-center">
                             <h1 class="m-0 text-blue">3+</h1>
                             <div class="text-start">

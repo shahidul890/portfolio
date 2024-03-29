@@ -23,13 +23,10 @@ class ContactFormListner
      */
     public function handle(ContactForm $event)
     {
-        $ip = $event->data['ip'];
+        $ip = json_encode($event->data['ip']);
 
-        $http = Http::withoutVerifying()
-        ->get("https://ipinfo.io/$ip?token=6cc45549a56a40");
-
-        $ipResponse = json_encode($http->object());
-
-        Mail::to("contact.shahidul@gmail.com")->send(new \App\Mail\ClientContactMail($event->data, $ipResponse));
+        Mail::to(env('SUPPORT_EMAIL_ADDRESS'))->send(
+            new \App\Mail\ClientContactMail($event->data, $ip)
+        );
     }
 }
