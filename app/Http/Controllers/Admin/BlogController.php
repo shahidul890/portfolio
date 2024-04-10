@@ -30,7 +30,32 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'thumbnail' => 'required|file',
+            'content' => 'required'
+        ]);
+
+        try
+        {
+            $inputs['title'] = $request->title;
+            $inputs['content'] = $request->content;
+
+            if($request->has('thumbnail'))
+            {
+                $fileName = $request->file('thumbnail')->hashName();
+                $request->file('thumbnail')->move(public_path('uploads/thumbs'), $fileName);
+                $inputs['thumbnail'] = "/uploads/thumbs/$fileName";
+            }
+            
+            Blog::create($inputs);
+
+            return back()->with('message', 'Blogs created successfully');
+        }
+        catch(\Exception $th)
+        {
+            return back()->with('exception',$th->getMessage());
+        }
     }
 
     /**

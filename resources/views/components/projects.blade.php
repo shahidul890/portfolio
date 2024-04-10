@@ -58,6 +58,7 @@
         <div class="card" style="border-radius: 15px; overflow:hidden; cursor: pointer">
             <img src="{{$project['images'][0]}}" class="d-block w-100" alt="{{$project['name']}}">
             <div class="card-header bg-orange text-white text-center border-0">
+                <p class="m-0">{{$project['name']}}</p>
                 <p class="m-0">{{$project['category']}}</p>
                 <p class="m-0"><small>Technologies: @foreach ($project['technology'] as $tech) <span class="badge bg-dark-blue">{{$tech}}</span> @endforeach </small></p>
             </div>

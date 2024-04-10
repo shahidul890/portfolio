@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md shadow-sm">
             <div class="container">
                 <Link class="navbar-brand" href="/home">
                     shahidull.com
@@ -12,6 +12,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ms-auto gap-5">
+                        <li class="nav-item">
+                            <Link href="/admin/categories" class="">Categories</Link>
+                        </li>
                         <li class="nav-item">
                             <Link href="/admin/blogs" class="">Blogs</Link>
                         </li>

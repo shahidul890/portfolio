@@ -1,6 +1,6 @@
-@extends('layouts.welcome')
+<template>
 
-@section('content')
+    <FrontLayout>
 
     <!-- Hero Section -->
     <section
@@ -10,7 +10,7 @@
 
         <!-- The video -->
         <video autoplay muted loop id="hero-bg-video" class="d-none d-lg-block">
-            <source src="{{asset("assets/videos/working-on-laptop.mov")}}" type="video/mp4" />
+            <source :src="'/assets/videos/working-on-laptop.mov'" type="video/mp4" />
         </video>
 
         <!-- container -->
@@ -40,7 +40,7 @@
                         <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
                             <i class="bi bi-github"></i>
                         </a>
-                        {{-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
+                        <!-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
                             <img
                                 src="/assets/icons/fiverr.png"
                                 alt="fiverr"
@@ -48,12 +48,12 @@
                                 class="img-fluid rounded-circle bg-orange"
                                 style="margin-top: -12px;"
                             />
-                        </a> --}}
+                        </a> -->
                     </div>
 
-                    {{-- <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a> --}}
-                    <a href="/contact" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a>
-                    <a href="/contact" class="btn btn-orange px-3 mt-3">CONTACT ME</a>
+                    <!-- <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a> -->
+                    <Link href="/contact" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</Link>
+                    <Link href="/contact" class="btn btn-orange px-3 mt-3">CONTACT ME</Link>
                 </div>
 
                 <div
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="assets/img/ai-me4.png" alt="" class="img-fluid shadow" width="400" style="border-radius: 15px;">
+                    <img :src="'/assets/img/ai-me4.png'" alt="" class="img-fluid shadow" width="400" style="border-radius: 15px;">
                 </div>
             </div>
         </div>
@@ -80,10 +80,10 @@
     <!-- Skills -->
     <section class="py-5" id="experties">
         <div id="icons">
-            <img src="{{asset("assets/icons/php-icon.png")}}" alt="php" id="php-icon" />
-            <img src="{{asset("assets/icons/tailwind-icons.jfif")}}" alt="tailwind" id="tailwind-icon" />
-            <img src="{{asset("assets/icons/laravel-icon.png")}}" alt="laravel" id="laravel-icon" />
-            <img src="{{asset("assets/icons/vue-icon.jfif")}}" alt="vue" id="vue-icon" />
+            <img :src="'/assets/icons/php-icon.png'" alt="php" id="php-icon" />
+            <img :src="'/assets/icons/tailwind-icons.jfif'" alt="tailwind" id="tailwind-icon" />
+            <img :src="'/assets/icons/laravel-icon.png'" alt="laravel" id="laravel-icon" />
+            <img :src="'/assets/icons/vue-icon.jfif'" alt="vue" id="vue-icon" />
         </div>
 
         <div class="container">
@@ -94,7 +94,22 @@
                 </div>
 
                 <div class="col-md-12">
-                    <x-skills :skills="$skills" />
+                    
+                    <div class="row align-items-center justify-content-center gy-3">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" v-for="item in skills">
+                            <div class="card rounded-4">
+                                <img class="img-fluid rounded-4" :src="item.icon" :alt="item.title" style="height: 100px; width: 100%"/>
+                                <div class="card-body text-center">
+                                    <p class="m-0 text-nowrap">{{item.title}}</p>
+                                    <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 25px">
+                                        <div class="progress-bar bg-dark-blue progress-bar-striped progress-bar-animated" :style="'width:'+item.width ">
+                                            <h6 class="m-0">{{item.width}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,7 +121,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md">
-                    <img src="/assets/gifs/developer.gif" alt="developer" class="img-fluid"/>
+                    <img :src="'/assets/gifs/developer.gif'" alt="developer" class="img-fluid"/>
                 </div>
                 <div class="col-md">
                     <p>ABOUT ME</p>
@@ -115,7 +130,7 @@
                     <br>
                     <p>With 3+ years of experience as a programmer, I've honed my skills in creating efficient and innovative solutions for a diverse range of clients. My journey started with a passion for coding, I've cultivated expertise that enables me to tackle complex challenges and deliver exceptional results. I have worked on a wide range of projects, such as School Management, Industry Management, Ecommerce, MLM, Car Management, and Schedule Booking. My programming expertise spans several key areas, making me a versatile choice for your projects. I specialize in PHP, Laravel, REST API, MySQL, AJAX, jQuery</p>
 
-                    <a href="javascript::" class="btn btn-orange px-5">Hire Me</a>
+                    <Link href="/contact" class="btn btn-orange px-5">Hire Me</Link>
                 </div>
             </div>
         </div>
@@ -135,7 +150,7 @@
                     </h1>
                 </div>
                 <div class="col-md-12">
-                    <x-projects :projects="$projects" />
+                    <!-- <x-projects :projects="$projects" /> -->
                 </div>
             </div>
         </div>
@@ -158,4 +173,15 @@
         </div>
     </section>
     <!-- // Services end -->
-@endsection
+
+    </FrontLayout>
+</template>
+
+<script setup>
+import FrontLayout from './../Layouts/Frontend.vue';
+import { Link } from '@inertiajs/vue3';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+
+defineProps(['projects', 'skills']);
+</script>
