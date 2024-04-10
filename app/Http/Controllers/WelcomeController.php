@@ -30,6 +30,7 @@ class WelcomeController extends Controller
         });
         
         return view('welcome')->with($data);
+        // return inertia('Frontend/Welcome', $data);
     }
 
 

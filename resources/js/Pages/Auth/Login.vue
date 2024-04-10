@@ -30,10 +30,10 @@
                         </div>
 
                         <!-- Checkbox -->
-                        <div class="form-check d-flex justify-content-start mb-4">
+                        <!-- <div class="form-check d-flex justify-content-start mb-4">
                             <input class="form-check-input" id="form1Example3" type="checkbox" value="" v-model="form.remember"/>
                             <label class="form-check-label" for="form1Example3"> Remember password </label>
-                        </div>
+                        </div> -->
                         
                         <button class="btn btn-primary btn-lg btn-block w-100" type="submit" :disabled="form.processing">Login</button>
                     </div>
@@ -53,9 +53,4 @@ const form = useForm({
     password: null,
     remember: false
 })
-
-
-const handleLoginRequest = () => {
-    router.post('/login', form);
-}
 </script>
