@@ -14,9 +14,16 @@
                             <form @submit.prevent="form.post('/admin/blogs')">
                                 <div class="form-group">
                                     <label for="">Category</label>
-                                    <select class="form-select mt-1" :class="form.errors.category_id ? 'is-invalid' : ''" v-model="form.categories">
-                                        <option v-for="item in categories" :value="item.id">{{item.name}}</option>
-                                    </select>
+                                    <VueMultiselect
+                                        class="mt-1"
+                                        v-model="form.category_id"
+                                        :options="categories"
+                                        :searchable="true"
+                                        @search-change="asyncFind"
+                                        placeholder="Type to search"
+                                        label="name"
+                                        track-by="id"
+                                    />
                                     <span class="text-danger text-xs" v-if="form.errors.category_id">{{ form.errors.category_id }}</span>
                                 </div>
 
@@ -33,6 +40,20 @@
                                     </progress>
                                     <span class="text-danger text-xs" v-if="form.errors.thumbnail">{{ form.errors.thumbnail }}</span>
                                 </div>
+
+                                <div class="form-group my-2">
+                                    <label for="">Content Image (Upload and get link)</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control mt-1" @input="upload.file = $event.target.files[0]" :class="upload.errors.thumbnail ? 'is-invalid' : ''" />
+                                        <button class="input-group-text btn btn-sm btn-primary" @click.prevent="uploadAndGetLink">Upload</button>
+                                    </div>
+                                    <progress v-if="form.progress" :value="form.progress.percentage" max="100">
+                                        {{ form.progress.percentage }}%
+                                    </progress>
+                                    <span class="text-danger text-xs" v-if="form.errors.thumbnail">{{ form.errors.thumbnail }}</span>
+                                    <span class="text-success text-sm" v-if="uploadedUrl">{{ uploadedUrl }}</span>
+                                </div>
+
                                 <div class="form-group mt-2">
                                     <label for="">Content</label> <br>
                                     <span class="text-danger text-xs" v-if="form.errors.content">{{ form.errors.content }}</span>
@@ -58,9 +79,14 @@
 <script setup>
 import AdminLayout from './../Layouts/Admin.vue';
 import FlashMessage from '../Components/FlashMessage.vue';
-import { Link, useForm } from '@inertiajs/vue3';
+import { Link, useForm, router } from '@inertiajs/vue3';
 import Editor from '@tinymce/tinymce-vue';
+import VueMultiselect from 'vue-multiselect';
+import axios from 'axios';
+import { ref } from 'vue';
+
 defineProps(['categories']);
+const uploadedUrl = ref(null);
 
 const form = useForm({
   title: null,
@@ -68,4 +94,20 @@ const form = useForm({
   content: null,
   categories: ''
 })
+
+const upload = useForm({
+    file: null
+})
+
+const headers = {
+    'Content-Type': 'multipart/form-data',
+    "Accept": "application/json",
+}
+
+const uploadAndGetLink = async () => {
+    const http = await axios.post('/cp/upload/file', upload, {headers:headers});
+    uploadedUrl.value = http.data.link;
+}
+
 </script>
+<style src="vue-multiselect/dist/vue-multiselect.css"></style>

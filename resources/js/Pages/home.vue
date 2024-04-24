@@ -4,8 +4,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-body">
-                            Hi {{ $page.props.auth.user.name }} . You are logged in! 
+                        <div class="card-body d-flex">
+                            Hi {{ $page.props.auth.user.name }} . You are logged in!
+                            <span class="ms-auto text-success fw-bolder">v1.1.0</span>
                         </div>
                     </div>
                 </div>
