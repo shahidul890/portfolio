@@ -23,9 +23,9 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')
-            ->restrictOnDelete()->cascadeOnUpdate();
+            ->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreign('creator_id')->references('id')->on('users')
-            ->restrictOnDelete()->cascadeOnUpdate();
+            ->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->index('title');
             $table->index('tags');

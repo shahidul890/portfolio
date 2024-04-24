@@ -6,7 +6,7 @@
                     <div class="card">
                         <div class="card-header d-flex">
                             <h5 class="card-title m-0">Blogs</h5>
-                            <Link href="/admin/blogs/create" class="btn btn-sm btn-outline-primary ms-auto">+ Create</Link>
+                            <Link href="/cp/blogs/create" class="btn btn-sm btn-outline-primary ms-auto">+ Create</Link>
                         </div>
                         <div class="card-body table-responsive">
                             <table class="table table-striped table-bordered">
