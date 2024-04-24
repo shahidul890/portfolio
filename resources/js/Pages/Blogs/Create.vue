@@ -6,12 +6,12 @@
                     <div class="card">
                         <div class="card-header d-flex align-items-center">
                             <h5 class="card-title m-0">Create Blogs</h5>
-                            <Link href="/admin/blogs" class="btn btn-sm btn-outline-primary ms-auto"> <i class="fa fa-arrow-left"></i> Back</Link>
+                            <Link href="/cp/blogs" class="btn btn-sm btn-outline-primary ms-auto"> <i class="fa fa-arrow-left"></i> Back</Link>
                         </div>
                         <div class="card-body table-responsive">
                             <FlashMessage/>
 
-                            <form @submit.prevent="form.post('/admin/blogs')">
+                            <form @submit.prevent="form.post('/cp/blogs')">
                                 <div class="form-group">
                                     <label for="">Category</label>
                                     <VueMultiselect
@@ -19,7 +19,6 @@
                                         v-model="form.category_id"
                                         :options="categories"
                                         :searchable="true"
-                                        @search-change="asyncFind"
                                         placeholder="Type to search"
                                         label="name"
                                         track-by="id"
@@ -92,7 +91,7 @@ const form = useForm({
   title: null,
   thumbnail: null,
   content: null,
-  categories: ''
+  category_id: ''
 })
 
 const upload = useForm({

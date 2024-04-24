@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['login'=>false]);
 Route::get('cp', [LoginController::class, 'showLoginForm']);
+Route::post('login', [LoginController::class, 'login'])->name('login');
 
 Route::get("/", [App\Http\Controllers\WelcomeController::class, 'welcome'])->name('welcome');
 Route::get("/about", [App\Http\Controllers\WelcomeController::class, 'about'])->name('about');
