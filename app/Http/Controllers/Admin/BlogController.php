@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -22,7 +23,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return inertia('Blogs/Create');
+        $categories = Category::whereIsActive(1)->get();
+        return inertia('Blogs/Create', compact('categories'));
     }
 
     /**

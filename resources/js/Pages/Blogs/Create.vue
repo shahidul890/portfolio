@@ -15,7 +15,7 @@
                                 <div class="form-group">
                                     <label for="">Category</label>
                                     <select class="form-select mt-1" :class="form.errors.category_id ? 'is-invalid' : ''" v-model="form.categories">
-                                        <option value="" selected disabled>Select One</option>
+                                        <option v-for="item in categories" :value="item.id">{{item.name}}</option>
                                     </select>
                                     <span class="text-danger text-xs" v-if="form.errors.category_id">{{ form.errors.category_id }}</span>
                                 </div>
@@ -59,7 +59,8 @@
 import AdminLayout from './../Layouts/Admin.vue';
 import FlashMessage from '../Components/FlashMessage.vue';
 import { Link, useForm } from '@inertiajs/vue3';
-import Editor from '@tinymce/tinymce-vue'
+import Editor from '@tinymce/tinymce-vue';
+defineProps(['categories']);
 
 const form = useForm({
   title: null,
