@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -22,7 +25,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return inertia('Blogs/Create');
+        $categories = Category::get();
+        return inertia('Blogs/Create')->with(compact('categories'));
     }
 
     /**
@@ -31,15 +35,19 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
+            'title' => 'required|string',
             'thumbnail' => 'required|file',
-            'content' => 'required'
+            'content' => 'required',
+            'category_id' => 'required|exists:categories,id',
         ]);
 
         try
         {
             $inputs['title'] = $request->title;
             $inputs['content'] = $request->content;
+            $inputs['category_id'] = $request->category_id;
+            $inputs['creator_id'] = Auth::id();
+            $inputs['slug'] = Str::slug($request->title);
 
             if($request->has('thumbnail'))
             {
@@ -87,6 +95,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+        return back()->with('message', 'Record deleted successfully');
     }
 }

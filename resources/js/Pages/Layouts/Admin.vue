@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar navbar-expand-md shadow-sm">
             <div class="container">
-                <Link class="navbar-brand" href="/home">
+                <Link class="navbar-brand" href="/cp/home">
                     shahidull.com
                 </Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -13,13 +13,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ms-auto gap-5">
                         <li class="nav-item">
-                            <Link href="/admin/categories" class="">Categories</Link>
+                            <Link href="/cp/categories" class="">Categories</Link>
                         </li>
                         <li class="nav-item">
-                            <Link href="/admin/blogs" class="">Blogs</Link>
+                            <Link href="/cp/blogs" class="">Blogs</Link>
                         </li>
                         <li class="nav-item">
-                            <Link href="/admin/contact-requests" class="">Contact Requests</Link>
+                            <Link href="/cp/contact-requests" class="">Contact Requests</Link>
                         </li>
                     </ul>
 
