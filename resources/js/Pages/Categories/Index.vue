@@ -52,7 +52,7 @@
                     <h1 class="modal-title fs-5" id="createModalLabel">Modal title</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form @submit.prevent="form.post('/admin/categories'), form.reset()">
+                <form @submit.prevent="form.post('/cp/categories'), form.reset()">
                 <div class="modal-body">
                     <FlashMessage/>
 
@@ -79,7 +79,7 @@
                     <h1 class="modal-title fs-5" id="EditModalLabel">Modal title</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" id="editModalCloseBtn" aria-label="Close"></button>
                 </div>
-                <form @submit.prevent="form.put('/admin/categories/'+form.id, {
+                <form @submit.prevent="form.put('/cp/categories/'+form.id, {
                     onSuccess: () => editModalHide()
                 })">
                 <div class="modal-body">
@@ -113,13 +113,13 @@ const form = useForm({
 
 const handleDeleteRequests = (id) => {
     if(confirm('Are you sure?')){
-        router.delete('/admin/categories/'+id);
+        router.delete('/cp/categories/'+id);
     }
 }
 
 const handleToggleRequests = (id) => {
     if(confirm('Are you sure?')){
-        router.put('/admin/categories/'+id+'/status');
+        router.put('/cp/categories/'+id+'/status');
     }
 }
 

@@ -16,6 +16,9 @@
                             <Link href="/cp/categories" class="">Categories</Link>
                         </li>
                         <li class="nav-item">
+                            <Link href="/cp/tags" class="">Tags</Link>
+                        </li>
+                        <li class="nav-item">
                             <Link href="/cp/blogs" class="">Blogs</Link>
                         </li>
                         <li class="nav-item">

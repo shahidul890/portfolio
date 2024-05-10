@@ -16,6 +16,7 @@
     <meta name="og:description" content="I offer Web design, development, Rest API, and Bug-fixing services" />
     <meta name="og:image" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
     <meta name="og:url" content="{{url('/')}}" />
+    <meta name="google-adsense-account" content="ca-pub-6580540719182750" />
 
     <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam - Full-stack Software Developer</title>
 
@@ -23,8 +24,9 @@
 
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link href="{{asset('bootstrap@5.3.3/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('bootstrap-icons@1.11.3/font/bootstrap-icons.css')}}" />
+
     {{-- Fontowesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Font -->
@@ -42,8 +44,9 @@
 
     <x-welcome.footer/>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{asset('bootstrap@5.3.3/js/bootstrap.bundle.min.js')}}"></script>
+    
     @stack('script')
 </body>
 </html>

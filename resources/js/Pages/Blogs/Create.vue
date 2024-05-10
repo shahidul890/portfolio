@@ -2,16 +2,16 @@
     <AdminLayout>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header d-flex align-items-center">
                             <h5 class="card-title m-0">Create Blogs</h5>
-                            <Link href="/admin/blogs" class="btn btn-sm btn-outline-primary ms-auto"> <i class="fa fa-arrow-left"></i> Back</Link>
+                            <Link href="/cp/blogs" class="btn btn-sm btn-outline-primary ms-auto"> <i class="fa fa-arrow-left"></i> Back</Link>
                         </div>
                         <div class="card-body table-responsive">
                             <FlashMessage/>
 
-                            <form @submit.prevent="form.post('/admin/blogs')">
+                            <form @submit.prevent="form.post('/cp/blogs')">
                                 <div class="form-group">
                                     <label for="">Category</label>
                                     <VueMultiselect
@@ -19,6 +19,22 @@
                                         v-model="form.category_id"
                                         :options="categories"
                                         :searchable="true"
+                                        @search-change="asyncFind"
+                                        placeholder="Type to search"
+                                        label="name"
+                                        track-by="id"
+                                    />
+                                    <span class="text-danger text-xs" v-if="form.errors.category_id">{{ form.errors.category_id }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Tags</label>
+                                    <VueMultiselect
+                                        class="mt-1"
+                                        v-model="form.tag_ids"
+                                        :options="tags"
+                                        :searchable="true"
+                                        :multiple="true"
                                         @search-change="asyncFind"
                                         placeholder="Type to search"
                                         label="name"
@@ -50,7 +66,6 @@
                                     <progress v-if="form.progress" :value="form.progress.percentage" max="100">
                                         {{ form.progress.percentage }}%
                                     </progress>
-                                    <span class="text-danger text-xs" v-if="form.errors.thumbnail">{{ form.errors.thumbnail }}</span>
                                     <span class="text-success text-sm" v-if="uploadedUrl">{{ uploadedUrl }}</span>
                                 </div>
 
@@ -85,14 +100,15 @@ import VueMultiselect from 'vue-multiselect';
 import axios from 'axios';
 import { ref } from 'vue';
 
-defineProps(['categories']);
+defineProps(['categories', 'tags']);
 const uploadedUrl = ref(null);
 
 const form = useForm({
   title: null,
   thumbnail: null,
   content: null,
-  categories: ''
+  category_id: '',
+  tag_ids: []
 })
 
 const upload = useForm({

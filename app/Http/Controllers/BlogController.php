@@ -12,7 +12,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blogs');
+        $blogs = Blog::whereIsActive(true)->get();
+        return view('blogs')->with(compact('blogs'));
     }
 
     /**
@@ -34,9 +35,11 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Blog $blog)
+    public function show($slug)
     {
-        //
+        $blog = Blog::where('slug', 'LIKE', "%{$slug}%")->first();
+        // $recomended_blogs = Blog::where
+        return view('blog-details')->with(compact('blog'));
     }
 
     /**

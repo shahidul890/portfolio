@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class BlogController extends Controller
@@ -25,8 +27,9 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $categories = Category::get();
-        return inertia('Blogs/Create')->with(compact('categories'));
+        $categories = Category::whereIsActive(true)->get(['name', 'id']);
+        $tags = Tag::whereIsActive(true)->get(['name', 'id']);
+        return inertia('Blogs/Create')->with(compact('categories', 'tags'));
     }
 
     /**
@@ -38,14 +41,14 @@ class BlogController extends Controller
             'title' => 'required|string',
             'thumbnail' => 'required|file',
             'content' => 'required',
-            'category_id' => 'required|exists:categories,id',
+            'category_id.id' => 'required|exists:categories,id',
         ]);
 
         try
         {
             $inputs['title'] = $request->title;
             $inputs['content'] = $request->content;
-            $inputs['category_id'] = $request->category_id;
+            $inputs['category_id'] = $request->category_id['id'];
             $inputs['creator_id'] = Auth::id();
             $inputs['slug'] = Str::slug($request->title);
 
@@ -56,7 +59,13 @@ class BlogController extends Controller
                 $inputs['thumbnail'] = "/uploads/thumbs/$fileName";
             }
             
-            Blog::create($inputs);
+            $blog = Blog::create($inputs);
+
+            $tag_ids = [];
+            foreach ($request->tag_ids as $tag) {
+                array_push($tag_ids, $tag['id']);
+            }
+            $blog->tags()->attach($tag_ids);
 
             return back()->with('message', 'Blogs created successfully');
         }
@@ -79,7 +88,9 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        $categories = Category::whereIsActive(true)->get(['name', 'id']);
+        $tags = Tag::whereIsActive(true)->get(['name', 'id']);
+        return inertia('Blogs/Edit')->with(compact('categories', 'tags', 'blog'));
     }
 
     /**
@@ -87,7 +98,41 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $request->validate([
+            'title' => 'required|string',
+            'thumbnail' => 'nullable|file',
+            'content' => 'required',
+            'category_id.id' => 'required|exists:categories,id',
+        ]);
+
+        try
+        {
+            $inputs['title'] = $request->title;
+            $inputs['content'] = $request->content;
+            $inputs['category_id'] = $request->category_id['id'];
+            $inputs['slug'] = Str::slug($request->title);
+
+            if($request->has('thumbnail'))
+            {
+                $fileName = $request->file('thumbnail')->hashName();
+                $request->file('thumbnail')->move(public_path('uploads/thumbs'), $fileName);
+                $inputs['thumbnail'] = "/uploads/thumbs/$fileName";
+            }
+            
+            $blog->update($inputs);
+
+            $tag_ids = [];
+            foreach ($request->tag_ids as $tag) {
+                array_push($tag_ids, $tag['id']);
+            }
+            $blog->tags()->async($tag_ids);
+
+            return back()->with('message', 'Blogs created successfully');
+        }
+        catch(\Exception $th)
+        {
+            return back()->with('exception',$th->getMessage());
+        }
     }
 
     /**
@@ -95,7 +140,9 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        $blog->delete();
+        File::delete(public_path($blog->thumbnail)); // Delete related thumbnail
+        $blog->tags()->detach(); // Delete related tags
+        $blog->delete(); // Delete core resource
         return back()->with('message', 'Record deleted successfully');
     }
 }
