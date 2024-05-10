@@ -13,7 +13,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $collection = Contact::paginate();
+        $collection = Contact::latest()->paginate();
         return inertia('Contacts/Index', compact('collection'));
     }
 

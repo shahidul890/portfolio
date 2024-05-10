@@ -36,7 +36,7 @@
                                         </td>
                                     </tr>
                                     <tr v-else align="center">
-                                        <td colspan="4">No record found</td>
+                                        <td colspan="5">No record found</td>
                                     </tr>
                                 </tbody>
                             </table>
