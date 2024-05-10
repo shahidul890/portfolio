@@ -29,9 +29,11 @@
                 </li>
                 @endif
 
+                @if(Route::has('welcome.blogs'))
                 <li class="nav-item">
                     <a class="nav-link @if(request()->is("blogs") || request()->is("blog/*")) active @endif" href="/blogs">Blogs</a>
                 </li>
+                @endif
 
                 @if (Route::is("contact"))
                 <li class="nav-item">

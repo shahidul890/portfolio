@@ -12,7 +12,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::whereIsActive(true)->get();
+        $blogs = Blog::whereIsActive(true)->latest()->get();
         return view('blogs')->with(compact('blogs'));
     }
 

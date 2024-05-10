@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card rounded-3 shadow mb-5">
+                    <div class="card rounded-3 shadow mb-3">
                         <div class="card-body">
                             <h2>{{\Str::ucfirst($blog->title)}}</h2>
                             
@@ -60,7 +60,7 @@
                 </div>
 
 
-                <div class="col-md-12 mt-5">
+                {{-- <div class="col-md-12 mt-5">
                     <p>Related Blogs</p>
                     <h1 style="font-size: 52px;">Maybe you will<span class="text-orange"> benefit to know </span> </h1>
 
@@ -79,7 +79,7 @@
                             </div>
                         @endfor
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
