@@ -9,6 +9,7 @@
                             <button @click="form.reset()" data-bs-target="#createModal" data-bs-toggle="modal" class="btn btn-sm btn-outline-primary ms-auto">+ Create</button>
                         </div>
                         <div class="card-body table-responsive">
+                            <FlashMessage/>
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
@@ -54,8 +55,6 @@
                 </div>
                 <form @submit.prevent="form.post('/cp/categories'), form.reset()">
                 <div class="modal-body">
-                    <FlashMessage/>
-
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" v-model="form.name" class="form-control mt-2" :class="form.errors.name ? 'is-invalid' : ''" />
@@ -83,8 +82,6 @@
                     onSuccess: () => editModalHide()
                 })">
                 <div class="modal-body">
-                    <FlashMessage/>
-
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" v-model="form.name" class="form-control mt-2" />

@@ -19,7 +19,6 @@
                                         v-model="form.category_id"
                                         :options="categories"
                                         :searchable="true"
-                                        @search-change="asyncFind"
                                         placeholder="Type to search"
                                         label="name"
                                         track-by="id"
