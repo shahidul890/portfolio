@@ -2,7 +2,7 @@
     <AdminLayout>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header d-flex">
                             <h5 class="card-title m-0">Blogs</h5>
@@ -16,6 +16,8 @@
                                         <th>#</th>
                                         <th>Thumbnail</th>
                                         <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Tags</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -27,6 +29,10 @@
                                             <img :src="blog.thumbnail" :alt="'Thumbnail of '+index" width="150" height="70" class="img-fluid rounded" />
                                         </td>
                                         <td>{{ blog.title }}</td>
+                                        <td>{{ blog.category?.name }}</td>
+                                        <td>
+                                            <span class="badge bg-success me-1" v-if="blog.tags?.length" v-for="tag in blog.tags">{{ tag.name }}</span>
+                                        </td>
                                         <td>{{ blog.active_as }}</td>
                                         <td>
                                             <div class="d-flex gap-1">

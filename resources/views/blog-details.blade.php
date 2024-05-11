@@ -5,6 +5,17 @@
 @section("content")
     <x-welcome.page-header/>
 
+    <style>
+        code{
+            padding: 20px;
+            display: block;
+            border-radius: 10px;
+            background-color: rgb(41, 41, 41) !important;
+            color: white !important;
+            font-family: monospace
+        }
+    </style>
+
     <section class="my-5">
         <div class="container">
             <div class="row">

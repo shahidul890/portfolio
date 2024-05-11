@@ -3,16 +3,19 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col text-center">
-                <h1>@yield('page_title')</h1>
+                @php
+                    $page_title = app()->view->getSections()['page_title'];
+                @endphp
+                
+                <h1>{{\Str::limit($page_title, 20)}}</h1>
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="/" class="text-decoration-none @if(request()->is("blog/*")) text-white @else text-orange @endif">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/" class="text-decoration-none @if(request()->is("blogs/*")) text-white @else text-orange @endif">Home</a></li>
                         
-                        @if(request()->is("blog/*"))
+                        @if(request()->is("blogs/*"))
                         <li class="breadcrumb-item"><a href="/blogs" class="text-decoration-none text-orange">Blogs</a></li>
                         @endif
-                        
-                        <li class="breadcrumb-item" aria-current="page">@yield('page_title')</li>
+                        <li class="breadcrumb-item" aria-current="page">{{\Str::limit($page_title, 20)}}</li>
                     </ol>
                 </nav>
             </div>

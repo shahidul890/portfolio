@@ -11,7 +11,7 @@
                         <div class="card-body table-responsive">
                             <FlashMessage/>
 
-                            <form @submit.prevent="form.post('/cp/blogs')">
+                            <form @submit.prevent="form.post('/cp/blogs/'+form.id)">
                                 <div class="form-group">
                                     <label for="">Category</label>
                                     <VueMultiselect
@@ -31,7 +31,7 @@
                                     <label for="">Tags</label>
                                     <VueMultiselect
                                         class="mt-1"
-                                        v-model="form.tag_id"
+                                        v-model="form.tag_ids"
                                         :options="tags"
                                         :searchable="true"
                                         :multiple="true"
@@ -66,7 +66,6 @@
                                     <progress v-if="form.progress" :value="form.progress.percentage" max="100">
                                         {{ form.progress.percentage }}%
                                     </progress>
-                                    <span class="text-danger text-xs" v-if="form.errors.thumbnail">{{ form.errors.thumbnail }}</span>
                                     <span class="text-success text-sm" v-if="uploadedUrl">{{ uploadedUrl }}</span>
                                 </div>
 
@@ -95,16 +94,27 @@
 <script setup>
 import AdminLayout from './../Layouts/Admin.vue';
 import FlashMessage from '../Components/FlashMessage.vue';
-import { Link, useForm, router } from '@inertiajs/vue3';
+import { Link, useForm, usePage } from '@inertiajs/vue3';
 import Editor from '@tinymce/tinymce-vue';
 import VueMultiselect from 'vue-multiselect';
 import axios from 'axios';
 import { ref } from 'vue';
 
-const props = defineProps(['categories', 'tags', 'blog']);
+const {blog} = usePage().props;
+const props = defineProps(['categories', 'tags']);
 const uploadedUrl = ref(null);
 
-const form = useForm(props.blog);
+const form = useForm({
+    _method: 'PUT',
+    id: blog.id,
+    title: blog.title,
+    thumbnail: null,
+    content: blog.content,
+    category_id: {
+        id: blog.category_id
+    },
+    tag_ids: []
+})
 
 const upload = useForm({
     file: null

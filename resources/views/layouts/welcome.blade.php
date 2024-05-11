@@ -16,6 +16,8 @@
     <meta name="og:description" content="I offer Web design, development, Rest API, and Bug-fixing services" />
     <meta name="og:image" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
     <meta name="og:url" content="{{url('/')}}" />
+
+    {{-- For verifying google adsense account --}}
     <meta name="google-adsense-account" content="ca-pub-6580540719182750" />
 
     <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam - Full-stack Software Developer</title>

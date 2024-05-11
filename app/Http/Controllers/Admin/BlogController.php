@@ -18,7 +18,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $collection = Blog::paginate();
+        $collection = Blog::with('category:id,name', 'tags:id,name')->paginate();
         return inertia('Blogs/Index', compact('collection'));
     }
 
@@ -37,8 +37,6 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
-
         $request->validate([
             'title' => 'required|string',
             'thumbnail' => 'required|file',
@@ -54,7 +52,7 @@ class BlogController extends Controller
             $inputs['creator_id'] = Auth::id();
             $inputs['slug'] = Str::slug($request->title);
 
-            if($request->has('thumbnail'))
+            if($request->hasFile('thumbnail'))
             {
                 $fileName = $request->file('thumbnail')->hashName();
                 $request->file('thumbnail')->move(public_path('uploads/thumbs'), $fileName);
@@ -102,7 +100,7 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required|string',
-            'thumbnail' => 'nullable|file',
+            'thumbnail' => 'nullable',
             'content' => 'required',
             'category_id.id' => 'required|exists:categories,id',
         ]);
@@ -114,8 +112,9 @@ class BlogController extends Controller
             $inputs['category_id'] = $request->category_id['id'];
             $inputs['slug'] = Str::slug($request->title);
 
-            if($request->has('thumbnail'))
+            if($request->hasFile('thumbnail'))
             {
+                File::delete(public_path($blog->thumbnail));
                 $fileName = $request->file('thumbnail')->hashName();
                 $request->file('thumbnail')->move(public_path('uploads/thumbs'), $fileName);
                 $inputs['thumbnail'] = "/uploads/thumbs/$fileName";
@@ -124,12 +123,14 @@ class BlogController extends Controller
             $blog->update($inputs);
 
             $tag_ids = [];
-            foreach ($request->tag_ids as $tag) {
-                array_push($tag_ids, $tag['id']);
+            if($request->tag_ids && is_array($request->tag_ids)){
+                foreach ($request->tag_ids as $tag) {
+                    array_push($tag_ids, $tag['id']);
+                }
+                $blog->tags()->sync($tag_ids);
             }
-            $blog->tags()->async($tag_ids);
 
-            return back()->with('message', 'Blogs created successfully');
+            return to_route('blogs.index')->with('message', 'Blogs updated successfully');
         }
         catch(\Exception $th)
         {
