@@ -60,7 +60,7 @@ const form = useForm({
 })
 </script>
 
-<style>
+<style scoped>
 .login-bg{
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');
     background-repeat: no-repeat;

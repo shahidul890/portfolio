@@ -2,11 +2,17 @@
 
 @section("page_title", \Str::ucfirst($blog->title))
 
+@push('styles')
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6580540719182750"
+    crossorigin="anonymous"></script>
+@endpush
+
 @section("content")
     <x-welcome.page-header/>
 
     <style>
         code{
+            margin: 10px 0px;
             padding: 20px;
             display: block;
             border-radius: 10px;
