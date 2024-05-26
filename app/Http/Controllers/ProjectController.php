@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $collection = Project::latest()->paginate();
+        return inertia()->render('Projects/Index')->with(compact('collection'));
     }
 
     /**
@@ -20,7 +22,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::get(['id','name']);
+        return inertia()->render('Projects/Create')->with(compact('categories'));
     }
 
     /**

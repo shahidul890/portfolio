@@ -1,11 +1,12 @@
 <template>
     <AdminLayout>
+        <Head title="Services"/>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header d-flex">
-                            <h5 class="card-title m-0">Categories</h5>
+                            <h4 class="card-title m-0">Services</h4>
                             <button @click="form.reset()" data-bs-target="#createModal" data-bs-toggle="modal" class="btn btn-sm btn-outline-primary ms-auto">+ Create</button>
                         </div>
                         <div class="card-body table-responsive">
@@ -14,7 +15,7 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Category</th>
+                                        <th>Title</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
@@ -22,10 +23,10 @@
                                 <tbody>
                                     <tr v-if="collection.data.length > 0" v-for="(item, index) in collection.data">
                                         <td> {{ ++index }} </td>
-                                        <td>{{ item.name }}</td>
+                                        <td>{{ item.title }}</td>
                                         <td>
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" :checked="item.is_active" @change="handleToggleRequests(item.id)">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" :checked="item.active" @change="handleToggleRequests(item.id)">
                                                 <label class="form-check-label" for="flexSwitchCheckChecked">Active</label>
                                             </div>
                                         </td>
@@ -101,7 +102,7 @@
 <script setup>
 import AdminLayout from './../Layouts/Admin.vue';
 import FlashMessage from '../Components/FlashMessage.vue';
-import { Link, useForm, router } from '@inertiajs/vue3';
+import { Head, useForm, router } from '@inertiajs/vue3';
 defineProps(['collection']);
 
 const form = useForm({

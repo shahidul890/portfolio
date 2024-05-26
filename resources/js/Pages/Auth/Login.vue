@@ -4,7 +4,7 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="card shadow-2-strong login-card">
-                <form @submit.prevent="form.post('/login')">
+                <form @submit.prevent="form.post('/cp/login')">
                     <div class="card-body p-5">
 
                         <div class="mb-3">
@@ -40,7 +40,9 @@
                         
                         <button class="mb-3 btn btn-orange btn-lg btn-block w-100" type="submit" :disabled="form.processing">Login</button>
                         
-                        <a href="">Forgot Password?</a>
+                        <Link href="/cp/password/forgot" method="post">Forgot Password?</Link>
+
+                        <FlashMessage/>
                     </div>
                 </form>
             </div>
@@ -51,7 +53,8 @@
 </template>
 
 <script setup>
-import { useForm, router } from '@inertiajs/vue3';
+import { useForm, router, Link } from '@inertiajs/vue3';
+import FlashMessage from '../Components/FlashMessage.vue';
 
 const form = useForm({
     email: null,

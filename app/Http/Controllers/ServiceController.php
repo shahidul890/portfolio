@@ -12,7 +12,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $collection = Service::latest()->paginate();
+        return inertia()->render('Services/Index')->with(compact('collection'));
     }
 
     /**

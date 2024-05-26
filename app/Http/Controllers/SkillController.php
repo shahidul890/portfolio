@@ -12,7 +12,8 @@ class SkillController extends Controller
      */
     public function index()
     {
-        //
+        $collection = Skill::latest()->paginate();
+        return inertia()->render('Skills/Index')->with(compact('collection'));
     }
 
     /**

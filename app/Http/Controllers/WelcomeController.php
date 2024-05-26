@@ -19,8 +19,8 @@ class WelcomeController extends Controller
      */
     public function welcome()
     {
-        $projects =  \App\Models\Project::all();
-        $skills =  \App\Models\Skill::all();
+        $projects =  \App\Models\ProjectCollection::all();
+        $skills =  \App\Models\SkillCollection::all();
 
         $data['projects'] = Arr::where($projects, function(array $value, string $key){
             return $value['active'] == true;
