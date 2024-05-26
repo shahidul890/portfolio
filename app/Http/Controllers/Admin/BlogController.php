@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
 class BlogController extends Controller
@@ -16,7 +18,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $collection = Blog::paginate();
+        $collection = Blog::with('category:id,name', 'tags:id,name')->paginate();
         return inertia('Blogs/Index', compact('collection'));
     }
 
@@ -25,8 +27,9 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $categories = Category::get();
-        return inertia('Blogs/Create')->with(compact('categories'));
+        $categories = Category::whereIsActive(true)->get(['name', 'id']);
+        $tags = Tag::whereIsActive(true)->get(['name', 'id']);
+        return inertia('Blogs/Create')->with(compact('categories', 'tags'));
     }
 
     /**
@@ -38,25 +41,31 @@ class BlogController extends Controller
             'title' => 'required|string',
             'thumbnail' => 'required|file',
             'content' => 'required',
-            'category_id' => 'required|exists:categories,id',
+            'category_id.id' => 'required|exists:categories,id',
         ]);
 
         try
         {
             $inputs['title'] = $request->title;
             $inputs['content'] = $request->content;
-            $inputs['category_id'] = $request->category_id;
+            $inputs['category_id'] = $request->category_id['id'];
             $inputs['creator_id'] = Auth::id();
             $inputs['slug'] = Str::slug($request->title);
 
-            if($request->has('thumbnail'))
+            if($request->hasFile('thumbnail'))
             {
                 $fileName = $request->file('thumbnail')->hashName();
                 $request->file('thumbnail')->move(public_path('uploads/thumbs'), $fileName);
                 $inputs['thumbnail'] = "/uploads/thumbs/$fileName";
             }
             
-            Blog::create($inputs);
+            $blog = Blog::create($inputs);
+
+            $tag_ids = [];
+            foreach ($request->tag_ids as $tag) {
+                array_push($tag_ids, $tag['id']);
+            }
+            $blog->tags()->attach($tag_ids);
 
             return back()->with('message', 'Blogs created successfully');
         }
@@ -79,7 +88,9 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        $categories = Category::whereIsActive(true)->get(['name', 'id']);
+        $tags = Tag::whereIsActive(true)->get(['name', 'id']);
+        return inertia('Blogs/Edit')->with(compact('categories', 'tags', 'blog'));
     }
 
     /**
@@ -87,7 +98,44 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $request->validate([
+            'title' => 'required|string',
+            'thumbnail' => 'nullable',
+            'content' => 'required',
+            'category_id.id' => 'required|exists:categories,id',
+        ]);
+
+        try
+        {
+            $inputs['title'] = $request->title;
+            $inputs['content'] = $request->content;
+            $inputs['category_id'] = $request->category_id['id'];
+            $inputs['slug'] = Str::slug($request->title);
+
+            if($request->hasFile('thumbnail'))
+            {
+                File::delete(public_path($blog->thumbnail));
+                $fileName = $request->file('thumbnail')->hashName();
+                $request->file('thumbnail')->move(public_path('uploads/thumbs'), $fileName);
+                $inputs['thumbnail'] = "/uploads/thumbs/$fileName";
+            }
+            
+            $blog->update($inputs);
+
+            $tag_ids = [];
+            if($request->tag_ids && is_array($request->tag_ids)){
+                foreach ($request->tag_ids as $tag) {
+                    array_push($tag_ids, $tag['id']);
+                }
+                $blog->tags()->sync($tag_ids);
+            }
+
+            return to_route('blogs.index')->with('message', 'Blogs updated successfully');
+        }
+        catch(\Exception $th)
+        {
+            return back()->with('exception',$th->getMessage());
+        }
     }
 
     /**
@@ -95,7 +143,9 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        $blog->delete();
+        File::delete(public_path($blog->thumbnail)); // Delete related thumbnail
+        $blog->tags()->detach(); // Delete related tags
+        $blog->delete(); // Delete core resource
         return back()->with('message', 'Record deleted successfully');
     }
 }

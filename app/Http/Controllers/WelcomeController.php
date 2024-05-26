@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Support\Arr;
 
 class WelcomeController extends Controller
@@ -18,8 +19,8 @@ class WelcomeController extends Controller
      */
     public function welcome()
     {
-        $projects =  \App\Models\Project::all();
-        $skills =  \App\Models\Skill::all();
+        $projects =  \App\Models\ProjectCollection::all();
+        $skills =  \App\Models\SkillCollection::all();
 
         $data['projects'] = Arr::where($projects, function(array $value, string $key){
             return $value['active'] == true;
@@ -28,6 +29,8 @@ class WelcomeController extends Controller
         $data['skills'] = Arr::where($skills, function(array $value, string $key){
             return $value['active'] == true;
         });
+
+        $data['blogs'] = Blog::whereIsActive(true)->latest()->take(3)->get();
         
         return view('welcome')->with($data);
         // return inertia('Frontend/Welcome', $data);
