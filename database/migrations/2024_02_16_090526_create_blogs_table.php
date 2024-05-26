@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations.item
      */
     public function up(): void
     {
@@ -23,9 +23,9 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')
-            ->restrictOnDelete()->cascadeOnUpdate();
+            ->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreign('creator_id')->references('id')->on('users')
-            ->restrictOnDelete()->cascadeOnUpdate();
+            ->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->index('title');
             $table->index('tags');
