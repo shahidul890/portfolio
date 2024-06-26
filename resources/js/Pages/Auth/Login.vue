@@ -40,7 +40,7 @@
                         
                         <button class="mb-3 btn btn-orange btn-lg btn-block w-100" type="submit" :disabled="form.processing">Login</button>
                         
-                        <Link href="/cp/password/forgot" method="post">Forgot Password?</Link>
+                        <!-- <Link href="/cp/password/forgot" method="post">Forgot Password?</Link> -->
 
                         <FlashMessage/>
                     </div>

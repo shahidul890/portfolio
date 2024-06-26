@@ -23,7 +23,7 @@
     {{-- For verify pinterest --}}
     <meta name="p:domain_verify" content="f930ce73e3e3f3d1d833e7a7096e30e4"/>
 
-    <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam - Full-stack Software Developer</title>
+    <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam | Full-stack Web Developer</title>
 
     <link rel="shortcut icon" href="{{asset("assets/img/sha.png")}}" type="image/x-icon">
 
