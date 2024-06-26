@@ -1,11 +1,25 @@
 <style>
     body {
         font-family: 'Josefin Sans', sans-serif;
-        /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/gifs/Blue-Connected-Particles.webp');
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-attachment: fixed; */
+        background-attachment: fixed;
+        color: white
+    }
+
+    .card{
+        background-color: #06051f;
+        color: white;
+    }
+
+    .text-muted{
+        color: rgb(179, 179, 179) !important;
+    }
+
+    .blog-content a{
+        color:rgb(248, 91, 0) !important
     }
 
     #hero-bg-video{
@@ -30,7 +44,8 @@
     }
 
     .navbar .navbar-nav .nav-item a{
-        color: #fff
+        color: #fff;
+        font-size: 14px !important
     }
 
     .my-name{
@@ -130,7 +145,17 @@
         color: #fff; 
     }
 
+    .form-control{
+        background: none;
+        color: #ffeae8
+    }
+
+    .form-control::placeholder{
+        color: #ffeae8
+    }
+
     .form-control:focus{
+        background-color: none !important;
         border-color: #09072d;
         box-shadow: none;
         /* transition: background-color 0.3s, border-color 0.3s; */
@@ -147,6 +172,11 @@
     }
     .project-img:hover{
         transform: scale(1.1);
+    }
+
+    section#experience .card .card-header{
+        background-color: #09072d;
+        color: white
     }
 
     #experties{

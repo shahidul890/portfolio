@@ -35,7 +35,7 @@
                                 <p class="m-0"> <i class="fa fa-recycle"></i> Last Updated: {{$blog->updated_at->format("F d, Y")}}</p>
                             </div>
 
-                            <div>
+                            <div class="blog-content">
                                 {!!$blog->content!!}
                             </div>
                         </div>

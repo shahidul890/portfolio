@@ -11,6 +11,10 @@
                 </li>
 
                 @if (Route::is("welcome"))
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experiences</a>
+                </li>
                     
                 <li class="nav-item">
                     <a class="nav-link" href="#experties">Experties</a>

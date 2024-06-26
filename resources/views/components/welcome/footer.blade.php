@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-12 text-center py-3">
-                &copy 2023 Shahidul Islam. All Rights Reserved
+                v2.1.0 &copy 2023 Shahidul Islam. All Rights Reserved.
             </div>
         </div>
     </div>
