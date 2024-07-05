@@ -3,9 +3,7 @@
 @section('content')
 
     <!-- Hero Section -->
-    <section
-        class="hero-bg"
-    >
+    <section class="hero-bg">
         <div class="d-md-none" style="padding-top: 100px;"></div>
 
         <!-- The video -->
@@ -60,7 +58,7 @@
                     class="col-md text-md-end slow-motion"
                     style="position: relative;"
                 >
-                    <div class="bg-light text-dark p-3 experience-card" style="z-index: 100">
+                    <div class="bg-light text-dark p-3 d-none d-md-inline experience-card" style="z-index: 100">
                         <div class="d-flex gap-3 align-items-center">
                             <h1 class="m-0 text-blue">3+</h1>
                             <div class="text-start">
@@ -69,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="assets/img/ai-me4.png" alt="" class="img-fluid shadow" width="400" style="border-radius: 15px;">
+                    <img src="assets/img/3color-img.png" alt="" class="img-fluid" width="400">
                 </div>
             </div>
         </div>
@@ -77,7 +75,7 @@
     </section>
     <!-- //. Hero Section -->
 
-    <!-- Working Experiences -->
+    <!-- Job Experiences -->
     <section class="py-5" id="experience">
         <div class="container">
             <div class="row align-items-center">
@@ -167,7 +165,7 @@
             </div>
         </div>
     </section>
-    <!-- // Working Experiences -->
+    <!-- // Job Experiences -->
 
     <!-- Skills -->
     <section class="py-5" id="experties">
@@ -198,7 +196,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md">
-                    <img src="/assets/gifs/developer.gif" alt="developer" class="img-fluid"/>
+                    <img src="/assets/gifs/developer-nobg.gif" alt="developer" class="img-fluid"/>
                 </div>
                 <div class="col-md">
                     <p>ABOUT ME</p>
@@ -215,7 +213,7 @@
     <!-- // about Me end -->
 
     <!-- Projects -->
-    <section id="projects" class="py-5" style="background-image: url('/assets/img/service_bg.png');">
+    <section id="projects" class="py-5">
         <div class="container py-3">
 
             <div class="row align-items-center">

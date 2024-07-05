@@ -166,6 +166,10 @@
         font-weight: 800
     }
 
+    /* #projects{
+        color: #000 !important;
+    } */
+
     .project-img{
         transition: 0.5s all ease-in-out;
         height: 140px;
