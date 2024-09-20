@@ -8,7 +8,7 @@
 
         <!-- The video -->
         <video autoplay muted loop id="hero-bg-video" class="d-none d-lg-block">
-            <source src="{{asset("assets/videos/working-on-laptop.mov")}}" type="video/mp4" />
+            <source src="{{asset("assets/videos/working-on-laptop.mp4")}}" type="video/mp4" />
         </video>
 
         <!-- container -->
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="assets/img/3color-img.png" alt="" class="img-fluid" width="400">
+                    <img src="assets/img/md-260kb.png" alt="" class="img-fluid" width="400">
                 </div>
             </div>
         </div>

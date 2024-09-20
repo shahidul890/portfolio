@@ -12,7 +12,8 @@ class Contact extends Model
     protected $guarded = ['id'];
 
     protected $casts = [
-        'ip' => 'object'
+        'ip' => 'object',
+        'created_at' => 'date:Y-m-d H:i:s'
     ];
 
     protected $appends = ['full_name'];

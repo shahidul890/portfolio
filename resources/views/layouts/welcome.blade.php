@@ -27,7 +27,6 @@
 
     <link rel="shortcut icon" href="{{asset("assets/img/sha.png")}}" type="image/x-icon">
 
-
     <!-- Bootstrap -->
     <link href="{{asset('bootstrap@5.3.3/css/bootstrap.min.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('bootstrap-icons@1.11.3/font/bootstrap-icons.css')}}" />
