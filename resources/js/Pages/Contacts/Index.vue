@@ -2,7 +2,7 @@
     <AdminLayout>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header d-flex">
                             <h5 class="card-title m-0">Contact Requests</h5>
@@ -15,14 +15,16 @@
                                         <th>#</th>
                                         <th>Name</th>
                                         <th>Email</th>
+                                        <th>Date</th>  
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr v-if="collection.data.length > 0" v-for="(item, index) in collection.data">
-                                        <td>{{ ++index }}</td>
+                                        <td>{{ collection.from+index }}</td>
                                         <td>{{ item.full_name }}</td>
                                         <td>{{ item.email }}</td>
+                                        <td>{{ item.created_at }}</td>
                                         <td>
                                             <button class="btn btn-sm btn-primary" data-bs-target="#details-modal" data-bs-toggle="modal" @click.prevent="showDetails(item)">Details</button>
                                         </td>
@@ -32,6 +34,11 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="card-footer d-flex">
+                            <div class="ms-auto">
+                                <Link class="btn btn-sm mx-1" v-for="item in collection.links" :href="item.url" :class="item.active ? 'btn-primary' : 'btn-outline-primary'" v-html="item.label"></Link>
+                            </div>
                         </div>
                     </div>
                 </div>

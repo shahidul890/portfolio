@@ -51,7 +51,7 @@
                             <div class="ms-auto d-flex gap-2">
                                 <button type="submit" class="btn btn-primary"> <i class="fa fa-floppy-disk"></i> Save</button>
                                 <button type="submit" class="btn btn-primary"> <i class="fa fa-right-to-bracket"></i> Save and Back</button>
-                                <button type="submit" class="btn btn-primary"> <i class="fa fa-cancel"></i> Cancel</button>
+                                <button type="button" @click="redirectBack" class="btn btn-primary"> <i class="fa fa-cancel"></i> Cancel</button>
                             </div>
                         </div>
                         </form>
@@ -70,7 +70,12 @@ defineProps(['categories']);
 
 
 const form = useForm({
-    name: null
+    title: '',
+    technologies: '',
+    category_id: '',
+    reference_link: '',
+    completed_at: '',
+    description: '',
 })
 
 const redirectBack = () => {

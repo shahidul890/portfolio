@@ -20,7 +20,7 @@ class SettingSeeder extends Seeder
         return [
             [
                 'name' => 'app_name',
-                'value' => 'shahidull.com'
+                'value' => 'shahidul.com.bd'
             ],
             [
                 'name' => 'app_title',

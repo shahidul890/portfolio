@@ -70,13 +70,13 @@ const form = useForm({
 
 const handleDeleteRequests = (id) => {
     if(confirm('Are you sure?')){
-        router.delete('/cp/categories/'+id);
+        router.delete('/cp/projects/'+id);
     }
 }
 
 const handleToggleRequests = (id) => {
     if(confirm('Are you sure?')){
-        router.put('/cp/categories/'+id+'/status');
+        router.put('/cp/projects/'+id+'/status');
     }
 }
 
