@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="I offer Web design, development, Rest API, and Bug-fixing services" />
+    <meta name="description" content="I offer Web design, web development, Rest API, and Bug-fixing services" />
     <meta name="keywords" content="web developer, software developer, programming, software engineer, developer">
     <meta name="author" content="Md Shahidul Islam">
 
@@ -23,7 +23,7 @@
     {{-- For verify pinterest --}}
     <meta name="p:domain_verify" content="f930ce73e3e3f3d1d833e7a7096e30e4"/>
 
-    <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam | Full-stack Web Developer</title>
+    <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam | Full-stack Software Developer</title>
 
     <link rel="shortcut icon" href="{{asset("assets/img/sha.png")}}" type="image/x-icon">
 

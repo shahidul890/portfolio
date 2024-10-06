@@ -41,15 +41,27 @@ class SkillCollection
                 "active"=> true,
             ],
             [
-                "title" => "OOP",
+                "title" => "Alpine JS",
                 "width" => "70%",
-                "icon" => asset("assets/icons/oop.jpg"),
+                "icon" => asset("assets/icons/alpine-js.jpg"),
+                "active"=> true,
+            ],
+            [
+                "title" => "Node JS",
+                "width" => "70%",
+                "icon" => asset("assets/icons/nodejs.webp"),
                 "active"=> true,
             ],
             [
                 "title" => "VUE JS",
                 "width" => "55%",
                 "icon" => asset("assets/icons/vuejs.jpg"),
+                "active"=> true,
+            ],
+            [
+                "title" => "Inertia JS",
+                "width" => "55%",
+                "icon" => asset("assets/icons/inertia-js.png"),
                 "active"=> true,
             ],
             [
@@ -74,7 +86,7 @@ class SkillCollection
                 "title" => "AJAX",
                 "width" => "90%",
                 "icon" => asset("assets/icons/ajax.jfif"),
-                "active"=> true,
+                "active"=> false,
             ],
             [
                 "title" => "Bootstrap",
@@ -92,7 +104,7 @@ class SkillCollection
                 "title" => "HTML",
                 "width" => "99%",
                 "icon" => asset("assets/icons/html.png"),
-                "active"=> true,
+                "active"=> false,
             ],
         ];
     }
