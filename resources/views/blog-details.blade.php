@@ -64,7 +64,7 @@
                                                 <div class="d-flex gap-2">
                                                     <a href="https://github.com/shahidul890" target="__blank" title="Github"><i class="fa-brands fa-github"></i></a>
                                                     <a href="https://www.linkedin.com/in/mdshahidul" target="__blank" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                                                    <a href="mailto:hello@shahidull.com" target="__blank" title="Email"><i class="fa fa-envelope"></i></a>
+                                                    <a href="mailto:hello@shahidul.com.bd" target="__blank" title="Email"><i class="fa fa-envelope"></i></a>
                                                 </div>
                                             </div>
                                             

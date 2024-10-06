@@ -27,7 +27,7 @@ class ClientContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Client Contact Mail From shahidull.com',
+            subject: 'Client Contact Mail From shahidul.com.bd',
         );
     }
 
