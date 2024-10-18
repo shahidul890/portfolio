@@ -39,9 +39,9 @@
                             <i class="bi bi-github"></i>
                         </a> --}}
                         <a href="https://x.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="X">
-                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-twitter-x"></i>
                         </a>
-                        <a href="https://wa.me/01642742704" target="_blank" class="text-orange text-decoration-none" title="Whatsapp">
+                        <a href="skype:live:.cid.90176ee53c448039?chat" target="_blank" class="text-orange text-decoration-none" title="Skype">
                             <i class="bi bi-skype"></i>
                         </a>
                         {{-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
