@@ -23,7 +23,7 @@
                     <h6> Say Hello To </h6>
                     <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start" style="font-size: 30px;">
 
-                        <a href="mailto:contact.shahidul@gmail.com" target="_blank" class="text-orange text-decoration-none" title="Email">
+                        <a href="mailto:hello@shahidul.com.bd" target="_blank" class="text-orange text-decoration-none" title="Email">
                             <i class="bi bi-envelope"></i>
                         </a>
                         <!-- <a href="https://facebook.com/its.antorislam/" target="_blank" class="text-orange text-decoration-none" title="Facebook">
@@ -35,8 +35,14 @@
                         <a href="https://linkedin.com/in/mdshahidul/" target="_blank" class="text-orange text-decoration-none" title="Linkedin">
                             <i class="bi bi-linkedin"></i>
                         </a>
-                        <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
+                        {{-- <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
                             <i class="bi bi-github"></i>
+                        </a> --}}
+                        <a href="https://x.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="X">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://wa.me/01642742704" target="_blank" class="text-orange text-decoration-none" title="Whatsapp">
+                            <i class="bi bi-skype"></i>
                         </a>
                         {{-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
                             <img
@@ -50,7 +56,7 @@
                     </div>
 
                     {{-- <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a> --}}
-                    <a href="{{asset('assets/cv/resume-of-md-shahidul-islam-v1.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">RESUME</a>
+                    <a href="{{asset('cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">RESUME</a>
                     <a href="/contact" class="btn btn-orange px-3 mt-3">CONTACT ME</a>
                 </div>
 
