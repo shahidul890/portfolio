@@ -25,7 +25,7 @@
 
     <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam | Full-stack Web Developer</title>
 
-    <link rel="shortcut icon" href="{{asset("assets/img/sha.png")}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset("assets/favicons/favicon.ico")}}" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="{{asset('bootstrap@5.3.3/css/bootstrap.min.css')}}" rel="stylesheet" />
