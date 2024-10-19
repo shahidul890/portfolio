@@ -4,7 +4,7 @@
 
             <a href="/" class="d-flex align-items-center text-white text-decoration-none">
                 <!-- <div> <i class="fa-brands fa-speaker-deck h5 m-0 me-2"></i> </div> -->
-                <span class="fs-4 mx-auto text-orange"> <i>shahidull.com</i> </span>
+                <span class="fs-4 mx-auto text-orange"> <i>shahidul.com.bd</i> </span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">

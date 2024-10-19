@@ -23,7 +23,7 @@
                     <h6> Say Hello To </h6>
                     <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start" style="font-size: 30px;">
 
-                        <a href="mailto:contact.shahidul@gmail.com" target="_blank" class="text-orange text-decoration-none" title="Email">
+                        <a href="mailto:hello@shahidul.com.bd" target="_blank" class="text-orange text-decoration-none" title="Email">
                             <i class="bi bi-envelope"></i>
                         </a>
                         <!-- <a href="https://facebook.com/its.antorislam/" target="_blank" class="text-orange text-decoration-none" title="Facebook">
@@ -35,8 +35,14 @@
                         <a href="https://linkedin.com/in/mdshahidul/" target="_blank" class="text-orange text-decoration-none" title="Linkedin">
                             <i class="bi bi-linkedin"></i>
                         </a>
-                        <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
+                        {{-- <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
                             <i class="bi bi-github"></i>
+                        </a> --}}
+                        <a href="https://x.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="X">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="skype:live:.cid.90176ee53c448039?chat" target="_blank" class="text-orange text-decoration-none" title="Skype">
+                            <i class="bi bi-skype"></i>
                         </a>
                         {{-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
                             <img
@@ -50,7 +56,7 @@
                     </div>
 
                     {{-- <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a> --}}
-                    <a href="/contact" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a>
+                    <a href="{{asset('cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">RESUME</a>
                     <a href="/contact" class="btn btn-orange px-3 mt-3">CONTACT ME</a>
                 </div>
 
@@ -60,7 +66,7 @@
                 >
                     <div class="bg-light text-dark p-3 d-none d-md-inline experience-card" style="z-index: 100">
                         <div class="d-flex gap-3 align-items-center">
-                            <h1 class="m-0 text-blue">3+</h1>
+                            <h1 class="m-0 text-blue">4+</h1>
                             <div class="text-start">
                                 <h5 class="m-0">Years Experience</h5>
                                 <small class="m-0">Happy Clients</small>
@@ -203,7 +209,7 @@
 
                     <h1 style="font-size: 52px;">Why you <span class="text-orange">hire me</span> for your <span class="text-blue">next project?</span></h1>
                     <br>
-                    <p>With 3+ years of experience as a programmer, I've honed my skills in creating efficient and innovative solutions for a diverse range of clients. My journey started with a passion for coding, I've cultivated expertise that enables me to tackle complex challenges and deliver exceptional results. I have worked on a wide range of projects, such as School Management, Industry Management, Ecommerce, MLM, Car Management, and Schedule Booking. My programming expertise spans several key areas, making me a versatile choice for your projects. I specialize in PHP, Laravel, REST API, MySQL, AJAX, jQuery</p>
+                    <p>With 4+ years of experience as a programmer, I've honed my skills in creating efficient and innovative solutions for a diverse range of clients. My journey started with a passion for coding, I've cultivated expertise that enables me to tackle complex challenges and deliver exceptional results. I have worked on a wide range of projects, such as School Management, Industry Management, Ecommerce, MLM, Car Management, and Schedule Booking. My programming expertise spans several key areas, making me a versatile choice for your projects. I specialize in PHP, Laravel, REST API, MySQL, AJAX, jQuery</p>
 
                     <a href="javascript::" class="btn btn-orange px-5">Hire Me</a>
                 </div>
