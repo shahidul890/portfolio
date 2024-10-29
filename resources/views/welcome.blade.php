@@ -41,6 +41,9 @@
                         <a href="https://x.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="X">
                             <i class="bi bi-twitter-x"></i>
                         </a>
+                        <a href="https://pinterest.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Pinterest">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
                         <a href="skype:live:.cid.90176ee53c448039?chat" target="_blank" class="text-orange text-decoration-none" title="Skype">
                             <i class="bi bi-skype"></i>
                         </a>
