@@ -18,7 +18,7 @@
                 <div class="col-md">
                     <h3>Hi! I'm</h3>
                     <h1 class="my-name">Shahidul Islam</h1>
-                    <h4>Full-stack Software Developer</h4>
+                    <h4>Full-stack Web Developer</h4>
                     <br>
                     <h6> Say Hello To </h6>
                     <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start" style="font-size: 30px;">
