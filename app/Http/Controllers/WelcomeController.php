@@ -21,6 +21,7 @@ class WelcomeController extends Controller
     {
         $projects =  \App\Models\ProjectCollection::all();
         $skills =  \App\Models\SkillCollection::all();
+        $data['basicInfo'] = \App\Models\BasicInfo::all();
 
         $data['projects'] = Arr::where($projects, function(array $value, string $key){
             return $value['active'] == true;

@@ -15,9 +15,15 @@
                 </div>
             </div>
             <div class="col-12 text-center py-3">
-                v2.1.1 &copy 2023 Shahidul Islam. All Rights Reserved.
+                v2.1.1 &copy {{ date('Y') }} Shahidul Islam. All Rights Reserved.
             </div>
         </div>
     </div>
 </footer>
 <!-- // Footer end -->
+
+<div class="fixed-bottom d-flex justify-content-end scroll-to-top">
+    <div class="scrollToTopBtn" id="scrollToTopBtn">
+        <i class="fa fa-angle-up text-white"></i>
+    </div>
+</div>

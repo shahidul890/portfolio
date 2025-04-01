@@ -39,6 +39,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <x-welcome.stylesheet/>
+    @vite([])
     @stack('styles')
 </head>
 <body>
@@ -51,6 +52,34 @@
 
     <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
     <script src="{{asset('bootstrap@5.3.3/js/bootstrap.bundle.min.js')}}"></script>
+
+    <script>
+        // Show navbar on scroll
+        window.addEventListener("scroll", () => {
+            const navbar = document.querySelector(".navbar");
+            const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+            if (window.scrollY > 150) { // Show after scrolling 100px
+                navbar.classList.add("show");
+                scrollToTopBtn.classList.add("show");
+            } else {
+                navbar.classList.remove("show");
+                scrollToTopBtn.classList.remove("show");
+            }
+        });
+
+        function scrollToSection() {
+            document.getElementById("experience").scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Smooth scroll to top
+        document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+        
+    </script>
     
     @stack('script')
 </body>

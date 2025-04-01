@@ -1,5 +1,5 @@
 <!-- navbar -->
-<nav class="navbar navbar-dark text-uppercase text-white navbar-expand-lg sticky-top d-none d-md-block" style="background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('/assets/img/footer_bg.svg')">
+<nav class="navbar navbar-dark text-uppercase text-white navbar-expand-lg fixed-top d-none d-md-block" style="background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('/assets/img/footer_bg.svg')">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
