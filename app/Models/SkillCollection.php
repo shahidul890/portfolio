@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-class SkillCollection
+class 
+SkillCollection
 {
     static function all(): array
     {
@@ -62,6 +63,18 @@ class SkillCollection
                 "title" => "Inertia JS",
                 "width" => "55%",
                 "icon" => asset("assets/icons/inertia-js.png"),
+                "active"=> false,
+            ],
+            [
+                "title" => "WordPress",
+                "width" => "90%",
+                "icon" => asset("assets/icons/wordpress.png"),
+                "active"=> true,
+            ],
+            [
+                "title" => "Elementor",
+                "width" => "90%",
+                "icon" => asset("assets/icons/elementor.png"),
                 "active"=> true,
             ],
             [
@@ -80,7 +93,7 @@ class SkillCollection
                 "title" => "jQuery",
                 "width" => "92%",
                 "icon" => asset("assets/icons/jquery.png"),
-                "active"=> true,
+                "active"=> false,
             ],
             [
                 "title" => "AJAX",

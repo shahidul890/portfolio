@@ -18,7 +18,7 @@
             <div class="row align-items-center overlay">
 
                 <div class="col-md">
-                    <h3>👋Hi there! I'm</h3>
+                    <h3>👋Hi there! I'm MD</h3>
                     <h1 class="my-name">{{ $basicInfo->display_name }}</h1>
                     <h3> {{ $basicInfo->designation_title }}</h3>
                     {{-- <br> --}}
@@ -229,7 +229,10 @@
 
                     <h1 style="font-size: 52px;">Why you <span class="text-orange">hire me</span> for your <span class="text-blue">next project?</span></h1>
                     <br>
-                    <p>With {{ $basicInfo->experience }} years of experience as a programmer, I've honed my skills in creating efficient and innovative solutions for a diverse range of clients. My journey started with a passion for coding, I've cultivated expertise that enables me to tackle complex challenges and deliver exceptional results. I have worked on a wide range of projects, such as School Management, Industry Management, Ecommerce, MLM, Car Management, and Schedule Booking. My programming expertise spans several key areas, making me a versatile choice for your projects. I specialize in PHP, Laravel, REST API, MySQL, AJAX, jQuery</p>
+
+                    <p>
+                       I am a professional web developer with over {{ str_replace('+', '', $basicInfo->experience) }} years of experience,  having successfully delivered more than {{ str_replace('+', '', $basicInfo->completed_projects) }} projects.  I specialize in end-to-end web application development, managing all stages from project design and development to debugging and server deployment. My expertise spans across Laravel, React.js, Vue.js, and WordPress, where I provide tailored, high-quality web solutions and custom software development to meet the unique needs of my clients.
+                    </p>
 
                     <a href="javascript::" class="btn btn-orange px-5">Hire Me</a>
                 </div>
@@ -253,6 +256,9 @@
                 <div class="col-md-12">
                     <x-projects :projects="$projects" />
                 </div>
+                {{-- <div class="col-md-12">
+                    <x-projects :projects="$projects" />
+                </div> --}}
             </div>
         </div>
     </section>

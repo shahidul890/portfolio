@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="I am a web application developer with more than 4 years of experience. I provide web application-related services to clients from scratch like everything from project design, development, debugging, and finally hosting to the server." />
-    <meta name="keywords" content="Full-stack Web Developer, Full-stack Web Developer, web developer, software developer, programming, software engineer, developer">
-    <meta name="author" content="Md Shahidul Islam">
+    <meta name="description" content="{{ MetaInfo('description') }}" />
+    <meta name="keywords" content="{{ MetaInfo('keywords') }}">
+    <meta name="author" content="{{ MetaInfo('author') }}">
 
-    <meta name="twitter:title" content="Md Shahidul Islam - Full-stack Web Developer" />
-    <meta name="twitter:description" content="I am a web application developer with more than 4 years of experience. I provide web application-related services to clients from scratch like everything from project design, development, debugging, and finally hosting to the server." />
-    <meta name="twitter:image" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
-    <meta name="twitter:card" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
+    <meta name="twitter:title" content="{{ MetaInfo('title') }}" />
+    <meta name="twitter:description" content="{{ MetaInfo('description') }}" />
+    <meta name="twitter:image" content="{{ MetaInfo('image') }}" />
+    <meta name="twitter:card" content="{{ MetaInfo('image') }}" />
 
-    <meta name="og:title" content="Md Shahidul Islam - Full-stack Software Developer" />
-    <meta name="og:description" content="I am a web application developer with more than 4 years of experience. I provide web application-related services to clients from scratch like everything from project design, development, debugging, and finally hosting to the server." />
-    <meta name="og:image" content="{{asset("assets/img/md-shahidul-islam.jpg")}}" />
+    <meta name="og:title" content="{{ MetaInfo('title') }}" />
+    <meta name="og:description" content="{{ MetaInfo('description') }}" />
+    <meta name="og:image" content="{{ MetaInfo('image') }}" />
     <meta name="og:url" content="{{url('/')}}" />
 
     {{-- For verifying google adsense account --}}
@@ -24,7 +24,7 @@
     <meta name="p:domain_verify" content="f930ce73e3e3f3d1d833e7a7096e30e4"/>
     
 
-    <title>@hasSection('page_title') @yield('page_title') | @endif Shahidul Islam | Full-stack Web Developer</title>
+    <title>@hasSection('page_title') @yield('page_title') | @endif {{ MetaInfo('title') }}</title>
 
     <link rel="shortcut icon" href="{{asset("assets/favicons/favicon.ico")}}" type="image/x-icon">
 

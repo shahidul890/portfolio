@@ -26,6 +26,14 @@ class BasicInfo
                 'github' => 'https://github.com/shahidul890',
                 'instagram' => 'https://www.instagram.com/shahidul_islam_890/',
                 'youtube' => 'https://www.youtube.com/@shahidulislam890',
+            ],
+            'meta' => (object)[
+                'title' => 'Md Shahidul Islam - Expert Web Developer | Laravel, Vue.js, WordPress',
+                'description' => 'Md Shahidul Islam - Expert Web Developer with 5+ years of experience, specializing in Laravel, Vue.js, and WordPress. He delivers high-quality web solutions, and full-stack development with seamless deployment to meet client needs.',
+                'robots' => 'index, follow',
+                'keywords' => 'Shahidul Islam, Md Shahidul, Web Developer, WordPress Developer, Web Application Developer, Professional Web Developer, Freelance Web Developer, WordPress Expert, Custom Web Applications, SAAS development, Multitenant Applications, Business Website Development, API integration',
+                'author' => 'Md Shahidul Islam',
+                'image' => asset('assets/img/md-shahidul-islam.jpg')
             ]
         ];
     }
