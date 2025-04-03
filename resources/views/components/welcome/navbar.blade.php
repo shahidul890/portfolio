@@ -33,17 +33,17 @@
                 </li>
                 @endif
 
-                @if(Route::has('welcome.blogs'))
+                {{-- @if(Route::has('welcome.blogs'))
                 <li class="nav-item">
                     <a class="nav-link @if(request()->is("blogs") || request()->is("blog/*")) active @endif" href="/blogs">Blogs</a>
                 </li>
-                @endif
+                @endif --}}
 
-                @if (!Route::is("welcome"))
+                {{-- @if (!Route::is("welcome"))
                 <li class="nav-item">
                     <a class="nav-link @if(Route::is('contact')) active @endif" href="{{route("contact")}}">Contact</a>
                 </li>
-                @endif
+                @endif --}}
                 
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

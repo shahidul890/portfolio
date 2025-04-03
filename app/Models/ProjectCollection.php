@@ -36,6 +36,19 @@ class ProjectCollection
                 "description" => "Biheco is a business portfolio website that showcases the services and products offered by the company. It is designed to provide potential customers with an overview of the company's offerings and to encourage them to get in touch for more information. Technology used: WordPress, Elementor.",
             ],
             [
+                "name" => "Openminds",
+                "category" => "A Business Portolio",
+                "type" => "WordPress Design",
+                "images" => [
+                    asset("assets/projects/long/openminds.jpeg"),
+                ],
+                "technology" => ["WordPress", "Elementor"],
+                "link" => "https://openminds.pt",
+                "completed_date"  => "",
+                "active"=> true,
+                "description" => "Openminds is a business portfolio website that showcases the services. It is designed to provide potential customers with an overview of the company's offerings and to encourage them to get in touch for more information. Technology used: WordPress, Elementor.",
+            ],
+            [
                 "name" => "Stamp",
                 "category" => "A Business Portolio",
                 "type" => "WordPress Design",
@@ -49,24 +62,45 @@ class ProjectCollection
                 "description" => "Stamp is a business portfolio website that showcases the services and products offered by the company. It is designed to provide potential customers with an overview of the company's offerings and to encourage them to get in touch for more information. Technology used: WordPress, Elementor.",
             ],
             [
+                "name" => "XLife Surf School",
+                "category" => "A Business Portolio",
+                "type" => "WordPress Design",
+                "images" => [
+                    asset("assets/projects/long/xlifesurfschool-home.jpeg"),
+                ],
+                "technology" => ["WordPress", "Elementor"],
+                "link" => "https://www.xlifesurfschool.com/",
+                "completed_date"  => "",
+                "active"=> true,
+                "description" => "XLife Surf School is a business portfolio website that showcases the services and products offered by the company. It is designed to provide potential customers with an overview of the company's offerings and to encourage them to get in touch for more information. Technology used: WordPress, Elementor.",
+            ],
+            [
                 "name" => "Optim QMS",
                 "category" => "A Queue Management Solution",
                 "type" => "Custom SAAS Application",
                 "images" => [
-                    asset("assets/projects/optimqms-dashboard.jpeg"),
+                    asset("assets/projects/optim/optim-dashboard.jpeg"),
+                    asset("assets/projects/optim/optim-datatable.jpeg"),
+                    asset("assets/projects/optim/optim-officer.jpeg"),
+                    asset("assets/projects/optim/optim-display.jpeg"),
+                    asset("assets/projects/optim/optim-login.jpeg"),
+                    asset("assets/projects/optim/optim-patient-create.png"),
+                    asset("assets/projects/optim/optim-queue-create.jpeg"),
                 ],
                 "technology" => ["Laravel", "MySQL", "JavaScript", "Multitenancy"],
                 "link" => "https://biheco.org",
                 "completed_date"  => "",
                 "active"=> true,
-                "description" => "Optim QMS is a custom web application designed to manage queues and appointments for businesses. The platform allows users to create and manage queues, track customer flow, and optimize service delivery. It features a user-friendly interface and provides tools for managing queues effectively. Technology used: Laravel, MySQL, JavaScript.",
+                "description" => "Optim QMS is a custom web-based SAAS application designed to manage queues and appointments for pharmacy. The platform allows users to create and manage queues, track customer flow, and optimize service delivery. It features a user-friendly interface and provides tools for managing queues effectively. Technology used: Laravel, MySQL, JavaScript.",
             ],
             [
                 "name" => "Auchan Mobile",
                 "category" => "Request Management System",
                 "type" => "Custom Web Application",
                 "images" => [
-                    asset("assets/projects/adesonline-dashboard.jpeg"),
+                    asset("assets/projects/auchan/auchan-dashboard.jpeg"),
+                    asset("assets/projects/auchan/auchan-employee-login.jpeg"),
+                    asset("assets/projects/auchan/auchan-cp-login.jpeg"),
                 ],
                 "technology" => ["Laravel", "Tailwind CSS", "MySQL"],
                 "link" => "https://auchan.pt",
@@ -79,7 +113,7 @@ class ProjectCollection
                 "category" => "A Business Profile",
                 "type" => "Custom Web Design",
                 "images" => [
-                    asset("assets/projects/rhodescoffeeco-home.jpeg"),
+                    asset("assets/projects/long/rhodescoffeeco-home-half.jpeg"),
                 ],
                 "technology" => ["Laravel 10", "Inertia JS", "Vue 3"],
                 "link" => "https://rhodescoffeeco.com",
@@ -105,7 +139,7 @@ class ProjectCollection
                 "category" => "Learning Management System (LMS)",
                 "type" => "Custom Web Application",
                 "images" => [
-                    asset("assets/projects/bigr.png"),
+                    asset("assets/projects/long/bigr-home.jpeg"),
                 ],
                 "technology" => ["Laravel 10", "Vue 3", "Tailwind CSS"],
                 "link" => "https://bigrdriving.co.uk",
@@ -177,7 +211,8 @@ class ProjectCollection
                 "category" => "Queue Management",
                 "type" => "Custom Web Application, SAAS Application",
                 "images" => [
-                    asset("assets/projects/gokiiw-dashboard.jpeg")
+                    asset("assets/projects/gokiiw-dashboard.jpeg"),
+                    asset("assets/projects/long/gokiiw-landing.jpeg"),
                 ],
                 "technology" => ["Laravel 7", "MySQL", "JavaScript", "Bootstrap 4"],
                 "link" => "https://gokiiw.com",
@@ -203,7 +238,7 @@ class ProjectCollection
                 "category" => "College Portfolio",
                 "type" => "Custom Web Application",
                 "images" => [
-                    asset("assets/projects/sonagazicollege.gov.bd.jpeg")
+                    asset("assets/projects/long/sonagazicollege-long.jpeg"),
                 ],
                 "technology" => ["Laravel", "MySQL", "JavaScript"],
                 "link" => "http://sonagazicollege.gov.bd",
