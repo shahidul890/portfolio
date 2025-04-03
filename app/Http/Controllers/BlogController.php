@@ -38,8 +38,8 @@ class BlogController extends Controller
     public function show($slug)
     {
         $blog = Blog::where('slug', 'LIKE', "%{$slug}%")->first();
-        // $recomended_blogs = Blog::where
-        return view('blog-details')->with(compact('blog'));
+        $recentBlogs = Blog::whereNot('id', $blog->id)->whereIsActive(true)->latest()->take(3)->get();
+        return view('blog-details')->with(compact('blog', 'recentBlogs'));
     }
 
     /**

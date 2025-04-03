@@ -18,11 +18,13 @@
         "@inertiajs/vue3": "^1.0.14",
         "@tinymce/tinymce-vue": "^5.1.1",
         "@vitejs/plugin-vue": "^5.0.4",
+        "@vueup/vue-quill": "^1.2.0",
         "laravel-vite-plugin": "^1.0.1",
         "swiper": "^11.1.1",
         "vue": "^3.4.19",
         "vue-multiselect": "^3.0.0-beta.3",
         "vue-select": "^4.0.0-beta.6",
-        "vue3-dropzone": "^2.2.1"
+        "vue3-dropzone": "^2.2.1",
+        "vue3-quill": "^0.3.1"
     }
 }

@@ -72,11 +72,7 @@
                                 <div class="form-group mt-2">
                                     <label for="">Content</label> <br>
                                     <span class="text-danger text-xs" v-if="form.errors.content">{{ form.errors.content }}</span>
-                                    <Editor 
-                                        api-key="aepu4lrc2mk9f2h3ivkjzgzbabo8xi5xfjafmmd48na18baa"
-                                        :init="{ plugins: 'lists link image table code help wordcount', toolbar: 'numlist bullist' }"
-                                        v-model="form.content" 
-                                    />
+                                    <QuillEditor theme="snow"  v-model:content="form.content" content-type="html"  toolbar="full" :style="{ height: '500px' }" />
                                 </div>
 
                                 <div class="form-group mt-5">
@@ -95,10 +91,11 @@
 import AdminLayout from './../Layouts/Admin.vue';
 import FlashMessage from '../Components/FlashMessage.vue';
 import { Link, useForm, usePage } from '@inertiajs/vue3';
-import Editor from '@tinymce/tinymce-vue';
 import VueMultiselect from 'vue-multiselect';
 import axios from 'axios';
 import { ref } from 'vue';
+import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
 const {blog} = usePage().props;
 const props = defineProps(['categories', 'tags']);

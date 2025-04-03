@@ -283,7 +283,7 @@
 
 
     <!-- Blogs -->
-    <section id="services" class="py-5">
+    <section id="blogs" class="py-5">
         <div class="container">
             <div class="row gap-3 align-items-center">
                 <div class="col-12 mb-4">
@@ -298,10 +298,10 @@
                         <div class="col-md-6 col-lg-4 mb-5">
                             <div class="card shadow rounded-4">
                                 <div class="card-body">
-                                    <a href="{{url('/blogs/'.$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail not found for blog#{{$blog->id}}" height="250" /></a>
+                                    <a href="{{route('welcome.blogs.show',$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail not found for blog#{{$blog->id}}" height="250" /></a>
                                     <div class="p-4">
                                         <h5>
-                                            <a href="{{url('/blogs/'.$blog->slug)}}" class="text-orange text-decoration-none">{{$blog->title}}</a>
+                                            <a href="{{route('welcome.blogs.show',$blog->slug)}}" class="text-orange text-decoration-none">{{$blog->title}}</a>
                                         </h5>
                                         
                                         <div class="text-muted my-3">
@@ -309,7 +309,7 @@
                                             <p class="m-0"> <i class="fa fa-recycle"></i> Last Updated: {{$blog->updated_at->format("M d, Y")}}</p>
                                         </div>
 
-                                        <a href="{{url('/blogs/'.$blog->slug)}}" class="mt-3 btn btn-orange px-4">Read More <i class="fa fa-angles-right"></i> </a>
+                                        <a href="{{route('welcome.blogs.show',$blog->slug)}}" class="mt-3 btn btn-orange px-4">Read More <i class="fa fa-angles-right"></i> </a>
                                     </div>
                                 </div>
                             </div>
@@ -337,7 +337,7 @@
                     @endforelse
 
                     <div class="col-12 mt-4 text-center">
-                        <a href="/blogs" class="btn btn-orange px-5">More <i class="bi bi-arrow-right"></i> </a>
+                        <a href="{{ route('welcome.blogs') }}" class="btn btn-orange px-5">More <i class="bi bi-arrow-right"></i> </a>
                     </div>
                 </div>
                 </div>
