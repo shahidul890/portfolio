@@ -21,7 +21,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="{{ Route::is('welcome') ? '#projects' : route('welcome.projects') }}">Projects</a>
                 </li>
 
                 <li class="nav-item">
@@ -32,12 +32,10 @@
                     <a class="nav-link" href="#services">Services</a>
                 </li>
                 @endif
-
-                {{-- @if(Route::is('contact')) --}}
+                
                 <li class="nav-item">
-                    <a class="nav-link" href="#blogs">Blogs</a>
+                    <a class="nav-link" href="{{ Route::is('welcome') ? '#blogs' : route('welcome.blogs') }}">Blogs</a>
                 </li>
-                {{-- @endif --}}
 
                 {{-- @if (!Route::is("welcome"))
                 <li class="nav-item">

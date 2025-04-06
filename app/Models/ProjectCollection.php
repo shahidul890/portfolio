@@ -23,6 +23,19 @@ class ProjectCollection
     {
         return [
             [
+                "name" => "Emad Transport Co. Ltd.",
+                "category" => "A Transport Company",
+                "type" => "Custom Web Application",
+                "images" => [
+                    asset("assets/projects/long/emad.jpeg"),
+                ],
+                "technology" => ["Laravel 11", "Vue 3", "Inertia JS", "Tailwind CSS"],
+                "link" => null,
+                "completed_date"  => "",
+                "active"=> true,
+                "description" => "Emad Transport Co. Ltd. is a custom web application designed for bus & ticket management system. It is developed to manage their bus, routes and sell tickets online to the customers. Technology used: Laravel 11, Vue 3, Inertia JS, Tailwind CSS.",
+            ],
+            [
                 "name" => "Biheco",
                 "category" => "A Business Portolio",
                 "type" => "WordPress Design",
@@ -88,7 +101,7 @@ class ProjectCollection
                     asset("assets/projects/optim/optim-queue-create.jpeg"),
                 ],
                 "technology" => ["Laravel", "MySQL", "JavaScript", "Multitenancy"],
-                "link" => "https://biheco.org",
+                "link" => "https://osqm.net",
                 "completed_date"  => "",
                 "active"=> true,
                 "description" => "Optim QMS is a custom web-based SAAS application designed to manage queues and appointments for pharmacy. The platform allows users to create and manage queues, track customer flow, and optimize service delivery. It features a user-friendly interface and provides tools for managing queues effectively. Technology used: Laravel, MySQL, JavaScript.",
@@ -116,7 +129,7 @@ class ProjectCollection
                     asset("assets/projects/long/rhodescoffeeco-home-half.jpeg"),
                 ],
                 "technology" => ["Laravel 10", "Inertia JS", "Vue 3"],
-                "link" => "https://rhodescoffeeco.com",
+                "link" => null,
                 "completed_date"  => "15 March, 2024",
                 "active"=> true,
                 "description" => "RhodesCoffeeCo is a custom web application that provides a platform for customers to order coffee online. The website features a user-friendly interface, allowing customers to browse the menu, select their desired items, and place orders with ease. Technology used: Laravel 10, Inertia JS, Vue 3.",
@@ -129,7 +142,7 @@ class ProjectCollection
                     asset("assets/projects/esperazero.jpeg"),
                 ],
                 "technology" => ["Laravel 10", "Vue 3", "Tailwind CSS"],
-                "link" => "https://esperazero.live",
+                "link" => null,
                 "completed_date"  => "10 February, 2024",
                 "active"=> true,
                 "description" => "Esperazero Pay is a custom web application that provides a solution for receiving payments online. The platform allows users to create payment links, manage transactions, and track their payment history. It is designed to be user-friendly and secure, making it easy for businesses to accept payments from customers. Technology used: Laravel 10, Vue 3, Tailwind CSS.",
@@ -148,6 +161,19 @@ class ProjectCollection
                 "description" => "Big R Driving is a custom web application that serves as a Learning Management System (LMS) for driving instructors and students. The platform allows instructors to create and manage courses, track student progress, and provide feedback. Students can access course materials, complete assignments, and communicate with their instructors. Technology used: Laravel 10, Vue 3, Tailwind CSS.",
             ],
             [
+                "name" => "Roof Top Explorer",
+                "category" => "A Business Profile",
+                "type" => "Custom Web Design",
+                "images" => [
+                    asset("assets/projects/long/rooftopexplorer.jpeg"),
+                ],
+                "technology" => ["Laravel 10", "Vue 3", "Tailwind CSS"],
+                "link" => null,
+                "completed_date"  => null,
+                "active"=> true,
+                "description" => "Roof Top Explorer is a custom web application that provides a platform for users to explore and discover rooftop spaces. The website features a user-friendly interface, allowing users to browse available rooftops, view photos, and read descriptions. It is designed to be visually appealing and easy to navigate. Technology used: Laravel 10, Vue 3, Tailwind CSS.",
+            ],
+            [
                 "name" => "Lead Tracker",
                 "category" => "Lead Management",
                 "type" => "Custom Web Application",
@@ -159,7 +185,7 @@ class ProjectCollection
                     asset("assets/projects/lead/filter.png"),
                 ],
                 "technology" => ["Laravel 10", "Vue 3", "MySQL"],
-                "link" => "https://leads.highlycoded.com",
+                "link" => "https://leads.marketingtech.london",
                 "completed_date"  => "25 June, 2023",
                 "active"=> true,
                 "description" => "Lead Tracker is a custom web application designed to help businesses manage their leads and sales pipeline. The platform allows users to track leads, manage contacts, and monitor sales performance. It features a user-friendly interface and provides tools for filtering and analyzing lead data. Technology used: Laravel 10, Vue 3, MySQL.",
@@ -198,12 +224,12 @@ class ProjectCollection
                 "category" => "Ecommerce",
                 "type" => "Custom Web Application",
                 "images" => [
-                    asset("assets/projects/mrdeal.png")
+                    asset("assets/projects/long/mrdeal.jpeg")
                 ],
-                "technology" => ["Laravel 9", "MySQL", "JavaScript", "Bootstrap 4"],
+                "technology" => ["Laravel 9", "MySQL", "JavaScript"],
                 "link" => null,
                 "completed_date"  => "25 June, 2023",
-                "active"=> false,
+                "active"=> true,
                 "description" => "Mr Deal is a custom web application designed for ecommerce. The platform allows users to browse products, manage orders, and track inventory. It features a user-friendly interface and provides tools for managing ecommerce effectively. Technology used: Laravel 9, MySQL, JavaScript.",
             ],
             [
@@ -245,6 +271,19 @@ class ProjectCollection
                 "completed_date"  => "25 Nov, 2020",
                 "active"=> true,
                 "description" => "Sonagazi Govt College is a custom web application designed for college management. The platform allows users to manage college information in their portfolio. It features a user-friendly interface and provides tools for managing the website content. Technology used: Laravel, MySQL, JavaScript.",
+            ],
+            [
+                "name" => "IBN Al Haytham Health Service",
+                "category" => "Portfolio",
+                "type" => "Web Design",
+                "images" => [
+                    asset("assets/projects/long/iahhs.jpeg"),
+                ],
+                "technology" => ["HTML", "CSS", "JavaScript"],
+                "link" => null,
+                "completed_date"  => null,
+                "active"=> true,
+                "description" => "IBN Al Haytham Health Service is a custom web application designed for health service management. The platform allows users to know health service information in their portfolio. Technology used: HTML, CSS, JavaScript.",
             ]
         ];
     }

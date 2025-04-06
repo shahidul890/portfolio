@@ -22,6 +22,9 @@
 
     {{-- For verify pinterest --}}
     <meta name="p:domain_verify" content="f930ce73e3e3f3d1d833e7a7096e30e4"/>
+
+    {{-- For verify microsoft bing --}}
+    <meta name="msvalidate.01" content="347BEE5BC3762E157510951CA7B0FB5D" />
     
 
     <title>@hasSection('page_title') @yield('page_title') | @endif {{ MetaInfo('title') }}</title>

@@ -37,6 +37,22 @@ class WelcomeController extends Controller
         // return inertia('Frontend/Welcome', $data);
     }
 
+    /**
+     * -----------------------------------------------------------
+     * Show Projects Page
+     * -----------------------------------------------------------
+     * 
+     * 
+     */
+    public function projects()
+    {
+        $projects =  \App\Models\ProjectCollection::all();
+        $data['projects'] = Arr::where($projects, function(array $value, string $key){
+            return $value['active'] == true;
+        });
+        return view('projects')->with($data);
+    }
+
 
     /**
      * -----------------------------------------------------------

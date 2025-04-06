@@ -44,7 +44,7 @@
 
         .swiper-slide-card > img{
             border-radius: 15px 15px 0 0;
-            height: 86vh;
+            height: 90vh;
             width: auto;
             display: block;
             object-fit: cover;
@@ -110,7 +110,7 @@
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
             },
-            loop: true,
+            loop: false,
             spaceBetween: 30,
             // grabCursor: true,
             // centeredSlides: true,
@@ -204,12 +204,12 @@
     <span></span>
   </div>
 
-  {{-- <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <!-- If we need navigation buttons -->
+  {{-- <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div> --}}
 
   <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div> --}}
+  {{-- <div class="swiper-scrollbar"></div> --}}
 </div>
 
 <div class="modal fade" id="project-dialog" tabindex="-1" aria-labelledby="project-dialog-label" aria-hidden="true">
