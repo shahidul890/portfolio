@@ -11,19 +11,23 @@
             <source src="{{asset("assets/videos/working-on-laptop.mp4")}}" type="video/mp4" />
         </video>
 
+        <div class="scroll" onclick="scrollToSection()"></div>
+
         <!-- container -->
         <div class="container text-white text-md-start text-center ">
             <div class="row align-items-center overlay">
 
                 <div class="col-md">
-                    <h3>Hi! I'm</h3>
-                    <h1 class="my-name">Shahidul Islam</h1>
-                    <h4>Full-stack Software Developer</h4>
+                    <h3>👋Hi there! I'm MD</h3>
+                    <h1 class="my-name">{{ $basicInfo->display_name }}</h1>
+                    <h3> {{ $basicInfo->designation_title }}</h3>
+                    {{-- <br> --}}
+                    {{-- <h5>I work with <span class="text-orange">PHP</span>, Laravel, Vue, ReactJS, NodeJS <br/> and WordPress as well.</h5> --}}
                     <br>
                     <h6> Say Hello To </h6>
                     <div class="d-flex align-items-center gap-3 justify-content-center justify-content-md-start" style="font-size: 30px;">
 
-                        <a href="mailto:hello@shahidul.com.bd" target="_blank" class="text-orange text-decoration-none" title="Email">
+                        <a href="mailto:hello@mdshahidul.com" target="_blank" class="text-orange text-decoration-none" title="Email">
                             <i class="bi bi-envelope"></i>
                         </a>
                         <!-- <a href="https://facebook.com/its.antorislam/" target="_blank" class="text-orange text-decoration-none" title="Facebook">
@@ -41,9 +45,12 @@
                         <a href="https://x.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="X">
                             <i class="bi bi-twitter-x"></i>
                         </a>
-                        <a href="skype:live:.cid.90176ee53c448039?chat" target="_blank" class="text-orange text-decoration-none" title="Skype">
-                            <i class="bi bi-skype"></i>
+                        <a href="https://pinterest.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Pinterest">
+                            <i class="bi bi-pinterest"></i>
                         </a>
+                        {{-- <a href="skype:live:.cid.90176ee53c448039?chat" target="_blank" class="text-orange text-decoration-none" title="Skype">
+                            <i class="bi bi-skype"></i>
+                        </a> --}}
                         {{-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
                             <img
                                 src="/assets/icons/fiverr.png"
@@ -56,7 +63,7 @@
                     </div>
 
                     {{-- <a href="{{asset('assets/cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">DOWNLOAD CV</a> --}}
-                    <a href="{{asset('cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">RESUME</a>
+                    {{-- <a href="{{asset('cv/resume-of-shahidul-islam.pdf')}}" target="__blank" class="btn btn-orange px-4 mt-3">RESUME</a> --}}
                     <a href="/contact" class="btn btn-orange px-3 mt-3">CONTACT ME</a>
                 </div>
 
@@ -64,12 +71,25 @@
                     class="col-md text-md-end slow-motion"
                     style="position: relative;"
                 >
+
+                    {{-- Experiance --}}
                     <div class="bg-light text-dark p-3 d-none d-md-inline experience-card" style="z-index: 100">
                         <div class="d-flex gap-3 align-items-center">
-                            <h1 class="m-0 text-blue">4+</h1>
+                            <h1 class="m-0 text-blue">{{ $basicInfo->experience }}</h1>
                             <div class="text-start">
                                 <h5 class="m-0">Years Experience</h5>
                                 <small class="m-0">Happy Clients</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Completed Projects --}}
+                    <div class="bg-light text-dark p-2 d-none d-md-inline projects-card" style="z-index: 100">
+                        <div class="d-flex gap-2 justify-content-center align-items-center">
+                            <h1 class="m-0 text-blue">{{ $basicInfo->completed_projects }}</h1>
+                            <div class="text-start">
+                                <h6 class="m-0">Completed <br/> Projects</h6>
+                                {{-- <small class="m-0">Happy Clients</small> --}}
                             </div>
                         </div>
                     </div>
@@ -209,7 +229,10 @@
 
                     <h1 style="font-size: 52px;">Why you <span class="text-orange">hire me</span> for your <span class="text-blue">next project?</span></h1>
                     <br>
-                    <p>With 4+ years of experience as a programmer, I've honed my skills in creating efficient and innovative solutions for a diverse range of clients. My journey started with a passion for coding, I've cultivated expertise that enables me to tackle complex challenges and deliver exceptional results. I have worked on a wide range of projects, such as School Management, Industry Management, Ecommerce, MLM, Car Management, and Schedule Booking. My programming expertise spans several key areas, making me a versatile choice for your projects. I specialize in PHP, Laravel, REST API, MySQL, AJAX, jQuery</p>
+
+                    <p>
+                       I am a professional web developer with over {{ str_replace('+', '', $basicInfo->experience) }} years of experience,  having successfully delivered more than {{ str_replace('+', '', $basicInfo->completed_projects) }} projects.  I specialize in end-to-end web application development, managing all stages from project design and development to debugging and server deployment. My expertise spans across Laravel, React.js, Vue.js, and WordPress, where I provide tailored, high-quality web solutions and custom software development to meet the unique needs of my clients.
+                    </p>
 
                     <a href="javascript::" class="btn btn-orange px-5">Hire Me</a>
                 </div>
@@ -227,12 +250,15 @@
                     <p>PROJECTS</p>
 
                     <h1 style="font-size: 52px;">
-                        I have worked over <span class="text-orange">20+ projects</span>
+                        I have worked over <span class="text-orange">{{ $basicInfo->completed_projects }} projects</span>
                     </h1>
                 </div>
                 <div class="col-md-12">
                     <x-projects :projects="$projects" />
                 </div>
+                {{-- <div class="col-md-12">
+                    <x-projects :projects="$projects" />
+                </div> --}}
             </div>
         </div>
     </section>
@@ -257,7 +283,7 @@
 
 
     <!-- Blogs -->
-    <section id="services" class="py-5">
+    <section id="blogs" class="py-5">
         <div class="container">
             <div class="row gap-3 align-items-center">
                 <div class="col-12 mb-4">
@@ -272,10 +298,10 @@
                         <div class="col-md-6 col-lg-4 mb-5">
                             <div class="card shadow rounded-4">
                                 <div class="card-body">
-                                    <a href="{{url('/blogs/'.$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail not found for blog#{{$blog->id}}" height="250" /></a>
+                                    <a href="{{route('welcome.blogs.show',$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail not found for blog#{{$blog->id}}" height="250" /></a>
                                     <div class="p-4">
                                         <h5>
-                                            <a href="{{url('/blogs/'.$blog->slug)}}" class="text-orange text-decoration-none">{{$blog->title}}</a>
+                                            <a href="{{route('welcome.blogs.show',$blog->slug)}}" class="text-orange text-decoration-none">{{$blog->title}}</a>
                                         </h5>
                                         
                                         <div class="text-muted my-3">
@@ -283,7 +309,7 @@
                                             <p class="m-0"> <i class="fa fa-recycle"></i> Last Updated: {{$blog->updated_at->format("M d, Y")}}</p>
                                         </div>
 
-                                        <a href="{{url('/blogs/'.$blog->slug)}}" class="mt-3 btn btn-orange px-4">Read More <i class="fa fa-angles-right"></i> </a>
+                                        <a href="{{route('welcome.blogs.show',$blog->slug)}}" class="mt-3 btn btn-orange px-4">Read More <i class="fa fa-angles-right"></i> </a>
                                     </div>
                                 </div>
                             </div>
@@ -311,7 +337,7 @@
                     @endforelse
 
                     <div class="col-12 mt-4 text-center">
-                        <a href="/blogs" class="btn btn-orange px-5">More <i class="bi bi-arrow-right"></i> </a>
+                        <a href="{{ route('welcome.blogs') }}" class="btn btn-orange px-5">More <i class="bi bi-arrow-right"></i> </a>
                     </div>
                 </div>
                 </div>

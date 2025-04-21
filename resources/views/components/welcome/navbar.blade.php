@@ -1,5 +1,5 @@
 <!-- navbar -->
-<nav class="navbar navbar-dark text-uppercase text-white navbar-expand-lg sticky-top d-none d-md-block" style="background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('/assets/img/footer_bg.svg')">
+<nav class="navbar navbar-dark text-uppercase text-white navbar-expand-lg fixed-top d-none d-md-block" style="background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('/assets/img/footer_bg.svg')">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="{{ Route::is('welcome') ? '#projects' : route('welcome.projects') }}">Projects</a>
                 </li>
 
                 <li class="nav-item">
@@ -32,18 +32,16 @@
                     <a class="nav-link" href="#services">Services</a>
                 </li>
                 @endif
-
-                @if(Route::has('welcome.blogs'))
+                
                 <li class="nav-item">
-                    <a class="nav-link @if(request()->is("blogs") || request()->is("blog/*")) active @endif" href="/blogs">Blogs</a>
+                    <a class="nav-link" href="{{ Route::is('welcome') ? '#blogs' : route('welcome.blogs') }}">Blogs</a>
                 </li>
-                @endif
 
-                @if (!Route::is("welcome"))
+                {{-- @if (!Route::is("welcome"))
                 <li class="nav-item">
                     <a class="nav-link @if(Route::is('contact')) active @endif" href="{{route("contact")}}">Contact</a>
                 </li>
-                @endif
+                @endif --}}
                 
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
