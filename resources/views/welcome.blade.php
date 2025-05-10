@@ -93,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="assets/img/md-260kb.png" alt="" class="img-fluid" width="400">
+                    <img src="assets/img/md-260kb.png" alt="Image Of Md Shahidul Islam" class="img-fluid" width="400">
                 </div>
             </div>
         </div>
@@ -298,7 +298,7 @@
                         <div class="col-md-6 col-lg-4 mb-5">
                             <div class="card shadow rounded-4">
                                 <div class="card-body">
-                                    <a href="{{route('welcome.blogs.show',$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail not found for blog#{{$blog->id}}" height="250" /></a>
+                                    <a href="{{route('welcome.blogs.show',$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail for blog#{{$blog->id}}" height="250" /></a>
                                     <div class="p-4">
                                         <h5>
                                             <a href="{{route('welcome.blogs.show',$blog->slug)}}" class="text-orange text-decoration-none">{{$blog->title}}</a>

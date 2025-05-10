@@ -3,7 +3,7 @@
         <div class="card border-0 shadow">
             <img
                 src="/assets/icons/web-design.jpg"
-                alt=""
+                alt="Web design service"
                 class="img-fluid rounded-circle" width="100"
                 style="margin-top: -50px;"
             />
@@ -18,7 +18,7 @@
     </div>
     <div class="col-12 col-md-6 col-lg-4 my-5">
         <div class="card border-0 shadow">
-            <img src="/assets/icons/web-development.jpg" alt="" class="img-fluid rounded-circle" width="100"
+            <img src="/assets/icons/web-development.jpg" alt="Web development service" class="img-fluid rounded-circle" width="100"
                 style="margin-top: -50px;"
             />
             <div class="card-body">
@@ -32,7 +32,7 @@
         <div class="card border-0 shadow">
             <img
                 src="/assets/icons/rest-api.jpg"
-                alt=""
+                alt="REST API service"
                 class="img-fluid rounded-circle"
                 width="100"
                 style="margin-top: -50px;"

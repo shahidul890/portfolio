@@ -22,6 +22,7 @@ class DomainGuard
             'mdshahidul.com',
             'mdshahidul.localhost',
             'www.mdshahidul.com',
+            'localhost'
         ];
 
         if(in_array($hostname, $validHostNames))

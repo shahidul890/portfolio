@@ -31,7 +31,7 @@ class BasicInfo
                 'title' => 'Md Shahidul Islam - Expert Web Developer | Laravel, Vue.js, WordPress',
                 'description' => "Md Shahidul Islam - Expert Web Developer with 5+ years' experience. Specializes in Laravel, Vue.js, WordPress & full-stack development for top-tier web solutions.",
                 'robots' => 'index, follow',
-                'keywords' => 'Shahidul Islam, Md Shahidul, Web Developer, WordPress Developer, Web Application Developer, Professional Web Developer, Freelance Web Developer, WordPress Expert, Custom Web Applications, SAAS development, Multitenant Applications, Business Website Development, API integration',
+                'keywords' => 'Best web developer, Top 10 web developer, Best Laravel Developer, Best Web solution, Best web solution provider, Best Wordpress Developer, Top 10 freelancer, Best Freelancer in Bangladesh, Top 10 freelancer, Expert web developer',
                 'author' => 'Md Shahidul Islam',
                 'image' => asset('assets/img/md-shahidul-islam.jpg')
             ]
