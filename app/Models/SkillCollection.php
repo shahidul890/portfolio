@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-class 
-SkillCollection
+class SkillCollection
 {
     static function all(): array
     {
