@@ -30,6 +30,6 @@ class BlogController extends Controller
     {
         $blog = $this->model->where('slug', 'LIKE', $slug)->first();
         $recentBlogs = $this->model->where('id', '!=', $blog->id)->where('active', true)->latest()->limit(3)->get();
-        return view($blog->file)->with(compact('blog', 'recentBlogs'));
+        return view('blogs.'.$blog->file)->with(compact('blog', 'recentBlogs'));
     }
 }
