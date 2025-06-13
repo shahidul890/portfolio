@@ -1,4 +1,5 @@
 <style>
+
     body {
         font-family: 'Josefin Sans', sans-serif;
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');

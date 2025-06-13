@@ -14,6 +14,10 @@
             font-family: monospace
         }
 
+        article a{
+            color: rgb(202, 106, 50) !important;
+        }
+
         .code-inline{
             background-color: rgb(29, 29, 63) !important;
             color: white !important;

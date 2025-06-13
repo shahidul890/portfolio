@@ -7,11 +7,11 @@
 @endsection
 
 @section("blog-content")
-    <div>
+    <article>
         
         <x-blogs.title :blog="$blog" />
 
-        <article>
+        <section>
             <h5 class="section-title">The Importance of a Portfolio Website in Today’s Digital World</h5>
 
             <p>In an increasingly competitive and digitally-driven marketplace, having a strong online presence is more than a luxury—it's a necessity. Whether you're a freelancer, entrepreneur, creative professional, or service provider, one of the most valuable tools you can have in your digital toolkit is a portfolio website.</p>
@@ -45,6 +45,6 @@
             <p>So if you’re still relying solely on social media or freelance platforms to represent your brand, it might be time to level up. Your future clients are searching—make sure you’re easy to find and impossible to ignore.</p>
 
             <p><strong>#PortfolioWebsite #LinkedInMarketing #PersonalBranding #OnlinePresence #WebDevelopment #DigitalBranding #BusinessGrowth</strong></p>
-        </article>
-    </div>
+        </section>
+    </article>
 @endsection
