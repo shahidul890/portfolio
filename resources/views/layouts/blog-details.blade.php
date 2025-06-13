@@ -21,23 +21,37 @@
             padding: 4px;
             border-radius: 4px;
         }
+
+        .section-title{
+            color: rgb(202, 106, 50);
+            margin-top: 20px !important;
+            margin-bottom: 12px !important;
+            font-weight: bold
+        }
     </style>
 
     <section class="my-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class=" @if(isset($blog) && $blog->show_recent_blogs && $blog->recent_blogs_position == 'right') col-md-9 @else col-md-12 @endif ">
                     <div class="card rounded-3 shadow mb-3">
                         <div class="card-body">
                             @yield('blog-content')
                         </div>
                     </div>
 
+                    @if(isset($blog) && $blog->show_author)
                     <x-blogs.author />
+                    @endif
                 </div>
 
+                @if(isset($blog) && $blog->show_recent_blogs && $blog->recent_blogs_position == 'right')
+                <x-blogs.recent-blogs.vertical :recentBlogs="$recentBlogs" />
 
-                <x-blogs.recent-blogs :recentBlogs="$recentBlogs" />
+                @elseif(isset($blog) && $blog->show_recent_blogs && $blog->recent_blogs_position == 'bottom')
+                <x-blogs.recent-blogs.horizont :recentBlogs="$recentBlogs" />
+
+                @endif
             </div>
         </div>
     </section>

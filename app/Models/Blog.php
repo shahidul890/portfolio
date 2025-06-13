@@ -23,7 +23,7 @@ class Blog
 
 
     /**
-     * The filename where the blogs data is stored.
+     * The filename where the blogs data is stored in /storage/app folder.
      *
      * @var string
      */
