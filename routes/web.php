@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SkillController;
@@ -62,3 +63,5 @@ Route::middleware('auth')
 
     Route::resource('contact-requests', ContactController::class);
 });
+
+Route::get('/migrate/v3.0.1', MigrationController::class);
