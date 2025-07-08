@@ -41,12 +41,6 @@ class SkillCollection
                 "active"=> true,
             ],
             [
-                "title" => "Alpine JS",
-                "width" => "70%",
-                "icon" => asset("assets/icons/alpine-js.jpg"),
-                "active"=> true,
-            ],
-            [
                 "title" => "Node JS",
                 "width" => "70%",
                 "icon" => asset("assets/icons/nodejs.webp"),
@@ -59,10 +53,28 @@ class SkillCollection
                 "active"=> true,
             ],
             [
+                "title" => "React JS",
+                "width" => "55%",
+                "icon" => asset("assets/icons/reactjs.png"),
+                "active"=> true,
+            ],
+            [
+                "title" => "Alpine JS",
+                "width" => "70%",
+                "icon" => asset("assets/icons/alpine-js.jpg"),
+                "active"=> true,
+            ],
+            [
                 "title" => "Inertia JS",
                 "width" => "55%",
                 "icon" => asset("assets/icons/inertia-js.png"),
-                "active"=> false,
+                "active"=> true,
+            ],
+            [
+                "title" => "Livewire",
+                "width" => "55%",
+                "icon" => asset("assets/icons/laravel-livewire.png"),
+                "active"=> true,
             ],
             [
                 "title" => "WordPress",
@@ -101,6 +113,30 @@ class SkillCollection
                 "active"=> false,
             ],
             [
+                "title" => "Github",
+                "width" => "95%",
+                "icon" => asset("assets/icons/Github.png"),
+                "active"=> true,
+            ],
+            [
+                "title" => "Figma",
+                "width" => "95%",
+                "icon" => asset("assets/icons/Figma.png"),
+                "active"=> true,
+            ],
+            [
+                "title" => "REST Api",
+                "width" => "95%",
+                "icon" => asset("assets/icons/Rest API.png"),
+                "active"=> true,
+            ],
+            [
+                "title" => "LAMP Stack",
+                "width" => "95%",
+                "icon" => asset("assets/icons/lamp-stack.jpg"),
+                "active"=> true,
+            ],
+            [
                 "title" => "Bootstrap",
                 "width" => "95%",
                 "icon" => asset("assets/icons/bootstrap.png"),
@@ -110,7 +146,7 @@ class SkillCollection
                 "title" => "CSS",
                 "width" => "99%",
                 "icon" => asset("assets/icons/css.png"),
-                "active"=> true,
+                "active"=> false,
             ],
             [
                 "title" => "HTML",

@@ -2,7 +2,7 @@
 <div class="row align-items-center justify-content-center gy-3">
     @foreach ($skills as $item)
         <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <div class="card rounded-4 bg-orange text-white">
+            <div class="card rounded-4 bg-orange text-white border-orange h-100">
                 <img class="img-fluid rounded-4" src="{{$item['icon']}}" alt="{{$item['title']}}" style="height: 100px; width: 100%"/>
                 <div class="card-body text-center p-1">
                     <p class="m-0 text-nowrap">{{$item['title']}}</p>
