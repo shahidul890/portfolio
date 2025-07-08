@@ -19,7 +19,7 @@ return new class extends Migration
             $table->longText('content')->nullable();
             $table->string('thumbnail')->nullable();
             $table->string('slug');
-            $table->string('tags')->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories')
@@ -28,7 +28,6 @@ return new class extends Migration
             ->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->index('title');
-            $table->index('tags');
         });
     }
 

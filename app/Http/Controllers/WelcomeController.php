@@ -21,6 +21,7 @@ class WelcomeController extends Controller
     {
         $projects =  \App\Models\ProjectCollection::all();
         $skills =  \App\Models\SkillCollection::all();
+        $data['basicInfo'] = \App\Models\BasicInfo::all();
 
         $data['projects'] = Arr::where($projects, function(array $value, string $key){
             return $value['active'] == true;
@@ -34,6 +35,22 @@ class WelcomeController extends Controller
         
         return view('welcome')->with($data);
         // return inertia('Frontend/Welcome', $data);
+    }
+
+    /**
+     * -----------------------------------------------------------
+     * Show Projects Page
+     * -----------------------------------------------------------
+     * 
+     * 
+     */
+    public function projects()
+    {
+        $projects =  \App\Models\ProjectCollection::all();
+        $data['projects'] = Arr::where($projects, function(array $value, string $key){
+            return $value['active'] == true;
+        });
+        return view('projects')->with($data);
     }
 
 

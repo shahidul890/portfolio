@@ -36,11 +36,23 @@
     }
 
     .overlay{
-        min-height: 93vh;
+        min-height: 100vh;
     }
 
     .footer-bg{
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');
+    }
+
+    .navbar{
+        opacity: 0;
+        transform: translateY(-20px); /* Moves slightly up */
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+     /* Show navbar */
+    .navbar.show {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .navbar .navbar-nav .nav-item a{
@@ -105,8 +117,16 @@
 
     .experience-card{
         position: absolute;
-        bottom: 13%;
+        bottom: 4%;
         right: -6%;
+        border-radius: 18px;
+        background: linear-gradient(90deg, #fff, #fdb08d);
+    }
+
+    .projects-card{
+        position: absolute;
+        top: 0%;
+        right: -8%;
         border-radius: 18px;
         background: linear-gradient(90deg, #fff, #fdb08d);
     }
@@ -266,5 +286,79 @@
         100% {
             transform: translateY(20px);
         }
+    }
+
+    .scroll {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #696969;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 5%;
+        left: 48%;
+        animation: down 1.5s infinite;
+        -webkit-animation: down 1.5s infinite;
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 16px;
+            width: 15px;
+            height: 15px;
+            border-left: 2px solid #fbfbfb;
+            border-bottom: 2px solid #fbfbfb;
+            transform: rotate(-45deg);
+        }
+    }
+
+    @keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+
+    @-webkit-keyframes down {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translateY(15px);
+        }
+        40% {
+            transform: translate(0);
+        }
+    }
+
+    .scroll-to-top div{
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        background-color: #09072d;
+        border: 2px solid #696969;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 9999;
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+        transform: translateY(20px); /* Moves slightly down */
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .scroll-to-top div.show{
+        opacity: 1;
+        transform: translateY(0);
     }
 </style>

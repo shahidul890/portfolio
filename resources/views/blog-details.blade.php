@@ -20,12 +20,19 @@
             color: white !important;
             font-family: monospace
         }
+
+        .blog-content img{
+            width: 100% !important;
+            /* object-fit: contain; */
+            height: auto;
+            margin: 10px 0px;
+        }
     </style>
 
     <section class="my-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-9">
                     <div class="card rounded-3 shadow mb-3">
                         <div class="card-body">
                             <h2>{{\Str::ucfirst($blog->title)}}</h2>
@@ -44,7 +51,7 @@
                     <div class="card shadow rounded">
                         <div class="card-body">
                              <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-12">
                                      <div class="d-flex gap-2">
                                         <div class="text-center w-50">
                                             <img src="{{asset('assets/img/md-shahidul-islam.jpg')}}" alt="Avatar of shahidul" width="90" class="rounded img-fluid" />
@@ -56,15 +63,15 @@
                                             <small class="m-0 fw-bold">Full-Stack Software Developer</small>
                                             <br />
                                             <small>
-                                                As a full-stack developer, I've been working for over 3 years. I am from Bangladesh and I love to write tutorials and tips that can help to other artisan. I am a big fan of PHP, Laravel, Vue, Javascript, JQuery, Tailwind CSS and Bootstrap from the early stage. I believe in Hardworking and Consistency.
+                                                As a full-stack developer, I've been working for over {{ str_replace('+', '', BasicInfo('experience')) }} years. I am from Bangladesh and I love to write tutorials and tips that can help to other artisan. I am a big fan of PHP, Laravel, WordPress, Vue, Javascript, Tailwind CSS and Bootstrap from the early stage. I believe in Hardworking and Consistency.
                                             </small>
 
                                             <div class="d-flex gap-3 mt-3">
                                                 <p class="m-0">Follow me:</p>
                                                 <div class="d-flex gap-2">
-                                                    <a href="https://github.com/shahidul890" target="__blank" title="Github"><i class="fa-brands fa-github"></i></a>
-                                                    <a href="https://www.linkedin.com/in/mdshahidul" target="__blank" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
-                                                    <a href="mailto:hello@shahidul.com.bd" target="__blank" title="Email"><i class="fa fa-envelope"></i></a>
+                                                    <a href="{{ SocialMedia('github') }}" target="__blank" title="Github"><i class="fa-brands fa-github"></i></a>
+                                                    <a href="{{ SocialMedia('linkedin') }}" target="__blank" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+                                                    <a href="mailto:{{ BasicInfo('contact_mail') }}" target="__blank" title="Email"><i class="fa fa-envelope"></i></a>
                                                 </div>
                                             </div>
                                             
@@ -77,26 +84,26 @@
                 </div>
 
 
-                {{-- <div class="col-md-12 mt-5">
-                    <p>Related Blogs</p>
-                    <h1 style="font-size: 52px;">Maybe you will<span class="text-orange"> benefit to know </span> </h1>
+                <div class="col-md-3">
+                    <p class="text-orange">Recent Blogs</p>
+                    <h3 style="font-size: 32px;">Maybe you will<span class="text-orange"> benefit to know </span> </h3>
 
-                    <div class="row">
-                        @for ($i=0; $i<3; $i++)
-                            <div class="col-md-4 mb-5">
+                    <div class="d-flex gap-3 flex-column">
+                        @foreach ($recentBlogs as $blog)
+                            <div class="mb-3">
                                 <div class="card shadow rounded-4">
                                     <div class="car-body">
-                                        <img class="card-img-top rounded-top-4" src="{{asset("assets/blogs/web-hosting.jpg")}}" alt="web hosting feature image" />
+                                        <img class="rounded-start-4 img-fluid" src="{{asset($blog->thumbnail)}}" alt="{{ $blog->title }}" />
                                         <div class="p-4">
-                                            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam reiciendis neque voluptas unde dolorum official!</h5>
-                                            <a href="{{url("/blog/lorem-ipsum")}}" class="mt-3 btn btn-orange px-4">Read More <i class="fa fa-angles-right"></i> </a>
+                                            <h5>{{ $blog->title }}</h5>
+                                            <a href="{{route('welcome.blogs.show', $blog->slug)}}" class="mt-3 btn btn-orange px-4">Read More <i class="fa fa-angles-right"></i> </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
     </section>
