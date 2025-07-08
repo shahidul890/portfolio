@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ MetaInfo('description') }}" />
-    <meta name="keywords" content="{{ MetaInfo('keywords') }}">
-    <meta name="author" content="{{ MetaInfo('author') }}">
+    
+    @hasSection('metatags')
+        @yield('metatags')
+    @else
+        <meta name="description" content="{{ MetaInfo('description') }}" />
+        <meta name="keywords" content="{{ MetaInfo('keywords') }}">
+        <meta name="author" content="{{ MetaInfo('author') }}">
 
-    <meta name="twitter:title" content="{{ MetaInfo('title') }}" />
-    <meta name="twitter:description" content="{{ MetaInfo('description') }}" />
-    <meta name="twitter:image" content="{{ MetaInfo('image') }}" />
-    <meta name="twitter:card" content="{{ MetaInfo('image') }}" />
+        <meta name="twitter:title" content="{{ MetaInfo('title') }}" />
+        <meta name="twitter:description" content="{{ MetaInfo('description') }}" />
+        <meta name="twitter:image" content="{{ MetaInfo('image') }}" />
+        <meta name="twitter:card" content="{{ MetaInfo('image') }}" />
 
-    <meta name="og:title" content="{{ MetaInfo('title') }}" />
-    <meta name="og:description" content="{{ MetaInfo('description') }}" />
-    <meta name="og:image" content="{{ MetaInfo('image') }}" />
-    <meta name="og:url" content="{{url('/')}}" />
+        <meta name="og:title" content="{{ MetaInfo('title') }}" />
+        <meta name="og:description" content="{{ MetaInfo('description') }}" />
+        <meta name="og:image" content="{{ MetaInfo('image') }}" />
+        <meta name="og:url" content="{{url('/')}}" />
+    @endif
 
     {{-- For verifying google adsense account --}}
     <meta name="google-adsense-account" content="ca-pub-6580540719182750" />

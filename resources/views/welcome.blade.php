@@ -30,27 +30,18 @@
                         <a href="mailto:hello@mdshahidul.com" target="_blank" class="text-orange text-decoration-none" title="Email">
                             <i class="bi bi-envelope"></i>
                         </a>
-                        <!-- <a href="https://facebook.com/its.antorislam/" target="_blank" class="text-orange text-decoration-none" title="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="javascript::" class="text-orange text-decoration-none" title="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a> -->
-                        <a href="https://linkedin.com/in/mdshahidul/" target="_blank" class="text-orange text-decoration-none" title="Linkedin">
+                        <a href="{{ SocialMedia("linkedin") }}" target="_blank" class="text-orange text-decoration-none" title="Linkedin">
                             <i class="bi bi-linkedin"></i>
                         </a>
-                        {{-- <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
+                        <a href="{{ SocialMedia('github') }}" target="_blank" class="text-orange text-decoration-none" title="Github">
                             <i class="bi bi-github"></i>
-                        </a> --}}
-                        <a href="https://x.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="X">
+                        </a>
+                        <a href="{{ SocialMedia('twitter') }}" target="_blank" class="text-orange text-decoration-none" title="X">
                             <i class="bi bi-twitter-x"></i>
                         </a>
-                        <a href="https://pinterest.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Pinterest">
+                        <a href="{{ SocialMedia('pinterest') }}" target="_blank" class="text-orange text-decoration-none" title="Pinterest">
                             <i class="bi bi-pinterest"></i>
                         </a>
-                        {{-- <a href="skype:live:.cid.90176ee53c448039?chat" target="_blank" class="text-orange text-decoration-none" title="Skype">
-                            <i class="bi bi-skype"></i>
-                        </a> --}}
                         {{-- <a href="https://fiverr.com/shahidul_islamm/" target="_blank" class="text-decoration-none" title="Fiverr">
                             <img
                                 src="/assets/icons/fiverr.png"
@@ -93,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="assets/img/md-260kb.png" alt="" class="img-fluid" width="400">
+                    <img src="assets/img/md-260kb.png" alt="Image Of Md Shahidul Islam" class="img-fluid" width="400">
                 </div>
             </div>
         </div>
@@ -112,11 +103,14 @@
 
                 <div class="col-md-12">
 
-                    <div class="card shadow">
-                        <div class="card-header text-white pt-3">
-                            <h5 class="m-0">HAMKO ICT Limited</h5>
-                            <small>Web Application Developer</small>
-                            <small class="m-0">(December 2023 – Present)</small>
+                    <div class="card border-orange">
+                        <div class="card-header text-white pt-3 d-flex align-items-start gap-2">
+                            <img src="{{ asset('assets/job/hamko-ict-logo.jpeg') }}" alt="Hamko ICT Limited logo" title="Hamko ICT Limited" class="img-fluid rounded-3" width="70" />
+                            <div>
+                                <a href="https://hamkoict.com.bd" target="__blank" class="text-decoration-none text-white"><h5 class="m-0">HAMKO ICT Limited</h5></a>
+                                <small>Remote - Web Developer</small> <br>
+                                <small class="m-0">(December 2023 – Present)</small>
+                            </div>
                         </div>
                         <div class="card-body">
                             <b>Responsibilities:</b>
@@ -139,11 +133,14 @@
                         </div>
                     </div>
                     
-                    <div class="card shadow mt-3">
-                        <div class="card-header bg-orange text-white pt-3">
-                            <h5 class="m-0">Codecell Limited</h5>
-                            <small>Team Lead & Web Developer</small>
-                            <small class="m-0">(July 2022 – November 2023)</small>
+                    <div class="card border-orange mt-3">
+                        <div class="card-header bg-orange text-white pt-3 d-flex align-items-start gap-2">
+                            <img src="{{ asset('assets/job/codecellltd_logo.jpeg') }}" alt="Codecell Limited Logo" title="Codecell Limited" class="img-fluid rounded-3" width="70" />
+                            <div>
+                                <a href="https://codecell.com.bd" target="__blank" class="text-decoration-none text-white"><h5 class="m-0">Codecell Limited</h5></a>
+                                <small>Team Lead & Web Developer</small> <br>
+                                <small class="m-0">(July 2022 – November 2023)</small>
+                            </div>
                         </div>
                         <div class="card-body">
                             <b>Responsibilities:</b>
@@ -172,11 +169,14 @@
                     </div>
 
 
-                    <div class="card shadow mt-3">
-                        <div class="card-header bg-orange text-white pt-3">
-                            <h5 class="m-0">DS Legends Pvt. Ltd.</h5>
-                            <small>Laravel Developer</small>
-                            <small class="m-0">(January 2022 – June 2022)</small>
+                    <div class="card border-orange mt-3">
+                        <div class="card-header bg-orange text-white pt-3 d-flex align-items-start gap-2">
+                            <img src="{{ asset('assets/job/dslegends-logo.jpeg') }}" alt="DS Legends Logo" title="DS Legends Pvt. Ltd." class="img-fluid rounded-3" width="70" />
+                            <div>
+                                <a href="https://dsl.sg/" target="__blank" class="text-decoration-none text-white"><h5 class="m-0">DS Legends Pvt. Ltd.</h5></a>
+                                <small>Remote - Web Developer</small> <br>
+                                <small class="m-0">(January 2022 – June 2022)</small>
+                            </div>
                         </div>
                         <div class="card-body">
                             <b>Responsibilities:</b>
@@ -231,10 +231,14 @@
                     <br>
 
                     <p>
-                       I am a professional web developer with over {{ str_replace('+', '', $basicInfo->experience) }} years of experience,  having successfully delivered more than {{ str_replace('+', '', $basicInfo->completed_projects) }} projects.  I specialize in end-to-end web application development, managing all stages from project design and development to debugging and server deployment. My expertise spans across Laravel, React.js, Vue.js, and WordPress, where I provide tailored, high-quality web solutions and custom software development to meet the unique needs of my clients.
+                       I bring over {{ BasicInfo('experience')[0] }} years of solid experience as a full-stack web developer, having successfully delivered {{ BasicInfo('completed_projects') }} projects across various industries. I specialize in Laravel, Vue.js, React.js, WordPress, and modern front-end tools like Tailwind CSS and Bootstrap. Whether it's building a custom SaaS application, integrating a payment gateway, or creating a fast, responsive business website — I handle everything from backend logic to front-end design with care and attention to detail.</p>
+
+                    <p>As a team lead, I’ve worked in collaborative environments, led developers, managed deadlines, and ensured quality results. I also stay updated with the latest development trends, follow best practices, and always focus on clean code and performance.</p>
+
+                    <p>If you’re looking for someone reliable, experienced, and easy to communicate with — someone who will treat your project as their own — I’m the developer you need.
                     </p>
 
-                    <a href="javascript::" class="btn btn-orange px-5">Hire Me</a>
+                    <a href="{{ route('contact') }}" class="btn btn-orange px-5">Hire Me</a>
                 </div>
             </div>
         </div>
@@ -242,7 +246,7 @@
     <!-- // about Me end -->
 
     <!-- Projects -->
-    <section id="projects" class="py-5">
+    {{-- <section id="projects" class="py-5">
         <div class="container py-3">
 
             <div class="row align-items-center">
@@ -256,12 +260,9 @@
                 <div class="col-md-12">
                     <x-projects :projects="$projects" />
                 </div>
-                {{-- <div class="col-md-12">
-                    <x-projects :projects="$projects" />
-                </div> --}}
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- // Projects end -->
 
     <!-- Services -->
@@ -296,9 +297,9 @@
 
                     @forelse ($blogs as $blog)
                         <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="card shadow rounded-4">
+                            <div class="card border-orange rounded-4 h-100">
                                 <div class="card-body">
-                                    <a href="{{route('welcome.blogs.show',$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail not found for blog#{{$blog->id}}" height="250" /></a>
+                                    <a href="{{route('welcome.blogs.show',$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail for blog#{{$blog->id}}" height="250" /></a>
                                     <div class="p-4">
                                         <h5>
                                             <a href="{{route('welcome.blogs.show',$blog->slug)}}" class="text-orange text-decoration-none">{{$blog->title}}</a>

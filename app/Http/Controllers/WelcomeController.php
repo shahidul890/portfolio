@@ -31,7 +31,7 @@ class WelcomeController extends Controller
             return $value['active'] == true;
         });
 
-        $data['blogs'] = Blog::whereIsActive(true)->latest()->take(3)->get();
+        $data['blogs'] = (new \App\Models\Blog)->where('active',true)->latest()->limit(3)->get();
         
         return view('welcome')->with($data);
         // return inertia('Frontend/Welcome', $data);
@@ -65,7 +65,7 @@ class WelcomeController extends Controller
      */
     public function about()
     {
-        // return view('about');
+        return view('about');
     }
 
 }

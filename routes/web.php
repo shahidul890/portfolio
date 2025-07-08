@@ -7,10 +7,12 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MigrationController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\TagController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 
@@ -61,4 +63,11 @@ Route::middleware('auth')
     Route::post('upload/file', FileUploadController::class)->withoutMiddleware('auth');
 
     Route::resource('contact-requests', ContactController::class);
+});
+
+Route::get('/migrate/v3.0.1', MigrationController::class);
+
+Route::get('cache-clear', function(){
+    Artisan::call('optimize:clear');
+    return "cleared";
 });

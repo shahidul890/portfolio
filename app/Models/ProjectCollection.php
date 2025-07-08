@@ -84,7 +84,7 @@ class ProjectCollection
                 "technology" => ["WordPress", "Elementor"],
                 "link" => "https://www.xlifesurfschool.com/",
                 "completed_date"  => "",
-                "active"=> true,
+                "active"=> false,
                 "description" => "XLife Surf School is a business portfolio website that showcases the services and products offered by the company. It is designed to provide potential customers with an overview of the company's offerings and to encourage them to get in touch for more information. Technology used: WordPress, Elementor.",
             ],
             [
@@ -195,15 +195,15 @@ class ProjectCollection
                 "category" => "Schedule Management",
                 "type" => "Custom Web Application",
                 "images" => [
-                    asset("assets/projects/precision/logo.png"),
                     asset("assets/projects/precision/welcome.png"),
+                    asset("assets/projects/precision/logo.png"),
                     asset("assets/projects/precision/login.png"),
                     asset("assets/projects/precision/dashboard.png"),
                 ],
                 "technology" => ["Laravel 9", "MySQL", "JavaScript"],
                 "link" => "https://precisiondriving.uk",
                 "completed_date"  => "25 June, 2023",
-                "active"=> false,
+                "active"=> true,
                 "description" => "Precision Driving UK is a custom web application designed to help driving instructors manage their schedules and appointments. The platform allows users to create and manage bookings, track student progress, and communicate with clients. It features a user-friendly interface and provides tools for managing schedules effectively. Technology used: Laravel 9, MySQL, JavaScript.",
             ],
             [

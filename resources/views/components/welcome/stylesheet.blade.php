@@ -1,4 +1,13 @@
 <style>
+
+    :root{
+        --theme-color: rgb(248, 91, 0);
+    }
+
+    p,li,ol{
+        font-size: 17px;
+    }
+
     body {
         font-family: 'Josefin Sans', sans-serif;
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');
@@ -43,11 +52,11 @@
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');
     }
 
-    .navbar{
+    /* .navbar{
         opacity: 0;
-        transform: translateY(-20px); /* Moves slightly up */
+        transform: translateY(-20px);
         transition: opacity 0.4s ease, transform 0.4s ease;
-    }
+    } */
 
      /* Show navbar */
     .navbar.show {
@@ -360,5 +369,13 @@
     .scroll-to-top div.show{
         opacity: 1;
         transform: translateY(0);
+    }
+
+    .border-orange{
+        border: 1px solid var(--theme-color);
+    }
+
+    .border-orange:hover{
+        box-shadow: 0 0 15px var(--theme-color);
     }
 </style>

@@ -1,44 +1,72 @@
-﻿<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-	<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-	<url>
-		<loc>https://mdshahidul.com/</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://mdshahidul.com/contact</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://mdshahidul.com/blogs/the-benefits-and-uses-of-a-queue-management-system-to-any-business</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://mdshahidul.com/blogs/how-to-use-timestamp-in-pivot-table-in-laravel-framework</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://mdshahidul.com/blogs/how-to-do-seo-in-laravel-project-best-seo-practices-in-laravel-project</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://mdshahidul.com/blogs</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://mdshahidul.com/blogs/how-to-run-specific-seeder-in-laravel</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>0.64</priority>
-	</url>
-	<url>
-		<loc>https://mdshahidul.com/blogs/how-to-create-laravel-project-with-composer-in-terminal</loc>
-		<lastmod>2025-04-03T16:12:05+00:00</lastmod>
-		<priority>0.64</priority>
-	</url>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://mdshahidul.com/</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/about</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/projects</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/contact</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs/importance-of-seo-for-any-business</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs/importance-of-a-portfolio-website</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs/benefits-and-uses-of-a-queue-management-system-to-any-business</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs/how-to-use-timestamp-in-pivot-table-in-laravel-framework</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs/how-to-do-seo-in-laravel-project-best-seo-practices-in-laravel-project</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs/how-to-run-specific-seeder-in-laravel</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mdshahidul.com/blogs/how-to-create-laravel-project-with-composer-in-terminal</loc>
+  <lastmod>2025-07-08T18:38:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>

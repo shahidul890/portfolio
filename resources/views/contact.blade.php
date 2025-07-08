@@ -14,8 +14,8 @@
     <!-- Form -->
     <section class="py-5">
         <div class="container py-5">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-8">
+            <div class="row justify-content-around align-items-start">
+                <div class="col-md-6">
                     <h1>Let's Talk</h1>
                     <p class="text-muted mb-5">Got a project in mind? Fill in the form or send us</p>
 
@@ -79,6 +79,31 @@
 
                         <button class="btn btn-orange px-5" id="contact-btn" disabled>Send Message</button>
                     </form>
+                </div>
+
+                <div class="col-md-4">
+                    <p class="h1">Find me</p>
+
+                    <div class="d-flex flex-column mt-5">
+                        <p class="h4 mb-3">Email</p>   
+                        <a class="text-orange" href="mailto:hello@mdshahidul.com">hello@mdshahidul.com</a>
+                        <a class="text-orange" href="mailto:contact@mdshahidul.com">contact@mdshahidul.com</a>
+                    </div>
+
+                    <div class="d-flex flex-column mt-5">
+                        <p class="h4">Social Media</p>   
+                        <div class="d-flex gap-4">
+                            <a href="https://linkedin.com/in/mdshahidul/" target="_blank" class="text-orange text-decoration-none" title="Linkedin">
+                                <i class="bi bi-linkedin h5"></i>
+                            </a>
+                            <a href="https://x.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="X">
+                                <i class="bi bi-twitter-x h5"></i>
+                            </a>
+                            <a href="https://github.com/shahidul890" target="_blank" class="text-orange text-decoration-none" title="Github">
+                                <i class="bi bi-github h5"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

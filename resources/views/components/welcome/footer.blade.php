@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-12 text-center py-3">
-                v2.1.1 &copy {{ date('Y') }} Shahidul Islam. All Rights Reserved.
+                {{ BasicInfo('app_version') }} &copy {{ date('Y') }} <a href="{{ url('/') }}" class="text-orange">{{ BasicInfo("full_name") }}</a>. All Rights Reserved.
             </div>
         </div>
     </div>

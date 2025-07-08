@@ -11,7 +11,7 @@
 
                 @forelse ($blogs as $blog)
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="card shadow rounded-4">
+                        <div class="card rounded-4 h-100 border-orange">
                             <div class="card-body">
                                 <a href="{{url('/blogs/'.$blog->slug)}}"><img class="card-img-top rounded-top-4" src="{{asset($blog->thumbnail)}}" alt="thumbnail not found for blog#{{$blog->id}}" height="250" /></a>
                                 <div class="p-4">
@@ -32,7 +32,7 @@
                 @empty
                     @for ($i=0; $i<9; $i++)
                         <div class="col-md-4 mb-5">
-                            <div class="card shadow rounded-4">
+                            <div class="card rounded-4">
                                 <div class="car-body">
                                     <img class="card-img-top rounded-top-4" src="{{asset("assets/blogs/web-hosting.jpg")}}" alt="web hosting feature image" />
                                     <div class="p-4">

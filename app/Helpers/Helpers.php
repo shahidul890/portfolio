@@ -1,5 +1,7 @@
 <?php 
 
+CONST APP_DATE_FORMAT="F d, Y";
+
 /**
  * Get Meta Information
  * 
