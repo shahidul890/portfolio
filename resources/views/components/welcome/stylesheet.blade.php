@@ -1,11 +1,11 @@
 <style>
 
     :root{
-        --theme-color: rgb(248, 91, 0);
+        --theme-color: #f85b00;
     }
 
-    p,li,ol{
-        font-size: 17px;
+    p,li, ol{
+        font-size: 18px;
     }
 
     body {
@@ -184,14 +184,15 @@
     }
 
     .form-control:focus{
-        background-color: none !important;
-        border-color: #09072d;
-        box-shadow: none;
-        /* transition: background-color 0.3s, border-color 0.3s; */
+        background: none !important;
+        border-color: var(--theme-color) !important;
+        box-shadow: none !important;
+        transition: background-color 0.3s, border-color 0.3s;
+        color: var(--theme-color);
     }
 
     .nav-link.active{
-        color: #ff580b !important;
+        color: var(--theme-color) !important;
         font-weight: 800
     }
 
