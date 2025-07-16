@@ -24,7 +24,7 @@ Route::get("/blogs", [App\Http\Controllers\BlogController::class, 'index'])->nam
 Route::get("/blogs/{slug}", [App\Http\Controllers\BlogController::class, 'show'])->name('welcome.blogs.show');
 
 // Tiny Url
-Route::get("turl", [TinyUrlController::class, 'index']);
+Route::get("turl", [TinyUrlController::class, 'index'])->name('tiny-url');
 Route::post("turl", [TinyUrlController::class, 'store']);
 Route::get("t/{short_url}", [TinyUrlController::class, 'show']);
 Route::view('/turl/404', 'tinyurl-notfound')->name('tinyurl.notfound');
@@ -71,7 +71,7 @@ Route::middleware('auth')
     Route::resource('contact-requests', ContactController::class);
 });
 
-Route::get('/migrate/v3.0.1', MigrationController::class);
+Route::get('/migrate', MigrationController::class);
 
 Route::get('cache-clear', function(){
     Artisan::call('optimize:clear');

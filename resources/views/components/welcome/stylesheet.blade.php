@@ -2,6 +2,16 @@
 
     :root{
         --theme-color: #f85b00;
+        --theme-dark-blue: #06051f;
+        --theme-purple: #342ead;
+        --theme-orange: #f85b00;
+        --theme-white: #fff;
+        --theme-light: #f5f5f5;
+        --theme-gray: #696969;
+        --theme-text: #f5f5f5;
+        --theme-text-muted: #b3b3b3;
+        --theme-bg: #040416;
+        --theme-bg-secondary: #06051f;
     }
 
     p,li, ol{
@@ -10,7 +20,7 @@
 
     body {
         font-family: 'Josefin Sans', sans-serif;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');
+        background: var(--theme-bg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -49,7 +59,8 @@
     }
 
     .footer-bg{
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg');
+        /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/assets/img/footer_bg.svg'); */
+        background: #06051f;
     }
 
     /* .navbar{
@@ -347,6 +358,9 @@
     }
 
     .scroll-to-top div{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
         width: 50px;
         height: 50px;
         opacity: 0;
@@ -378,5 +392,9 @@
 
     .border-orange:hover{
         box-shadow: 0 0 15px var(--theme-color);
+    }
+
+    .text-xs{
+        font-size: 16px;
     }
 </style>

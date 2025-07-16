@@ -1,5 +1,5 @@
 <!-- navbar -->
-<nav class="navbar navbar-dark text-uppercase text-white navbar-expand-lg fixed-top" style="background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url('/assets/img/footer_bg.svg')">
+<nav class="navbar navbar-dark text-uppercase text-white navbar-expand-lg fixed-top" style="background: var(--theme-dark-blue);">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,11 +29,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/')}}/#services">Services</a>
                 </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url('/')}}/#blogs">Blogs</a>
-                </li>
-                
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li>

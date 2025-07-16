@@ -9,7 +9,12 @@ class MigrationController extends Controller
 {
     public function __invoke(Request $request)
     {
-        Artisan::call('storage:link');
-        dd('Storage link created successfully.');
+        if(!$request->has('key') || $request->input('key') !== config('app.migration_key')) {
+            abort(404);
+        }
+
+        // Run migrations
+        Artisan::call('migrate', ['--force' => true]);
+        return "Migration completed successfully.";
     }
 }

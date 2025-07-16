@@ -185,4 +185,9 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    /**
+     * Migration Key
+     */
+    'migration_key' => env('MIGRATION_KEY'),
+
 ];

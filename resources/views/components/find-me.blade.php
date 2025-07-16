@@ -41,7 +41,7 @@
     <section class="d-flex flex-column mt-5">
         <p class="h4">Blogging Site</p>
         <p>I have recently started blogging about web development guideline where I share my programming experience with you. You can follow my website to learn web development</p>
-        <a href="https://learnwith.mdshahidul.com" target="__blank" class="text-orange" title="Learn With Me"> <i class="fa fa-globe"></i> Learn With Shahidul</a>
+        <a href="https://codingwith.mdshahidul.com" target="__blank" class="text-orange" title="Learn With Me"> <i class="fa fa-globe"></i> Coading With Shahidul</a>
     </section>
 </div>
 
