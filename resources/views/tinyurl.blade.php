@@ -2,6 +2,26 @@
 
 @section('page_title', 'Tiny URL')
 
+@section('metatags')
+<!-- SEO Meta Tags -->
+<meta name="description" content="You can create a short URL for any long URL using our TinyURL service." />
+<meta name="keywords" content="tinyurl, short url, url shortener, create short link, link shortening service">
+<meta name="author" content="Md Shahidul Islam">
+
+<!-- Twitter Card -->
+<meta name="twitter:title" content="TinyURL - Shorten Your Links" />
+<meta name="twitter:description" content="You can create a short URL for any long URL using our TinyURL service." />
+<meta name="twitter:image" content="{{ asset('assets/img/md-260kb.png') }}" />
+<meta name="twitter:card" content="{{ asset('assets/img/md-260kb.png') }}" />
+
+<!-- Open Graph (for social media previews) -->
+<meta property="og:title" content="TinyURL - Shorten Your Links" />
+<meta property="og:description" content="You can create a short URL for any long URL using our TinyURL service." />
+<meta property="og:type" content="article">
+<meta property="og:image" content="{{ asset('assets/img/md-260kb.png') }}" />
+<meta property="og:url" content="{{ url()->current() }}" />
+@endsection
+
 @section('content')
     
     <x-welcome.page-header/>
