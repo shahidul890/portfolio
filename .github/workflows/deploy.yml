@@ -9,8 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    env:
-      SKIP_DB_BOOT: true
+    # env:
+    #   SKIP_DB_BOOT: true
 
     steps:
       - name: Checkout code
@@ -44,7 +44,7 @@ jobs:
       - name: Upload ZIP File via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          server: ftp.emadparibahan.com.bd
+          server: ftp.shahidul.com.bd
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./deploy/
