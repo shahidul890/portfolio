@@ -11,7 +11,7 @@ class BasicInfo
             'full_name' => 'Md Shahidul Islam',
             'designation' => 'Full-Stack Web Developer',
             'designation_title' => 'Expert Full-Stack Web Developer',
-            'completed_projects' => '36+',
+            'completed_projects' => '20+',
             'experience' => '5+',
             'location' => 'Dhaka, Bangladesh',
             'hello_mail' => 'hello@mdshahidul.com',
