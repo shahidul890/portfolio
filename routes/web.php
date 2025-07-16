@@ -12,11 +12,30 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\TinyUrlController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 
+Route::get("/", [App\Http\Controllers\WelcomeController::class, 'welcome'])->name('welcome');
+Route::get("/about", [App\Http\Controllers\WelcomeController::class, 'about'])->name('about');
+Route::get("/projects", [App\Http\Controllers\WelcomeController::class, 'projects'])->name('welcome.projects');
+Route::get("/blogs", [App\Http\Controllers\BlogController::class, 'index'])->name('welcome.blogs');
+Route::get("/blogs/{slug}", [App\Http\Controllers\BlogController::class, 'show'])->name('welcome.blogs.show');
 
+// Tiny Url
+Route::get("turl", [TinyUrlController::class, 'index']);
+Route::post("turl", [TinyUrlController::class, 'store']);
+Route::get("t/{short_url}", [TinyUrlController::class, 'show']);
+Route::view('/turl/404', 'tinyurl-notfound')->name('tinyurl.notfound');
+
+// contact form
+Route::get("/contact", [App\Http\Controllers\ContactFormController::class, 'contact'])->name('contact');
+Route::post("/contact", [App\Http\Controllers\ContactFormController::class, 'storeContact'])->name('contact.store');
+Route::get("/check/validity", [App\Http\Controllers\ContactFormController::class, 'emailValidity']);
+
+
+// Control Panel Authentication
 Route::prefix('cp')->group(function(){
     Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'handleLogin']);
@@ -26,19 +45,6 @@ Route::prefix('cp')->group(function(){
     Route::post('/password/reset/verify', \App\Http\Controllers\Auth\VerificationController::class);
     Route::post('/password/reset', \App\Http\Controllers\Auth\ResetPasswordController::class);
 });
-
-
-Route::get("/", [App\Http\Controllers\WelcomeController::class, 'welcome'])->name('welcome');
-Route::get("/about", [App\Http\Controllers\WelcomeController::class, 'about'])->name('about');
-Route::get("/projects", [App\Http\Controllers\WelcomeController::class, 'projects'])->name('welcome.projects');
-Route::get("/blogs", [App\Http\Controllers\BlogController::class, 'index'])->name('welcome.blogs');
-Route::get("/blogs/{slug}", [App\Http\Controllers\BlogController::class, 'show'])->name('welcome.blogs.show');
-
-// contact form
-Route::get("/contact", [App\Http\Controllers\ContactFormController::class, 'contact'])->name('contact');
-Route::post("/contact", [App\Http\Controllers\ContactFormController::class, 'storeContact'])->name('contact.store');
-Route::get("/check/validity", [App\Http\Controllers\ContactFormController::class, 'emailValidity']);
-
 
 Route::middleware('auth')
 ->prefix('cp')

@@ -29,6 +29,7 @@ class BlogController extends Controller
     public function show($slug)
     {
         $blog = $this->model->where('slug', 'LIKE', $slug)->first();
+        if(!$blog) abort(404, 'Blog not found');
         $recentBlogs = $this->model->where('id', '!=', $blog->id)->where('active', true)->latest()->limit(3)->get();
         return view('blogs.'.$blog->file)->with(compact('blog', 'recentBlogs'));
     }

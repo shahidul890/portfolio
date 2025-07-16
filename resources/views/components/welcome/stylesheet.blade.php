@@ -180,7 +180,7 @@
     }
 
     .form-control::placeholder{
-        color: #ffeae8
+        color: #ffeae83d
     }
 
     .form-control:focus{
