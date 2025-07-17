@@ -51,23 +51,43 @@
                     <section class="mt-5">
                         <h3 class="text-orange">My Completed Projects</h3>
                         <ul>
-                            <li><strong>Lead Tracker</strong> – A sales and CRM platform for managing leads. Built with Laravel 10 and Vue 3.</li>
-                            <li><strong>Mr Deal</strong> – An online shop for product listing and order management.</li>
-                            <li><strong>Gokiiw SAAS</strong> – A smart queue management system to reduce wait times for customers.</li>
-                            <li><strong>Esperazero Pay</strong> – A payment and transaction tracking system with secure user dashboards.</li>
-                            <li><strong>Roof Top Explorer</strong> – A web booking system for rooftop tours with date and slot availability.</li>
-                            <li><strong>Big R Driving</strong> – A driving school management app with course schedules, payment, and admin panel.</li>
-                            <li><strong>Kelvin Okafor Art</strong> – A portfolio and e-commerce site for a UK-based artist, optimized for SEO.</li>
-                            <li><strong>Fitness App & Website</strong> – Health advice and product selling platform for a London-based client.</li>
-                            <li><strong>Kowri Payment Gateway Integration</strong> – Payment gateway integration in a Laravel system.</li>
-                            <li><strong>Battery Master QA Library</strong> – Converted a large HTML-based Q&A library into a clean Bootstrap accordion format.</li>
-                            <li><strong>Notice Board & Student List Plugin</strong> – WordPress plugin to add, edit, and show student lists and notices with a scrolling marquee.</li>
-                            <li><strong>POS Printing Solution</strong> – Developed a custom printing solution for Android-based kiosk tablets (CITAQ V8).</li>
-                            <li><strong>Stripe NFC Payment</strong> – Frontend payment using Stripe Terminal JavaScript SDK.</li>
-                            <li><strong>Stripe Payment & History Logging</strong> – Created a flow to securely handle payments and store transaction history in a custom database model.</li>
-                            <li><strong>Multitenancy in Laravel</strong> – Used tenancyforlaravel with a single database structure.</li>
-                            <li><strong>OCR-based Business Card Reader</strong> – Extracted and formatted contact data using OCR in Laravel.</li>
-                            <li><strong>FTP and SSH Git Deployment</strong> – Set up deployment workflows using Git branches over FTP/SSH.</li>
+                            <li><strong>Emad Paribahan Pvt. Ltd.</strong> – A custom transportation management system for vehicle tracking and company management, allowing passengers to book bus tickets and companies to manage operations in one app. Built with Laravel, Vue.js, Livewire, and Tailwind CSS.</li>
+                            <li><strong>MNN Doctors</strong> – A custom solution for managing doctor shifts and submitting management requests. Built with Livewire.</li>
+                            <li><strong>Auchan Mobile</strong> – A custom solution for a company to manage their employee offers and benefits. Built with Laravel.</li>
+                            <li><strong>Quad App</strong> – A custom PWA with all hr features where they can manage their employees. Built with React.JS and Node.JS.</li>
+                            <li><strong>Lead Tracker</strong> – A custom CRM system for managing leads and sales pipelines. Built with Laravel 10 and Vue 3.</li>
+                            <li><strong>Inventory Management System</strong> – A custom system for managing inventory and stock levels. Built with Laravel.</li>
+                            <li><strong>School Management System</strong> – A custom SAAS application for managing student information, attendance, and grades. Built with Laravel.</li>
+                            <li><strong>Mr Deal</strong> – A multi-vendor e-commerce platform for buying and selling products. Built with Laravel.</li>
+                            <li><strong>Gokiiw SAAS</strong> – A smart queue management system to reduce wait times for customers. Built with Laravel.</li>
+                            <li><strong>Esperazero Pay</strong> – A payment and transaction tracking system with secure user dashboards. Built with Laravel.</li>
+                            <li><strong>Roof Top Explorer</strong> – A web booking system for rooftop tours with date and slot availability. Built with Laravel.</li>
+                            <li><strong>Big R Driving</strong> – A driving school management app with course schedules, payment, and admin panel where instructors can manage their classes and students can book lessons. Built with Laravel, VueJS and Tailwind CSS.</li>
+                            <li><strong>Kelvin Okafor Art</strong> – A portfolio and e-commerce site for a UK-based artist, optimized for SEO. Built with WordPress and Elementor.</li>
+                            
+                        </ul>
+                    </section>
+
+                    <section class="mt-5">
+                        <h3 class="text-orange">Also have experienced in</h3>
+                        <ul>
+                            <li><strong>Facebook meta API.</strong> – Implementing Whatsapp API for messaging and notifications.</li>
+                            <li><strong>Google API.</strong> – Integrating Google services such as Maps and Drive.</li>
+                            <li><strong>AI Integration</strong> – Implementing AI solutions for various applications.</li>
+                            <li><strong>Payment Gateway Integration</strong> – Stripe, PayPal, Paystack, Razorpay, Kowri and SSLCommerze.</li>
+                            <li><strong>OCR</strong> – Optical Character Recognition for text extraction from images and documents.</li>
+                            <li><strong>NFC</strong> – Near Field Communication for contactless payments and data transfer.</li>
+                            <li><strong>Kiosk</strong> – Interactive kiosks for user engagement and information dissemination.</li>
+                            <li><strong>POS</strong> – Point of Sale systems for retail and inventory management.</li>
+                            <li><strong>Version Control</strong> – Git and GitHub for code management.</li>
+                            <li><strong>Agile Methodologies</strong> – Scrum and Kanban for project management.</li>
+                            <li><strong>SEO Best Practices</strong> – Ensuring websites are optimized for search engines.</li>
+                            <li><strong>Performance Optimization</strong> – Techniques to improve website speed and user experience.</li>
+                            <li><strong>Security Best Practices</strong> – Implementing security measures to protect applications from vulnerabilities.</li>
+                            <li><strong>Responsive Design</strong> – Ensuring websites work well on all devices, including mobile and tablet.</li>
+                            <li><strong>API Development</strong> – Building RESTful APIs for seamless integration with other services.</li>
+                            <li><strong>Progressive Web Apps (PWA)</strong> – Building web applications that provide a native app-like experience.</li>
+                            <li><strong>Internationalization (i18n)</strong> – Building applications that support multiple languages and regions.</li>
                         </ul>
                     </section>
 
