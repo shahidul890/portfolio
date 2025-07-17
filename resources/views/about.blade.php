@@ -42,6 +42,7 @@
                         <ul>
                             <li><strong>Web Design</strong> – Clean and responsive designs using Tailwind, Bootstrap, or custom CSS.</li>
                             <li><strong>Web Development</strong> – Full-stack development using Laravel, Vue, or React.</li>
+                            <li><strong>Custom Web Application</strong> – Developed your custom web applications tailored to your business needs.</li>
                             <li><strong>WordPress Websites</strong> – Fast-loading, SEO-friendly business or blog sites.</li>
                             <li><strong>Custom API</strong> – Build and consume RESTful APIs.</li>
                             <li> <strong>Bug Fixes & Optimization</strong> – Debugging, performance tuning, and security fixes.</li>
@@ -52,6 +53,7 @@
                         <h3 class="text-orange">My Completed Projects</h3>
                         <ul>
                             <li><strong>Emad Paribahan Pvt. Ltd.</strong> – A custom transportation management system for vehicle tracking and company management, allowing passengers to book bus tickets and companies to manage operations in one app. Built with Laravel, Vue.js, Livewire, and Tailwind CSS.</li>
+                            <li><strong>Optim QMS</strong> – A custom SaaS application for pharmacies to manage customer queues using token-based systems. Built with Livewire.</li>
                             <li><strong>MNN Doctors</strong> – A custom solution for managing doctor shifts and submitting management requests. Built with Livewire.</li>
                             <li><strong>Auchan Mobile</strong> – A custom solution for a company to manage their employee offers and benefits. Built with Laravel.</li>
                             <li><strong>Quad App</strong> – A custom PWA with all hr features where they can manage their employees. Built with React.JS and Node.JS.</li>
@@ -74,18 +76,17 @@
                             <li><strong>Facebook meta API.</strong> – Implementing Whatsapp API for messaging and notifications.</li>
                             <li><strong>Google API.</strong> – Integrating Google services such as Maps and Drive.</li>
                             <li><strong>AI Integration</strong> – Implementing AI solutions for various applications.</li>
-                            <li><strong>Payment Gateway Integration</strong> – Stripe, PayPal, Paystack, Razorpay, Kowri and SSLCommerze.</li>
+                            <li><strong>Payment Gateway Integration</strong> – Stripe, PayPal, Paystack, Razorpay, Kowri, Cryptomus and SSLCommerze.</li>
                             <li><strong>OCR</strong> – Optical Character Recognition for text extraction from images and documents.</li>
                             <li><strong>NFC</strong> – Near Field Communication for contactless payments and data transfer.</li>
                             <li><strong>Kiosk</strong> – Interactive kiosks for user engagement and information dissemination.</li>
                             <li><strong>POS</strong> – Point of Sale systems for retail and inventory management.</li>
                             <li><strong>Version Control</strong> – Git and GitHub for code management.</li>
-                            <li><strong>Agile Methodologies</strong> – Scrum and Kanban for project management.</li>
                             <li><strong>SEO Best Practices</strong> – Ensuring websites are optimized for search engines.</li>
                             <li><strong>Performance Optimization</strong> – Techniques to improve website speed and user experience.</li>
                             <li><strong>Security Best Practices</strong> – Implementing security measures to protect applications from vulnerabilities.</li>
                             <li><strong>Responsive Design</strong> – Ensuring websites work well on all devices, including mobile and tablet.</li>
-                            <li><strong>API Development</strong> – Building RESTful APIs for seamless integration with other services.</li>
+                            <li><strong>REST API Development</strong> – Building RESTful APIs for seamless integration with other services.</li>
                             <li><strong>Progressive Web Apps (PWA)</strong> – Building web applications that provide a native app-like experience.</li>
                             <li><strong>Internationalization (i18n)</strong> – Building applications that support multiple languages and regions.</li>
                         </ul>
