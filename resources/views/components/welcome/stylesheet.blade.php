@@ -113,7 +113,7 @@
         border: 2px solid rgb(248, 91, 0);
         border-radius: 25px;
         background-color: rgb(248, 91, 0);
-        color: #fff;
+        color: #fff !important;
     }
 
     .btn-orange{

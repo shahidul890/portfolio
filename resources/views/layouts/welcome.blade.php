@@ -12,6 +12,8 @@
         <meta name="author" content="{{ MetaInfo('author') }}">
 
         <meta name="twitter:title" content="{{ MetaInfo('title') }}" />
+        <meta name="twitter:site" content="@shahidul890">
+        <meta name="twitter:creator" content="@shahidul890">
         <meta name="twitter:description" content="{{ MetaInfo('description') }}" />
         <meta name="twitter:image" content="{{ MetaInfo('image') }}" />
         <meta name="twitter:card" content="{{ MetaInfo('image') }}" />
@@ -19,7 +21,11 @@
         <meta name="og:title" content="{{ MetaInfo('title') }}" />
         <meta name="og:description" content="{{ MetaInfo('description') }}" />
         <meta name="og:image" content="{{ MetaInfo('image') }}" />
-        <meta name="og:url" content="{{url('/')}}" />
+        <meta name="og:url" content="{{url()->current()}}" />
+        <meta name="og:site_name" content="{{ MetaInfo('title') }}">
+        <meta name="og:locale" content="en_US">
+
+        <link rel="canonical" href="{{url()->current()}}" />
     @endif
 
     {{-- For verifying google adsense account --}}

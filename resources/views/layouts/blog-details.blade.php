@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class=" @if(isset($blog) && $blog->show_recent_blogs && $blog->recent_blogs_position == 'right') col-md-9 @else col-md-12 @endif ">
-                    <div class="card rounded-3 shadow mb-3">
+                    <div class="card rounded-3 shadow mb-3 border-orange">
                         <div class="card-body">
                             @yield('blog-content')
                         </div>
