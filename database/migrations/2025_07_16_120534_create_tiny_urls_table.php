@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::dropIfExists('tiny_urls');
+
         Schema::create('tiny_urls', function (Blueprint $table) {
             $table->id();
             $table->text("site_url");
@@ -24,7 +26,7 @@ return new class extends Migration
             $table->boolean('active')->default(true);
             $table->timestamps();
 
-            $table->index('url_code');
+            $table->index('short_url');
         });
     }
 

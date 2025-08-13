@@ -1,7 +1,7 @@
 <?php
 // Example: Extract to parent directory
-$zipFile = dirname(__DIR__) . '/archive.zip'; // One level up from current directory
-$extractTo = dirname(__DIR__) . '/'; // Extract to '/' folder in parent directory
+$zipFile = dirname(__DIR__) . '/../archive.zip'; // One level up from current directory
+$extractTo = dirname(__DIR__) . '/../'; // Extract to '/' folder in parent directory
 
 // Alternative: Use absolute path
 // $zipFile = '/path/to/your/archive.zip';

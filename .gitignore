@@ -18,6 +18,6 @@ yarn-error.log
 /.idea
 /.vscode
 README.md
-*.zip
+/*.zip
 /public/*.zip
 # public/assets/videos
